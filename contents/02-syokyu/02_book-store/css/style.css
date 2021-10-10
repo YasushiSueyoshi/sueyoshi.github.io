@@ -1,0 +1,298 @@
+@charset "utf-8";
+/* 共通エリア */
+html {
+  font-size: 62.5%; /* 10px */
+}
+body {
+  font-family: "Arial,Hiragino Sans,Hiragino Kaku Gothic ProN,Meiryo,sans-serif";
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+section {
+  padding: 80px 0;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+}
+/* メインビジュアル エリア
+------------------------------------------------------- */
+.mainvisual {
+  height: 100vh;
+  background: url(../img/mainvisual.jpg) no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+}
+.mainvisual .head_log img {
+  position: absolute;
+  display: block;
+  top: 30px;
+  right: 30px;
+}
+/* section01 エリア
+------------------------------------------------------- */
+.sec01 .sec01_read {
+  margin-bottom: 40px;
+}
+.sec01 .sec01_items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec01 .sec01_items a {
+  width: 49%;
+  position: relative;
+  display: inline-block;
+}
+/* .sec01 .sec01_items a:hover {
+  opacity: 0.7;
+} */
+.sec01_item_txt {
+  width: 300px;
+  padding: 20px 0;
+  color: #fff;
+  font-weight: bold;
+  background: rgba(8, 8, 8, 0.37);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*　波紋　*/
+
+.circle span.mask {
+  position: relative; /*波紋の基点となる位置を定義*/
+  display: block;
+  /* line-height: 0; 行の高さを0にする */
+  overflow: hidden; /*拡大してはみ出る要素を隠す*/
+}
+
+.circle span.mask::before {
+  position: absolute;
+  content: "";
+  transform: scale(0); /*円の大きさ初期値は0*/
+  opacity: 0; /*透過0*/
+  width: 100%; /*円のサイズ指定*/
+  height: 100%; /*円のサイズ指定*/
+  border-radius: 50%; /*円の角丸指定*/
+  background: rgba(255, 255, 255, 0.4); /*円の背景色*/
+}
+
+.circle span.mask:hover::before {
+  /*hoverした時の変化*/
+  animation: circle 0.75s; /*アニメーションの名前と速度を定義*/
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0);
+    opacity: 1; /*透過なし*/
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2); /*アニメーションで大きくなった2倍の円の指定*/
+  }
+}
+/* section02 エリア
+------------------------------------------------------- */
+.sec02 {
+  background: url(../img/fashion.jpg) no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 500px;
+  padding-top: 60px;
+}
+.sec02_lead {
+  margin-bottom: 30px;
+}
+/*== ボタン共通設定 */
+.btn {
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+  overflow: hidden;
+  /*ボタンの形状*/
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #555; /* ボーダーの色と太さ */
+  padding: 10px 30px;
+  text-align: center;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: ease 0.2s;
+}
+
+/*ボタン内spanの形状*/
+.btn span {
+  position: relative;
+  z-index: 3; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  color: #333;
+}
+
+.btn:hover span {
+  color: #fff;
+}
+
+/*== 背景が流れる（斜め） */
+.bgskew::before {
+  content: "";
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: -130%;
+  /*色や形状*/
+  background: #333;
+  width: 120%;
+  height: 100%;
+  transform: skewX(-25deg);
+}
+
+/*hoverした時のアニメーション*/
+.bgskew:hover::before {
+  animation: skewanime 0.5s forwards; /*アニメーションの名前と速度を定義*/
+}
+
+@keyframes skewanime {
+  100% {
+    left: -10%; /*画面の見えていない左から右へ移動する終了地点*/
+  }
+}
+/* section03 エリア
+------------------------------------------------------- */
+.sec03 {
+  background: #f5f5f5;
+  text-align: left;
+}
+.sec03_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
+.sec03_item.sec03_antique {
+  flex-direction: row-reverse;
+}
+.sec03_item:last-of-type {
+  margin-bottom: 0;
+}
+.sec03_item_img {
+  width: 48%;
+}
+.sec03_item_txt {
+  width: 48%;
+}
+.sec03_item_txt h2 {
+  text-align: center;
+}
+.sec03_item_txt p {
+  margin-bottom: 30px;
+}
+.sec03_btn {
+  text-align: center;
+}
+/* footer エリア
+------------------------------------------------------- */
+footer .foot_cont {
+  background: #333;
+  color: #fff;
+  padding: 100px 0;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+footer .foot_cont .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .foot_cont h3 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+.foot_item {
+  width: calc(100% / 3);
+}
+
+.foot_copyright {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1.2rem;
+}
+
+.foot_center ul li:before {
+  content: "-";
+  margin-right: 5px;
+}
+
+/* スマホ表示
+-------------------------------------------------------------------------------------------------------- */
+@media (max-width: 896px) {
+  /* section01 エリア
+------------------------------------------------------- */
+  .sec01 .sec01_items {
+    display: block;
+  }
+  .sec01 .sec01_items a {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .sec01 .sec01_items a:last-of-type {
+    margin-bottom: 0;
+  }
+  /* section02 エリア
+------------------------------------------------------- */
+  .sec02 {
+    padding-top: 30px;
+  }
+
+  /* section03 エリア
+------------------------------------------------------- */
+  .sec03_item {
+    display: block;
+  }
+  .sec03_item_img {
+    width: 100%;
+  }
+  .sec03_item_txt {
+    width: 100%;
+  }
+  .sec03_item_txt h2 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  /* footer エリア
+------------------------------------------------------- */
+  footer .foot_cont {
+    padding: 30px 0 60px;
+  }
+  footer .foot_cont .inner {
+    display: block;
+  }
+  .foot_item {
+    width: 100%;
+  }
+  .foot_cont .inner .foot_left {
+    text-align: center;
+  }
+}

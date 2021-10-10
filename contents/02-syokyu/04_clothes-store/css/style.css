@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* 共通エリア */
+html {
+  font-size: 62.5%; /* 10px */
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.9;
+}
+
+.inner_800 {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 0 4%; */
+}
+img {
+  max-width: 100%;
+}
+
+/* header エリア
+--------------------------------------------- */
+header {
+  /* max-width: 1000px; */
+  /* width: 100%; */
+  margin: 0 auto;
+  padding: 45px 0 25px 0;
+  border-bottom: solid 1px rgb(180, 180, 180);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background: #fff;
+}
+header .head_log {
+  width: 110px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.head_nav .inner_800 {
+  display: flex;
+  justify-content: space-between;
+}
+.head_nav_left_items {
+  display: flex;
+  justify-content: space-between;
+}
+.head_nav_left_items .head_nav_left_item {
+  margin-right: 15px;
+}
+.head_nav_right_items {
+  display: flex;
+  justify-content: space-between;
+}
+.head_nav_right_items .head_nav_right_item {
+  margin-left: 15px;
+}
+/* main エリア
+--------------------------------------------- */
+main {
+  padding: 50px 100px;
+  margin-top: 110px;
+}
+main .inner_800 {
+  display: flex;
+  justify-content: space-between;
+}
+.main_left {
+  width: 50%;
+}
+.main_right {
+  width: 43%;
+}
+.main_right h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-top: solid 1px rgb(180, 180, 180);
+  border-bottom: solid 1px rgb(180, 180, 180);
+}
+.main_right_read {
+  margin-bottom: 30px;
+}
+.main_right_price {
+  margin-bottom: 20px;
+}
+/* button エリア
+--------------------------------------------- */
+/* クリックしたら波紋が広がる */
+
+.btnripple {
+  /*波紋の基点とするためrelativeを指定*/
+  position: relative;
+  /*はみ出す波紋を隠す*/
+  overflow: hidden;
+  /*ボタンの形状*/
+  text-decoration: none;
+  display: inline-block;
+  background: rgb(104, 104, 104);
+  color: #fff;
+  width: 100%;
+  padding: 15px 20px;
+  outline: none;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.btnripple::after {
+  content: "";
+  /*絶対配置で波紋位置を決める*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /*波紋の形状*/
+  background: radial-gradient(circle, #fff 10%, transparent 10%) no-repeat 50%;
+  transform: scale(10, 10);
+  /*はじめは透過0に*/
+  opacity: 0;
+  /*アニメーションの設定*/
+  transition: transform 0.3s, opacity 1s;
+}
+
+/*クリックされたあとの形状の設定*/
+.btnripple:active::after {
+  transform: scale(0, 0);
+  transition: 0s;
+  opacity: 0.3;
+}
+
+/* table_01 エリア
+--------------------------------------------- */
+.table_01 {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  table-layout: fixed;
+  color: #000;
+}
+
+.table_01 tr {
+  background-color: #fff;
+  padding: 0.35em;
+  border-bottom: 1px solid #bbb;
+  vertical-align: middle;
+}
+
+.table_01 tr:last-child {
+  border-bottom: none;
+}
+.table_01 th,
+.table_01 td {
+  padding: 1em 5px 1em 1em;
+  border-right: 1px solid #bbb;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+}
+.table_01 th:last-child,
+.table_01 td:last-child {
+  border: none;
+}
+
+.cp_ipselect {
+  overflow: hidden;
+  width: 90%;
+  margin: 2em auto;
+  text-align: center;
+}
+.cp_ipselect select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+  display: none;
+}
+.cp_ipselect.cp_sl01 {
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+}
+.cp_ipselect.cp_sl01::before {
+  position: absolute;
+  top: 1.8em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666666;
+  pointer-events: none;
+}
+.cp_ipselect.cp_sl01 select {
+  padding: 8px 38px 8px 8px;
+  color: #666;
+  background: #f9cfcf;
+}
+/* table_02 */
+.table_02 {
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table_02 tr {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  padding: 0.35em;
+  vertical-align: middle;
+}
+.table_02 th,
+.table_02 td {
+  padding: 1em 10px 1em 1em;
+  border-right: 1px solid #bbb;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+}
+.table_02 th {
+  font-size: 0.85em;
+  background: #ecebeb;
+}
+.table_02 thead tr {
+  background-color: #fff;
+}
+/* footer エリア
+--------------------------------------------- */
+footer {
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+@media (max-width: 896px) {
+  /* header エリア
+--------------------------------------------- */
+  header {
+    padding: 30px 15px 15px 15px;
+  }
+  .head_nav {
+    overflow: scroll;
+  }
+  header .head_log {
+    margin-bottom: 20px;
+  }
+  /* main エリア
+--------------------------------------------- */
+  main {
+    padding: 0;
+    margin-top: 125px;
+  }
+
+  main .inner_800 {
+    display: block;
+  }
+  .main_left {
+    width: 100%;
+  }
+  .main_right {
+    width: 98%;
+    padding: 0 4%;
+    margin-bottom: 100px;
+  }
+  .main_right h2 {
+    margin-top: 10px;
+    padding: 15px 0;
+  }
+  /* footer エリア
+--------------------------------------------- */
+} /*  //メディアクエリ */
