@@ -1,0 +1,647 @@
+@charset "utf-8";
+/* 共通エリア */
+
+html {
+  font-size: 62.5%;
+  /* font-sizeは16pxの62.5%の10px */
+}
+
+body {
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 1.4rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.inner {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 170px;
+}
+
+h2 {
+  font-size: 7.2rem;
+  font-weight: bold;
+  color: #fff;
+  /* drop-shadow */
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.74));
+}
+
+h3 {
+  font-size: 4.2rem;
+  font-weight: bold;
+  padding-bottom: 15px;
+  margin-bottom: 70px;
+  border-bottom: solid 6px #E03131;
+  display: inline-block;
+}
+
+/*== btn少し出ていた線が伸びる */
+
+.btnlinestretches2 {
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+  /*ボタンの形状*/
+  color: #333;
+  padding: 20px 40px;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+}
+
+/*線の設定*/
+
+.btnlinestretches2::before, .btnlinestretches2::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  /*事前に出現させる線の形状*/
+  border: solid #E03131;
+  width: 25px;
+  height: 25px;
+  /*アニメーションの指定*/
+  transition: all 0.3s ease-in-out;
+}
+
+.btnlinestretches2::before {
+  /*事前に出現させる線の位置*/
+  top: 0;
+  left: 0;
+  /*事前に出現させる線の形状*/
+  border-width: 2px 0 0 2px;
+}
+
+.btnlinestretches2::after {
+  /*事前に出現させる線の位置*/
+  bottom: 0;
+  right: 0;
+  /*事前に出現させる線の形状*/
+  border-width: 0 2px 2px 0;
+}
+
+/*hoverした際の線の形状*/
+
+.btnlinestretches2:hover::before, .btnlinestretches2:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: #E03131;
+}
+
+/* headerエリア
+-------------------------------------------*/
+
+header {
+  height: 100vh;
+  background: url(../img/mainvisual.jpg) no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header h1 img {
+  /* drop-shadow */
+  filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6));
+}
+
+header .head_nav_items {
+  display: flex;
+  justify-content: end;
+  padding: 25px 40px;
+}
+
+header .head_nav_items .head_nav_item {
+  margin-left: 30px;
+  font-size: 1.4rem;
+}
+
+header .head_nav_items .head_nav_item a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+header .head_nav_items .head_nav_item a:hover {
+  color: rgb(201, 41, 41);
+  transition: all 0.5s 0s ease;
+}
+
+/* ハンバーガーメニュー
+-------------------------------------------------------------------------------------------------------*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+
+.openbtn5 {
+  position: fixed;
+  /*ボタン内側の基点となるためrelativeを指定*/
+  background: #666;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+
+/*ボタン内側*/
+
+.openbtn5 span {
+  display: inline-block;
+  transition: all .4s;
+  /*アニメーションの設定*/
+  position: absolute;
+}
+
+.openbtn5 span:nth-of-type(1), .openbtn5 span:nth-of-type(3) {
+  height: 2px;
+  background: #fff;
+  width: 62%;
+  left: 10px;
+}
+
+.openbtn5 span:nth-of-type(1) {
+  top: 13px;
+}
+
+.openbtn5 span:nth-of-type(2) {
+  top: 19px;
+  left: 11px;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.openbtn5 span:nth-of-type(3) {
+  top: 36px;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu表記をしている2つ目の要素が透過して消える*/
+
+.openbtn5.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn5.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn5.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/*open_navクラスが付与されると線が回転して×になり、Menu表記をしている2つ目の要素が透過して消える*/
+
+header .head_nav_items.open_nav {
+  display: block;
+  padding: 0;
+  width: 30%;
+  background: tomato;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+header .head_nav_items.open_nav .head_nav_item {
+  margin: 0;
+  padding: 20px 25px;
+}
+
+/* hanba-ga- */
+
+/* header（デモの参考値） */
+
+.demobox-header {
+  background: #ddd;
+  height: 64px;
+  padding: 1em;
+}
+
+/* headerのサイト名（デモの参考値） */
+
+.demobox-sitename {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* 全体調整CSS */
+
+.hamburger-demo-menubox * {
+  font-size: 16px;
+}
+
+.hamburger-demo-menubox li {
+  font-size: 14px;
+}
+
+/* hamburgerここから */
+
+/* inputを非表示 */
+
+.input-hidden {
+  display: none;
+}
+
+/* label */
+
+.hamburger-demo-switch {
+  cursor: pointer;
+  position: absolute;
+  right: 3%;
+  top: 0;
+  /* ハンバーガーアイコンの位置（上から） */
+  z-index: 9999;
+  /* width: 4em; */
+  /* アイコン（クリック可能領域）の幅 */
+  /* height: 4em; */
+  /* アイコン（クリック可能領域の）高さ */
+}
+
+/* メニュー展開時にハンバーガーアイコンを固定 */
+
+#hamburger-demo1:checked~.hamburger-demo-switch {
+  position: fixed;
+}
+
+/* ハンバーガーアイコン */
+
+.hamburger-switch-line1, .hamburger-switch-line1:before, .hamburger-switch-line1:after {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  /* ハンバーガーアイコンの色 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: .3s;
+  content: "";
+}
+
+.hamburger-switch-line1 {
+  transform: translate(-50%, -50%);
+}
+
+.hamburger-switch-line1:before {
+  transform: translate(-50%, -300%);
+}
+
+.hamburger-switch-line1:after {
+  transform: translate(-50%, 200%);
+}
+
+/* ハンバーガーアイコン･アニメーション */
+
+#hamburger-demo1:checked~.hamburger-demo-switch .hamburger-switch-line1 {
+  width: 0;
+}
+
+#hamburger-demo1:checked~.hamburger-demo-switch .hamburger-switch-line1:before {
+  transform: rotate(45deg) translate(-40%, 325%);
+}
+
+#hamburger-demo1:checked~.hamburger-demo-switch .hamburger-switch-line1:after {
+  transform: rotate(-45deg) translate(-40%, -325%);
+}
+
+/* メニューエリア */
+
+.hamburger-demo-menuwrap {
+  position: fixed;
+  height: 100%;
+  background: #fafafa;
+  /* メニューエリアの背景色 */
+  padding: 5em 0;
+  z-index: 9998;
+  transition: .3s;
+  overflow-y: scroll;
+  /* メニュー内容が多い場合に縦スクロールする */
+  top: 0;
+  left: 100%;
+  width: 70%;
+}
+
+/* メニューリスト */
+
+.hamburger-demo-menulist {
+  margin-right: 3%;
+  list-style: none;
+}
+
+.hamburger-demo-menulist li a {
+  text-decoration: none;
+  color: #333;
+  /* メニューリストの文字色 */
+  display: block;
+  padding: 1em 2em;
+}
+
+/* メニューエリア･アニメーション */
+
+/* 右から */
+
+#hamburger-demo1:checked~.hamburger-demo-menuwrap {
+  left: 65%;
+}
+
+/* コンテンツカバー */
+
+#hamburger-demo1:checked~.hamburger-demo-cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9997;
+  background: rgba(3, 3, 3, .5);
+  display: block;
+}
+
+/* PCではハンバーガーメニューを表示しない */
+
+@media (min-width: 992px) {
+  .hamburger-demo-menubox {
+    display: none;
+  }
+}
+
+/* MENUエリア
+-------------------------------------------*/
+
+#menu .h2_inner {
+  background: url(../img/menu.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+  z-index: 2;
+}
+
+#menu .h2_inner h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#menu .inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+}
+
+#menu h3 {
+  margin-bottom: 75px;
+}
+
+#menu .inner .menu_left {
+  padding: 15px 45px;
+  width: 50%;
+  border-right: 1px solid #333;
+}
+
+#menu .inner dl {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  line-height: 24px;
+}
+
+#menu .inner dl dt {
+  width: 87%;
+  text-align-last: left;
+  padding-top: 25px;
+  padding-bottom: 3px;
+  border-bottom: #333 dotted 1px;
+}
+
+#menu .inner dl dt:first-of-type {
+  padding-top: 0;
+}
+
+#menu .inner dl dd {
+  width: 10%;
+  padding-top: 25px;
+}
+
+#menu .inner dl dd:first-of-type {
+  padding-top: 0;
+}
+
+#menu .inner .menu_right {
+  width: 50%;
+  padding: 15px 45px;
+}
+
+.menu_right_other h3 {
+  padding-top: 100px;
+}
+
+/* ABOUTエリア
+-------------------------------------------*/
+
+#about .h2_inner {
+  background: url(../img/about.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+  z-index: 2;
+}
+
+#about .h2_inner h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.coffee_items {
+  margin-bottom: 40px;
+}
+
+.coffee_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coffee_item_txt {
+  padding: 20px;
+  font-size: 1.4rem;
+  line-height: 29px;
+  text-align-last: left;
+}
+
+/* LOCATIONエリア
+-------------------------------------------*/
+
+#location .h2_inner {
+  background: url(../img/location.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+  z-index: 2;
+}
+
+#location .h2_inner h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.location_map {
+  margin-bottom: 30px;
+}
+
+.location_map iframe {
+  max-width: 1000px;
+  width: 100%;
+  height: 500px;
+}
+
+.location_map .google_map {
+  margin-bottom: 20px;
+  filter: grayscale(100%);
+}
+
+.location_map .google_map:hover {
+  filter: none
+}
+
+.location_address {
+  text-align: left;
+  line-height: 24px;
+}
+
+.location_address_jusyo {
+  margin-bottom: 15px;
+}
+
+.location_address_open {
+  margin-bottom: 15px;
+}
+
+/* footerエリア
+-------------------------------------------*/
+
+footer .inner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* SP
+-------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 3.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  /* headerエリア
+-------------------------------------------*/
+  header {
+    margin-bottom: 10px;
+  }
+  header .head_nav_items {
+    display: none;
+  }
+  header h1 img {
+    max-width: 345px;
+    max-height: 75px;
+  }
+  /* ハンバーガーメニュー
+-----------------------------------------------------------------------*/
+  .openbtn5 {
+    display: block;
+    z-index: 3;
+  }
+  /* MENUエリア
+-------------------------------------------*/
+  #menu .h2_inner {
+    background-attachment: scroll;
+    height: 150px;
+  }
+  #menu .inner {
+    padding-top: 0;
+    padding-bottom: 90px;
+  }
+  #menu .inner .menu_left {
+    width: 100%;
+    border-right: none;
+    padding: 0;
+  }
+  #menu .inner .menu_right {
+    width: 100%;
+    padding: 0;
+  }
+  #menu h3 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .menu_right_other h3 {
+    padding-top: 0;
+  }
+  /* ABOUTエリア
+-------------------------------------------*/
+  #about .h2_inner {
+    height: 150px;
+  }
+  #about .inner {
+    padding-bottom: 90px;
+    padding-top: 40px;
+  }
+  .coffee_items {
+    margin-bottom: 20px;
+  }
+  .coffee_item {
+    display: block;
+    width: 100%;
+  }
+  .coffee_item_txt:first-of-type {
+    padding-top: 0;
+  }
+  /* LOCATIONエリア
+-------------------------------------------*/
+  #location .h2_inner {
+    height: 150px;
+  }
+  #location .inner {
+    padding-top: 40px;
+    padding-bottom: 90px;
+  }
+  .location_map iframe {
+    height: auto;
+  }
+  /* footerエリア
+-------------------------------------------*/
+}
