@@ -111,7 +111,7 @@ header .inner {
   left: 0;
   right: 0;
   background-color: #8adce2;
-  transform: skewY(-7deg) translateY(-90px);
+  transform: skewY(-5deg) translateY(-75px);
   z-index: -1;
 }
 
@@ -160,7 +160,7 @@ header .inner {
   left: 0;
   right: 0;
   background-color: #D1E28A;
-  transform: skewY(-7deg);
+  transform: skewY(-5deg);
   z-index: -1;
 }
 
@@ -206,7 +206,7 @@ footer:before {
   left: 0;
   right: 0;
   background-color: #e28a8c;
-  transform: skewY(-7deg) translateY(90px);
+  transform: skewY(-5deg) translateY(90px);
   z-index: -1;
 }
 
