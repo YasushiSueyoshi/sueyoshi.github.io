@@ -391,55 +391,62 @@ main {
   }
 }
 
-/*　画像縮小（ぼかし）＋テキスト
+/*　 枠線＋テキストが出現
 -----------------------------------------------*/
 
-.zoomInText {
-  /*テキストの基点となる位置を定義*/
+.lineText {
   position: relative;
+  /*テキストの基点となる位置を定義*/
 }
 
-.zoomInText span.mask {
+/*線の設定*/
+
+.lineText span.mask {
   position: relative;
-  transition: .3s ease-in-out;
-  /*移り変わる速さを変更したい場合はこの数値を変更*/
   display: block;
   /*画像をくくるspanタグをブロック要素にする*/
   line-height: 0;
   /*行の高さを0にする*/
-  overflow: hidden;
-  /*拡大してはみ出る要素を隠す*/
 }
 
-.zoomInText:hover span.mask::before {
-  /*hoverした時の変化*/
-  content: "";
+.lineText span.mask::before, .lineText span.mask::after {
   position: absolute;
-  z-index: 2;
-  top: 10px;
-  left: 10px;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-  background: rgba(0, 0, 0, 0.5);
-  /*背景色*/
-}
-
-.zoomInText img {
-  transform: scale(1);
-  filter: blur(0);
+  top: 4%;
+  right: 2.5%;
+  bottom: 4%;
+  left: 2.5%;
+  z-index: 3;
+  content: "";
+  opacity: 0;
   transition: .3s ease-in-out;
   /*移り変わる速さを変更したい場合はこの数値を変更*/
 }
 
-.zoomInText:hover img {
-  /*hoverした時の変化*/
-  transform: scale(1.2);
-  /*拡大の値を変更したい場合はこの数値を変更*/
-  filter: blur(2px);
-  /*ぼかし具合を変更したい場合はこの数値を変更*/
+.lineText span.mask::before {
+  border-top: 1px solid #fff;
+  /*枠線の色と太さを変更したい場合はこの数値を変更*/
+  border-bottom: 1px solid #fff;
+  /*枠線の色と太さを変更したい場合はこの数値を変更*/
+  transform: scale(0, 1);
 }
 
-.zoomInText span.cap {
+.lineText span.mask::after {
+  border-right: 1px solid #fff;
+  /*枠線の色と太さを変更したい場合はこの数値を変更*/
+  border-left: 1px solid #fff;
+  /*枠線の色と太さを変更したい場合はこの数値を変更*/
+  transform: scale(1, 0);
+}
+
+.lineText:hover span.mask::before, .lineText:hover span.mask::after {
+  /*hoverした時の変化*/
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*中央テキスト*/
+
+.lineText span.cap {
   opacity: 0;
   transition: .5s ease-in-out;
   /*移り変わる速さを変更したい場合はこの数値を変更*/
@@ -453,14 +460,10 @@ main {
   /*テキストの色を変えたい場合はここを修正*/
   line-height: 1.5;
   /*行の高さを1.5にする*/
+  font-size: 24px;
 }
 
-.zoomInText:hover span.cap {
-  /*hoverした時の変化*/
-  opacity: 1;
-}
-
-.zoomOutText:hover span.cap {
+.lineText:hover span.cap {
   /*hoverした時の変化*/
   opacity: 1;
 }
@@ -525,9 +528,85 @@ main {
   /*テキストの色を変えたい場合はここを修正*/
   line-height: 1.5;
   /*行の高さを1.5にする*/
+  font-size: 24px;
 }
 
 .opacityText:hover span.cap {
+  /*hoverした時の変化*/
+  opacity: 1;
+}
+
+/*　画像縮小（ぼかし）＋テキスト
+-----------------------------------------------*/
+
+.zoomInText {
+  /*テキストの基点となる位置を定義*/
+  position: relative;
+}
+
+.zoomInText span.mask {
+  position: relative;
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  display: block;
+  /*画像をくくるspanタグをブロック要素にする*/
+  line-height: 0;
+  /*行の高さを0にする*/
+  overflow: hidden;
+  /*拡大してはみ出る要素を隠す*/
+}
+
+.zoomInText:hover span.mask::before {
+  /*hoverした時の変化*/
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background: rgba(0, 0, 0, 0.5);
+  /*背景色*/
+}
+
+.zoomInText img {
+  transform: scale(1);
+  filter: blur(0);
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoomInText:hover img {
+  /*hoverした時の変化*/
+  transform: scale(1.2);
+  /*拡大の値を変更したい場合はこの数値を変更*/
+  filter: blur(2px);
+  /*ぼかし具合を変更したい場合はこの数値を変更*/
+}
+
+.zoomInText span.cap {
+  opacity: 0;
+  transition: .5s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  position: absolute;
+  z-index: 3;
+  /*テキストを前面に出す*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  /*テキストの色を変えたい場合はここを修正*/
+  line-height: 1.5;
+  /*行の高さを1.5にする*/
+  font-size: 1.8rem;
+}
+
+.zoomInText:hover span.cap {
+  /*hoverした時の変化*/
+  opacity: 1;
+}
+
+.zoomOutText:hover span.cap {
   /*hoverした時の変化*/
   opacity: 1;
 }
