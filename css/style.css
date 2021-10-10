@@ -1,0 +1,615 @@
+@charset "utf-8";
+/* 共通エリア */
+
+body {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 16px;
+  background: #f0fdb6;
+}
+
+ul, dl, li, dt, dd {
+  list-style: none;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Loading背景画面設定
+----------------------------------------------　*/
+
+/* Loading背景画面設定　*/
+
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #f0fdb6;
+  text-align: center;
+  color: #333;
+}
+
+/* Loadingバー中央配置　*/
+
+#splash_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: #333;
+}
+
+/* TOPへ戻る
+----------------------------------------------　*/
+
+#totop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 19px;
+  z-index: 96;
+}
+
+.inner {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #f0fdb6;
+}
+
+.img_item_ttl {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* header
+----------------------------------------------　*/
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  box-shadow: 0 7px 10px rgb(0 0 0 / 30%);
+  background: #2c7aa1;
+  text-align: center;
+  z-index: 99;
+}
+
+header .inner {
+  display: flex;
+  justify-content: center;
+}
+
+.head_log img {
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+/* main
+----------------------------------------------　*/
+
+main {
+  padding-top: 120px;
+}
+
+.img_items {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.img_item {
+  width: 30%;
+  margin-bottom: 80px;
+}
+
+.img_item a:hover {
+  background: #f5f0f085;
+  transition: all 0.5s 0s ease;
+  /*transitionの記述を追加*/
+}
+
+/*画像リンクの動き まとめ
+  -------------------------------------------------------------------*/
+
+/*画像の拡大　KAKERU MIYAICHI　プロフィールサイト / 1カラム
+  -----------------------------------------------*/
+
+.zoom_in img {
+  transform: scale(1);
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoom_in a:hover img {
+  /*hoverした時の変化*/
+  transform: scale(1.2);
+  /*拡大の値を変更したい場合はこの数値を変更*/
+}
+
+/*　画像のマスク　*/
+
+.mask {
+  display: block;
+  line-height: 0;
+  /*行の高さを0にする*/
+  overflow: hidden;
+  /*拡大してはみ出る要素を隠す*/
+}
+
+.img_item01 {
+  margin-bottom: 0;
+}
+
+/*画像の縮小　PHOTO BOOK フォトサイト / 1カラム
+  -----------------------------------------------*/
+
+.zoom_out img {
+  transform: scale(1.1);
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoom_out a:hover img {
+  /*hoverした時の変化*/
+  transform: scale(1);
+  /*拡大の値を変更したい場合はこの数値を変更*/
+}
+
+/*　画像のマスク　*/
+
+.mask {
+  display: block;
+  line-height: 0;
+  /*行の高さを0にする*/
+  overflow: hidden;
+  /*拡大してはみ出る要素を隠す*/
+}
+
+/*　画像拡大＋回転　右回転
+  -----------------------------------------------*/
+
+.zoom_in_rotate_right img {
+  transform: scale(1);
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoom_in_rotate_right a:hover img {
+  /*hoverした時の変化*/
+  transform: rotate(5deg) scale(1.2);
+  /*拡大、回転の値を変更したい場合はこの数値を変更*/
+}
+
+/*　画像のマスク　*/
+
+.mask {
+  display: block;
+  line-height: 0;
+  /*行の高さを0にする*/
+  overflow: hidden;
+  /*拡大してはみ出る要素を隠す*/
+}
+
+/*　画像拡大＋回転　左回転
+  -----------------------------------------------*/
+
+.zoom_in_rotate_left img {
+  transform: scale(1);
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoom_in_rotate_left a:hover img {
+  /*hoverした時の変化*/
+  transform: rotate(-5deg) scale(1.2);
+  /*拡大、回転の値を変更したい場合はこの数値を変更*/
+}
+
+/*　画像のマスク　*/
+
+.mask {
+  display: block;
+  line-height: 0;
+  /*行の高さを0にする*/
+  overflow: hidden;
+  /*拡大してはみ出る要素を隠す*/
+}
+
+/*　セピアからカラーへ
+  -----------------------------------------------*/
+
+.sepia img {
+  filter: sepia(70%);
+  /*セピア具合を変更したい場合はこの数値を変更*/
+  transition: .2s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.sepia a:hover img {
+  /*hoverした時の変化*/
+  filter: sepia(0);
+}
+
+/*　モノクロからカラーへ
+  -----------------------------------------------*/
+
+.monochrome img {
+  filter: grayscale(100%);
+  /*モノクロ具合を変更したい場合はこの数値を変更*/
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.monochrome a:hover img {
+  /*hoverした時の変化*/
+  filter: grayscale(0);
+}
+
+/*　ぼかす
+  -----------------------------------------------*/
+
+.blur img {
+  filter: blur(2px);
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.blur a:hover img {
+  /*hoverした時の変化*/
+  filter: blur(0);
+  /*ぼかし具合を変更したい場合はこの数値を変更*/
+}
+
+/*　透過
+  -----------------------------------------------*/
+
+.opacity img {
+  opacity: 1;
+  transition: .2s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.opacity a:hover img {
+  /*hoverした時の変化*/
+  opacity: 0.7;
+  /*透過具合を変更したい場合はこの数値を変更*/
+}
+
+/*　キラッ
+  -----------------------------------------------*/
+
+.shine span.mask {
+  position: relative;
+  /*キラッの基点となる位置を定義*/
+  display: block;
+  line-height: 0;
+  /*行の高さを0にする*/
+  overflow: hidden;
+  /*拡大してはみ出る要素を隠す*/
+}
+
+.shine span.mask::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  /*キラッの横幅*/
+  height: 100%;
+  /*キラッの縦幅*/
+  top: 0;
+  /*.shine span.maskのトップ0を基点*/
+  left: -75%;
+  /*画面の見えていない左から右へ移動するスタート地点*/
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+  transform: skewX(-25deg);
+  /*背景白透過を斜めに*/
+}
+
+.shine span.mask:hover::before {
+  /*hoverした時の変化*/
+  animation: shine 1.5s;
+  /*アニメーションの名前と速度を定義*/
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+    /*画面の見えていない左から右へ移動する終了地点*/
+  }
+}
+
+/*　波紋
+  -----------------------------------------------*/
+
+.hamon span.mask {
+  position: relative;
+  /*波紋の基点となる位置を定義*/
+  display: block;
+  line-height: 0;
+  /*行の高さを0にする*/
+  overflow: hidden;
+  /*拡大してはみ出る要素を隠す*/
+}
+
+.hamon span.mask::before {
+  position: absolute;
+  content: "";
+  transform: scale(0);
+  /*円の大きさ初期値は0*/
+  opacity: 0;
+  /*透過0*/
+  width: 100%;
+  /*円のサイズ指定*/
+  height: 100%;
+  /*円のサイズ指定*/
+  border-radius: 50%;
+  /*円の角丸指定*/
+  background: rgba(255, 255, 255, 0.4);
+  /*円の背景色*/
+}
+
+.hamon span.mask:hover::before {
+  /*hoverした時の変化*/
+  animation: circle 0.75s;
+  /*アニメーションの名前と速度を定義*/
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+    /*透過なし*/
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    /*アニメーションで大きくなった2倍の円の指定*/
+  }
+}
+
+/*　画像縮小（ぼかし）＋テキスト
+-----------------------------------------------*/
+
+.zoomInText {
+  /*テキストの基点となる位置を定義*/
+  position: relative;
+}
+
+.zoomInText span.mask {
+  position: relative;
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  display: block;
+  /*画像をくくるspanタグをブロック要素にする*/
+  line-height: 0;
+  /*行の高さを0にする*/
+  overflow: hidden;
+  /*拡大してはみ出る要素を隠す*/
+}
+
+.zoomInText:hover span.mask::before {
+  /*hoverした時の変化*/
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background: rgba(0, 0, 0, 0.5);
+  /*背景色*/
+}
+
+.zoomInText img {
+  transform: scale(1);
+  filter: blur(0);
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoomInText:hover img {
+  /*hoverした時の変化*/
+  transform: scale(1.2);
+  /*拡大の値を変更したい場合はこの数値を変更*/
+  filter: blur(2px);
+  /*ぼかし具合を変更したい場合はこの数値を変更*/
+}
+
+.zoomInText span.cap {
+  opacity: 0;
+  transition: .5s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  position: absolute;
+  z-index: 3;
+  /*テキストを前面に出す*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  /*テキストの色を変えたい場合はここを修正*/
+  line-height: 1.5;
+  /*行の高さを1.5にする*/
+}
+
+.zoomInText:hover span.cap {
+  /*hoverした時の変化*/
+  opacity: 1;
+}
+
+.zoomOutText:hover span.cap {
+  /*hoverした時の変化*/
+  opacity: 1;
+}
+
+/*　画像透過+グラデーション＋テキスト
+-----------------------------------------------*/
+
+/*　画像の透過+グラデーション＋テキスト出現　*/
+
+.opacityText {
+  /*テキストの基点となる位置を定義*/
+  position: relative;
+}
+
+.opacityText span.mask {
+  position: relative;
+  /*グラデーションの基点となる位置を定義*/
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  display: block;
+  /*画像をくくるspanタグをブロック要素にする*/
+  line-height: 0;
+  /*行の高さを0にする*/
+}
+
+.opacityText:hover span.mask::before {
+  /*hoverした時の変化*/
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(88, 182, 211, .6), rgba(229, 93, 135, .6));
+  /*背景色（グラデーション）*/
+}
+
+.opacityText img {
+  opacity: 1;
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.opacityText:hover img {
+  /*hoverした時の変化*/
+  opacity: 0.6;
+  /*透過具合を変更したい場合はこの数値を変更*/
+}
+
+.opacityText span.cap {
+  opacity: 0;
+  transition: .5s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  position: absolute;
+  z-index: 3;
+  /*テキストを前面に出す*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  /*テキストの色を変えたい場合はここを修正*/
+  line-height: 1.5;
+  /*行の高さを1.5にする*/
+}
+
+.opacityText:hover span.cap {
+  /*hoverした時の変化*/
+  opacity: 1;
+}
+
+/* TOPへ戻る */
+
+/*リンクの形状*/
+
+/*リンクを右下に固定*/
+
+#page-top {
+  position: fixed;
+  right: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+#page-top img {
+  width: 45%;
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+
+/* footer
+----------------------------------------------　*/
+
+footer .copyright {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+/* SP表示
+----------------------------------------------　*/
+
+@media (max-width: 800px) {
+  .inner {
+    padding: 0 20px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .img_items {
+    justify-content: space-between;
+  }
+  .img_item {
+    width: 100%;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
