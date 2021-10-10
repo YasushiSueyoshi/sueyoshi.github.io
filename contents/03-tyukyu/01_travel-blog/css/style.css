@@ -1,0 +1,497 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+body {
+  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  text-align: center;
+  color: #fff;
+}
+
+/* Loadingバー中央配置　*/
+
+#splash_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+
+#splash_text svg {
+  height: 2px;
+}
+
+/*header Area
+--------------------------------------------------*/
+
+header .head_log {
+  padding: 20px 0;
+}
+
+header nav {
+  background: #333;
+  margin-bottom: 40px;
+}
+
+header nav ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+header nav ul li {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 9px 30px 9px;
+}
+
+header nav ul li a:hover {
+  background: #fff;
+  color: #333;
+  transition: all 0.4s;
+}
+
+/*3カラムエリア
+--------------------------------------------------*/
+
+.column_3_area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column_3_area .column_3_area_items {
+  width: 32%;
+}
+
+.column_3_area .column_3_area_items .column_3_area_items_ttl h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.column_3_area .column_3_area_items .column_3_area_items_link {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 疑似要素で下線を設定するために、「position: relative;」を設定 */
+
+.column_3_area .column_3_area_items .column_3_area_items_link a {
+  color: #333;
+  padding-bottom: 1px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+/*
+「position: absolute;」を設定し、left、bottomで下線の位置を調整
+widthとheightで線の長さと高さを設定
+疑似要素で線を表示させるためには、「content: '';」を設定すること
+「transition: all 200ms ease;」でホバー時の速度などを設定
+*/
+
+.column_3_area .column_3_area_items .column_3_area_items_link a::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #333;
+  transition: all 200ms ease;
+}
+
+/*
+ホバー時の下線の設定
+「opacity: 0;」下線を非表示
+「transform: translateY(3px);」下に3px移動
+→下に3px移動しながら下線を非表示にする
+*/
+
+.column_3_area .column_3_area_items .column_3_area_items_link a:hover::after {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+/*2カラムエリア
+--------------------------------------------------*/
+
+.column_2_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  padding-bottom: 140px;
+}
+
+/*2カラムエリア 左*/
+
+.column_2_area .column_2_area_left {
+  width: 65%;
+}
+
+.column_2_area_left_items {
+  padding-bottom: 80px;
+}
+
+.column_2_area .column_2_area_left .column_2_area_left_items .column_2_area_left_items_ttl {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.column_2_area .column_2_area_left .column_2_area_left_items .column_2_area_left_items_ttl a {
+  color: #333;
+  text-decoration: none;
+}
+
+.column_2_area_left_items_date {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.column_2_area_left_items_date a {
+  color: #333;
+  text-decoration: none;
+}
+
+.column_2_area_left_items_day {
+  margin-right: 20px;
+}
+
+.column_2_area_left_items_img {
+  margin-bottom: 15px;
+}
+
+/*　画像拡大＋回転　*/
+
+.zoomInRotate img {
+  transform: scale(1);
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoomInRotate:hover img {
+  /*hoverした時の変化*/
+  transform: rotate(5deg) scale(1.2);
+  /*拡大、回転の値を変更したい場合はこの数値を変更*/
+}
+
+/*　画像のマスク　*/
+
+.mask {
+  display: block;
+  line-height: 0;
+  /*行の高さを0にする*/
+  overflow: hidden;
+  /*拡大してはみ出る要素を隠す*/
+}
+
+.column_2_area_left_items_txt {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.column_2_area_left_items_link {
+  text-align: center;
+}
+
+.column_2_area_left_items_link a {
+  color: #333;
+  font-size: 14px;
+}
+
+/* 疑似要素で下線を設定するために、「position: relative;」を設定 */
+
+.column_2_area_left_items_link a {
+  color: #333;
+  padding-bottom: 1px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+/*
+「position: absolute;」を設定し、left、bottomで下線の位置を調整
+widthとheightで線の長さと高さを設定
+疑似要素で線を表示させるためには、「content: '';」を設定すること
+「transition: all 200ms ease;」でホバー時の速度などを設定
+*/
+
+.column_2_area_left_items_link a::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #333;
+  transition: all 200ms ease;
+}
+
+/*
+ホバー時の下線の設定
+「opacity: 0;」下線を非表示
+「transform: translateY(3px);」下に3px移動
+→下に3px移動しながら下線を非表示にする
+*/
+
+.column_2_area_left_items_link a:hover::after {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+/*2カラムエリア 右*/
+
+.column_2_area .column_2_area_right {
+  width: 35%;
+  padding: 0 35px;
+  font-size: 14px;
+}
+
+.column_2_area_right_item {
+  margin-bottom: 60px;
+}
+
+.column_2_area_right_item:last-child {
+  margin-bottom: 0;
+}
+
+.column_2_area_right_item h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.column_2_area_right_item_profile .column_2_area_right_item_profile_img {
+  text-align: center;
+}
+
+.column_2_area_right_item_profile .column_2_area_right_item_profile_img img {
+  width: 35%;
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+
+.column_2_area_right_item_ranking {
+  margin-bottom: 30px;
+}
+
+.column_2_area_right_item_ranking a {
+  color: #333;
+  text-decoration: none;
+}
+
+.column_2_area_right_item_ranking_img {
+  margin-bottom: 5px;
+}
+
+/*　セピアからカラーへ　*/
+
+.sepia img {
+  filter: sepia(100%);
+  /*セピア具合を変更したい場合はこの数値を変更*/
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.sepia a:hover img {
+  /*hoverした時の変化*/
+  filter: sepia(0);
+}
+
+.column_2_area_right_items_archive ul {
+  color: #333;
+  border-top: solid 1px #777;
+}
+
+.column_2_area_right_items_archive ul li {
+  padding: 20px;
+  border-bottom: 1px solid #777;
+}
+
+.column_2_area_right_items_archive ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+/*footerエリア
+--------------------------------------------------*/
+
+footer {
+  background: #F7F7F7;
+  padding-top: 60px;
+}
+
+.foot_3column_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  padding-bottom: 60px;
+}
+
+.foot_3column_area_item {
+  width: 30%;
+}
+
+.foot_3column_area_item h3 {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.foot_3column_area_item_about_txt {
+  margin-bottom: 20px;
+}
+
+.foot_copyright {
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.foot_3column_area_item_about_link li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.foot_3column_area_item_about_link .arrow_s {
+  position: relative;
+  display: inline-block;
+  padding-left: 12px;
+  color: #333;
+  text-decoration: none;
+}
+
+.foot_3column_area_item_about_link .arrow_s:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 8px;
+  border-color: transparent transparent transparent #333;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -6px;
+}
+
+.foot_3column_area_item .foot_3column_area_item_menu_link {
+  border-top: 1px solid #333;
+}
+
+.foot_3column_area_item .foot_3column_area_item_menu_link li {
+  border-bottom: 1px solid #333;
+  padding: 15px;
+}
+
+.foot_3column_area_item .foot_3column_area_item_menu_link li a {
+  color: #333;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  /*header Area
+---------------------------------------*/
+  header nav .inner {
+    overflow: scroll;
+    padding: 0;
+  }
+  /*3カラムエリア
+--------------------------------------------------*/
+  main .column_3_area {
+    display: block;
+  }
+  main .column_3_area .column_3_area_items {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  /*2カラムエリア
+--------------------------------------------------*/
+  .column_2_area {
+    display: block;
+    padding-bottom: 120px;
+  }
+  .column_2_area .column_2_area_left {
+    width: 100%;
+  }
+  .column_2_area .column_2_area_right {
+    width: 100%;
+    padding: 0;
+  }
+  .column_2_area_right_item_profile .column_2_area_right_item_profile_img img {
+    width: 60%;
+  }
+  /*footer Area
+---------------------------------------*/
+  .foot_3column_area {
+    display: block;
+  }
+  .foot_3column_area_item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
