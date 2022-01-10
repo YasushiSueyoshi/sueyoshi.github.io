@@ -382,9 +382,11 @@ main {
     opacity: 1;
     /*透過なし*/
   }
+
   30% {
     opacity: 1;
   }
+
   100% {
     transform: scale(2);
     /*アニメーションで大きくなった2倍の円の指定*/
@@ -641,6 +643,7 @@ main {
     opacity: 0;
     transform: translateY(100px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -658,11 +661,69 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
+
   to {
     opacity: 1;
     transform: translateY(100px);
   }
 }
+
+/* isara 回転Z軸2
+   ----------------------------- */
+
+.flipZ2 a {
+  /*テキストの基点となる位置を定義*/
+  position: relative;
+  display: block;
+}
+
+.flipZ2 img {
+  transition: all 0.35s ease;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  backface-visibility: hidden;
+  /*三次元になった際に裏面を可視化させない*/
+}
+
+.flipZ2 a:hover img {
+  /*hoverした時の変化*/
+  transform: rotate3d(-1, -1, 0, 100deg);
+  /*奥行きをもたせて回転*/
+  opacity: 0;
+}
+
+.flipZ2 span.cap {
+  /*ここからエリアの絶対配置の指定*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*ここまでエリアの絶対配置の指定*/
+  transition: all 0.35s ease;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  transform: rotate3d(1, 1, 0, 100deg);
+  /*奥行きをもたせて回転*/
+  opacity: 0;
+  background: #333;
+  /*背景色*/
+  color: #fff;
+  /*テキストの色を変えたい場合はここを修正*/
+  /*ここからテキスト中央寄せの指定*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*ここまでテキスト中央寄せの指定*/
+}
+
+.flipZ2 a:hover span.cap {
+  /*hoverした時の変化*/
+  transform: rotate3d(0, 0, 0, 0deg);
+  /*奥行きをもたせて回転*/
+  opacity: 1;
+  transition-delay: 0.15s;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
 
 /* footer
 ----------------------------------------------　*/
@@ -680,12 +741,15 @@ footer .copyright {
   .inner {
     padding: 0 20px;
   }
+
   h1 {
     font-size: 20px;
   }
+
   .img_items {
     justify-content: space-between;
   }
+
   .img_item {
     width: 100%;
     margin-bottom: 60px;
