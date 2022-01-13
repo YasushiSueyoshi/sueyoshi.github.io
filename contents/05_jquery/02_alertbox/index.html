@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>練習｜Alertbox</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="wrap">
+    <h1>Alertbox</h1>
+    <button class="click_btn">Click Me!</button>
+    <div class="kara"></div>
+    <div class="window">
+      <p>Good job!</p>
+      <button>OK</button>
+    </div>
+  </div>
+
+  <style>
+    body {
+      background: #f1bd29;
+      position: relative;
+    }
+
+    h1,
+    p,
+    div {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 0;
+      appearance: none;
+    }
+
+    .bg {
+      background: rgba(0, 0, 0, .4);
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+    }
+
+    /* 表示領域外へはスクロールさせない */
+    .no_scroll {
+      overflow: hidden;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 80px;
+      font-weight: bold;
+      margin-top: 200px;
+    }
+
+    .click_btn {
+      background: #45abb5;
+      color: #fff;
+      font-size: 36px;
+      padding: 10px 50px;
+      border-radius: 5px;
+    }
+
+    .kara {
+      margin-bottom: 2000px;
+    }
+
+    .window {
+      width: 350px;
+      margin: 0 auto;
+      background: #fff;
+      vertical-align: middle;
+      padding: 20px 0;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateY(-40%) translateX(-50%);
+      z-index: 11;
+
+    }
+
+    .window p {
+      font-size: 36px;
+    }
+
+    .window button {
+      background: #45abb5;
+      color: #fff;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $('.bg, .window').hide();
+      $('.click_btn').click(function () {
+        $("body").addClass("no_scroll"); // 背景固定させるクラス付与
+        $('.bg, .window').fadeIn(300);
+      });
+      // オーバーレイクリックでもモーダルを閉じるように
+      $('.window button, .bg').click(function () {
+        $("body").addClass("no_scroll"); // 背景固定させるクラス付与
+        $('.bg, .window').fadeOut(300);
+      });
+    });
+  </script>
+</body>
+
+</html>
