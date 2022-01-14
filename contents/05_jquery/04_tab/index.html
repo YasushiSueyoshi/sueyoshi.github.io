@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>練習｜Tab</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <style>
+    /* リセットcss */
+    *, *::before, *::after {
+  box-sizing: border-box;
+}
+    html,
+    body,
+    h1,
+    h2,
+    p,
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      line-height: 1.9;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      border: none;
+      vertical-align: bottom;
+      max-width: 100%;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      font-size: 1.6rem;
+      font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    }
+
+    /* 装飾css */
+    body {
+      background: #E46E6E;
+    }
+    #wrap {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #C15757;
+      font-size: 8rem;
+      text-align: center;
+    }
+    .tab_label_items {
+      display: flex;
+    }
+    .tab_label_item {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #fff;
+      background: #C15757;
+      border-right: 1px solid #E46E6E;
+    }
+
+    .tab_label_item a {
+      display: block;
+      width: 150px;
+      padding: 0px 20px;
+    }
+    .tab_label_item a:hover {
+      background: #e18586;
+    }
+    .tab_label_items .tab_label_item .now_tab{
+      background: #F5F4F2;
+      color: #C15757;
+    }
+    .tab_label_items .tab_label_item.now_tab a:hover {
+      background: #F5F4F2;
+      color: #C15757;
+    }
+    h2 {
+      color: #D6AF62;
+      font-size: 6.4rem;
+    }
+    .tab_cont {
+      color: #C15757;
+      background: #F5F4F2;
+      padding: 30px 20px;
+    }
+  </style>
+  <div id="wrap">
+    <h1>Tab</h1>
+    <ul class="tab_label_items">
+      <li class="tab_label_item"><a class="now_tab" href="#tab01">01</a></li>
+      <li class="tab_label_item"><a href="#tab02">02</a></li>
+      <li class="tab_label_item"><a href="#tab03">03</a></li>
+      <li class="tab_label_item"><a href="#tab04">04</a></li>
+    </ul>
+    
+    <div class="contents_wrap">
+      <div id="tab01" class="tab_cont">
+        <h2>01</h2>
+        <p class="tab_txt">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <!-- //.tab_cont -->
+      <div id="tab02" class="tab_cont">
+        <h2>02</h2>
+        <p class="tab_txt">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <!-- //.tab_cont -->
+      <div id="tab03" class="tab_cont">
+        <h2>03</h2>
+        <p class="tab_txt">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <!-- //.tab_cont -->
+      <div id="tab04" class="tab_cont">
+        <h2>04</h2>
+        <p class="tab_txt">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <!-- //.tab_cont -->
+    </div>
+    <!-- // .contents_wrap -->
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+  $(function(){
+    // tab01以外のコンテンツを非表示
+    $('.contents_wrap div[id != "tab01"]').hide();
+    //タブをクリックしたとき
+    $('.tab_label_item a').click(function(){
+      // 一度すべてのコンテンツを非表示
+      $('.tab_cont').hide();
+      // clickしたタブのコンテンツを表示
+      $($(this).attr('href')).show();
+      // 選択したタブを白くする
+      $('.now_tab').removeClass('now_tab');
+      $(this).addClass('now_tab');
+      return false;
+    });
+      
+  });
+
+</script>
+</body>
+
+</html>
