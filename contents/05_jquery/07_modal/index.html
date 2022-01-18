@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>練習｜Modal</title>
+  <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- favicon -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <style>
+    /* リセットcss */
+    html,
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background:#CE563F;
+  color: #333;
+  font-size: 1.6rem;
+  font-family:"游ゴシック",YuGothic,"Hiragino Kaku Gothic ProN",Meiryo, sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 装飾css */
+#wrap {
+  padding: 100px 20px 0 20px;
+}
+h1 {
+  font-size: 8rem;
+  color: #f9b972;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+.modal_items {
+display: flex;
+justify-content: center;
+}
+.modal_item {
+  margin-right: 50px;
+}
+.modal_item:last-child {
+  margin-right: 0;
+}
+/* 半透明背景 */
+#bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,.4);
+}
+/* 拡大画像 */
+#big_photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 640px;
+  height: 420px;
+}
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <h1>Modal</h1>
+    <ul class="modal_items">
+      <li class="modal_item"><a href="img/img1.jpg"><img src="img/thumb1.jpg" alt=""></a></li>
+      <li class="modal_item"><a href="img/img2.jpg"><img src="img/thumb2.jpg" alt=""></a></li>
+      <li class="modal_item"><a href="img/img3.jpg"><img src="img/thumb3.jpg" alt=""></a></li>
+    </ul>
+  </div><!-- /#wrap -->
+
+  <script>
+    $(function(){
+      $('.modal_item a').click(function(){
+        // 背景divと拡大画像divを追加
+          $('body').append('<div id="bg"></div>','<div id="big_photo">');
+        // 背景と拡大画像を一度非表示
+          $('#bg, #big_photo').hide();
+
+        // 拡大画像divの中にimgを追加
+          $('#big_photo').html('<img>');
+        // img要素にclickしたaタグのsrcを取得して設定
+          $('#big_photo img').attr('src',$(this).attr('href'));
+        // img要素にheight,widthを設定
+          $('#big_img img').attr('width',640).attr('height',420);
+        // 背景と拡大画像を再表示
+        $('#bg, #big_photo').fadeIn();
+
+        // 背景をクリックしたとき、モーダルを閉じる
+        $('#bg').click(function(){
+          // 背景（自分自身）をフェードアウト、完了したら削除
+          $(this).fadeOut(function(){
+            $(this).remove();
+          });
+          
+          // 拡大画像をフェードアウト、完了したら削除
+          $('#big_photo').fadeOut(function(){
+            $(this).remove();
+
+          });
+        });
+        return false;
+      });
+    });
+  </script>
+</body>
+</html>
