@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>練習｜photo_caption</title>
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- favicon -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <style>
+    /* リセットcss */
+    html,
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  font-size: 1.6rem;
+  font-family:"游ゴシック",YuGothic,"Hiragino Kaku Gothic ProN",Meiryo, sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 装飾CSS
+-------------------------------- */
+#wrap {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+header {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+.cont_items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cont_item {
+  width: calc(100% / 3 - 20px );
+  margin-bottom: 30px;
+  position: relative;
+}
+main div {
+position: absolute;
+display: none;
+width: 100%;
+height: 100%;
+padding: 20px;
+top: 0;
+left: 0;
+box-sizing: border-box;
+background: rgba(17,179,179,.7);
+}
+main p {
+  position: relative;
+  top: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 2;
+}
+@media (max-width: 768px){
+  .cont_items {
+    justify-content:space-around;
+
+  }
+  .cont_item {
+    width: calc(100% / 2 - 20px );
+  }
+  
+}
+
+</style>
+</head>
+<body>
+  <header><h1>Photo Caption</h1></header>
+    <div id="wrap">
+    <main>
+      <ul  class="cont_items">
+          <li class="cont_item"><img src="img/img1.jpg" alt="photo1：Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></li>
+          <li class="cont_item"><img src="img/img2.jpg" alt="photo2：Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></li>
+          <li class="cont_item"><img src="img/img3.jpg" alt="photo3：Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"></li>
+          <li class="cont_item"><img src="img/img4.jpg" alt="photo4：Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></li>
+          <li class="cont_item"><img src="img/img5.jpg" alt="photo5：Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></li>
+          <li class="cont_item"><img src="img/img6.jpg" alt="photo6：Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></li>
+      </ul>
+    </main>
+  </div><!-- /#wrap -->
+  <script>
+    $(function(){
+      $('.cont_item').hover(function(){
+        //マウスオーバー時の処理
+        $(this).append('<div><p>' + $(this).children('img').attr('alt') + '</p></div>');
+        // フェードイン:キャプションの表示
+        $(this).children('div').stop().fadeIn(300);
+        //キャプションのテキスト位置：0pxから10pxへ移動
+        $(this).children('div').children('p').stop().animate({'top':0},300);
+
+      },function(){ //マウスアウト時の処理
+        // フェードイン:キャプションの表示
+        $(this).children('div').stop().fadeOut(300);
+        //キャプションのテキスト位置：0pxから10pxへ移動
+        $(this).children('div').children('p').stop().animate({'top':'10px'},300, function(){
+                $(this).parent('div').remove();
+        });
+      });
+    });
+
+  </script>
+</body>
+</html>
