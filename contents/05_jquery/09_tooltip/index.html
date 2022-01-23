@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>練習｜09_tooltip</title>
+      <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- favicon -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <style>
+
+body{
+	font-family:Arial, sans-serif;
+	-webkit-font-smoothing:antialiased;
+	background:#E86278;
+	text-align:center;
+}
+
+h1{
+	margin:120px 0;
+	color:#F5D228;
+	font-size:5em;
+	font-weight:bold;
+}
+
+.tool_item{
+	list-style-type:none;
+	margin-right:60px;
+	cursor:pointer;
+	width:150px;
+	height:150px;
+	background:#F5D228;
+	font-size:4em;
+	border-radius:50%;
+}
+
+.tool_item:last-child{
+	margin-right:0;
+}
+
+.tool{
+	display: flex;
+  justify-content: center;
+}
+
+#tooltip{
+	position:absolute;
+	border-radius:10px;
+	background:#FFF;
+}
+
+#tooltip p{
+	text-align:center;
+	color:#E86278;
+	font-size:2em;
+	padding:17px;
+  margin: 0;
+}
+
+#tooltip:after{
+	content:" ";
+	width:0px;
+	border-top:18px solid #FFF;
+	border-left:8px solid transparent;
+	border-right:8px solid transparent;
+	position:absolute;
+	left:50%;
+	margin-left:-8px;
+}
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <h1>Tooltip</h1>
+    <main>
+      <ul class="tool">
+        <li class="tool_item"><img src="img/icon1.png" alt="Information"></li>
+        <li class="tool_item"><img src="img/icon2.png" alt="Help"></li>
+        <li class="tool_item"><img src="img/icon3.png" alt="Contact"></li>
+      </ul>
+    </main>
+  </div><!-- /#wrap -->
+  <script>
+  $(function(){
+      //マウスオーバー時の処理
+      $(".tool_item").hover(function(){
+
+        //body内の最後に要素追加
+        $("body").append('<div id="tooltip"><p></p></div>');
+
+        //tooltipのpタグに、ホバーしたアイコンのalt値を追加
+        $("#tooltip p").html($(this).children().attr("alt"));
+
+        //tooltipを非表示に
+        $('#tooltip').hide();
+
+        //tooltipをフェードイン
+        $('#tooltip').stop().fadeIn();
+
+        // ツールチップ縦位置：アイコンの縦位置 - 角丸四角形高さ - 三角形高さ
+        $("#tooltip").css("top", $(this).offset().top - $("#tooltip").height() - 18);
+
+        // ツールチップ横位置：アイコンの横位置 + (アイコンの幅 - ツールチップの幅)/2
+        $("#tooltip").css("left", $(this).offset().left - ($("#tooltip").width() - $(this).width())/2);
+        
+        // ツールチップをフェードイン
+        $("#tooltip").fadeIn();
+      }, function(){ //マウスアウト時の処理
+        // ツールチップを削除
+        $("#tooltip").remove();
+        
+
+      
+      });
+    });
+
+  </script>
+</body>
+</html>
