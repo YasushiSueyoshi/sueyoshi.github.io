@@ -1,0 +1,228 @@
+@charset "utf-8";
+// 共通エリア
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  width: 100%;
+}
+body.fixed {
+	position: fixed;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+#wrap {
+  max-width: 1360px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+.inner {
+  max-width: 1360px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+// header
+header .inner{
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  .head_left {
+    img {
+      width: 180px;
+    }
+  }
+  .head_right ul{
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 500px;
+    // color: #fff;
+    padding: 36px 50px;
+    transition: all 0.5s;
+    z-index: 20;
+    opacity: 0;
+  a {
+    color: #fff;
+  }
+  }
+  /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn{
+  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+  width: 50px;
+  height:50px;
+  cursor: pointer;
+  z-index: 20;
+}
+/*ボタン内側*/
+
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 13px;
+    height: 2px;
+    background-color: #666;
+  }
+
+
+.openbtn span:nth-of-type(1) {
+  top:22px;
+    width: 50%;
+}
+
+.openbtn span:nth-of-type(2) {
+  top:29px;
+    width:30%;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 20px;
+    left: 16px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 35%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    top: 32px;
+    left: 16px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 35%;
+}
+#mask {
+  display: none;
+  transition: all 0.5s;
+}
+
+
+}
+header.open .inner .head_right ul{
+  left: 0;
+    opacity: 1;
+    transition: all 0.5s;
+li {
+  padding: 10px 0;
+  font-size: 1.4rem;
+  transition: all 0.5s;
+  a{
+    color: #fff;
+    display: block;
+   }
+  }
+}
+header.open .inner .head_right #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+
+
+main {
+  padding-top: 80px;
+}
+// .top_items
+.top_items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .top_item {
+    width: 23%;
+
+      .top_item_txt{
+        margin: 10px 0 40px 0;
+      }
+
+  }
+}
+.top_items .top_item a {
+  transition: all .5s;
+}
+.top_items .top_item a:hover {
+  opacity: 0.6;
+  transition: all .4s;
+}
+// more_link
+.more_link {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 180px;
+  a {
+    display: block;
+    &:hover {
+      opacity: .6;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+// footer
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  .foot_left {
+    list-style: none;
+    display: flex;
+    li {
+      margin-right: 30px;
+    }
+  }
+  .foot_right {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 900px){
+
+
+header {
+  background: tomato;
+}
+header .inner .head_right ul{
+
+  width: 100%;
+
+}
+  // .top_items
+.top_items {
+
+  .top_item {
+    width: 47%;
+  }
+}
+// more_link
+.more_link {
+  margin-bottom: 80px;
+}
+// footer
+footer {
+  display: block;
+  .foot_left {
+    margin-bottom: 5px;
+  }
+}
+}
