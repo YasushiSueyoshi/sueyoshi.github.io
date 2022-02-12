@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 html {
   font-size: 62.5%;
   font-family: "Hiragino Kaku Gothic Pro", sans-serif;
@@ -96,7 +97,7 @@ header {
   width: 100%;
   /*追加*/
   -webkit-box-shadow: 0 7px 10px rgba(30, 30, 31, 0.76);
-          box-shadow: 0 7px 10px rgba(30, 30, 31, 0.76);
+  box-shadow: 0 7px 10px rgba(30, 30, 31, 0.76);
   z-index: 3;
 }
 
@@ -106,11 +107,11 @@ header .inner {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .head_left {
@@ -118,8 +119,8 @@ header .inner {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   font-weight: bold;
 }
 
@@ -168,7 +169,7 @@ header .inner {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
@@ -240,8 +241,8 @@ header .inner {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   font-size: 1.1rem;
 }
 
@@ -384,10 +385,10 @@ header .inner {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .about_skill_wrap .about_skill_items .about_skill_item {
@@ -426,10 +427,10 @@ header .inner {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   color: #000;
   font-size: 1.6rem;
@@ -487,10 +488,10 @@ header .inner {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-bottom: 45px;
 }
 
@@ -553,10 +554,10 @@ h2.h2_kagikakko:after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .three_merit_items .three_merit_item {
@@ -625,7 +626,7 @@ h2.h2_kagikakko:after {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .sougyou_member_items .sougyou_member_item {
@@ -800,10 +801,10 @@ h2.h2_kagikakko:after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .gakusyu_naiyou_items .gakusyu_naiyou_item {
@@ -812,7 +813,7 @@ h2.h2_kagikakko:after {
   border-radius: 5px;
   margin-right: 30px;
   -ms-flex-item-align: baseline;
-      align-self: baseline;
+  align-self: baseline;
 }
 
 .gakusyu_naiyou_items .gakusyu_naiyou_item:nth-child(2n) {
@@ -860,11 +861,11 @@ h2.h2_kagikakko:after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 10px 35px;
   width: 90%;
   margin: 0 auto;
@@ -989,7 +990,7 @@ h2.h2_kagikakko:after {
   top: -40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   background: #F7C23C;
   padding: 0 10px;
 }
@@ -999,9 +1000,9 @@ h2.h2_kagikakko:after {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 50px 70px;
 }
 
@@ -1014,15 +1015,15 @@ h2.h2_kagikakko:after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 20px;
 }
 
@@ -1037,6 +1038,8 @@ h2.h2_kagikakko:after {
 ====================================================================*/
 #no_volunteer {
   background: url(../img/specialdetail.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #fff;
   padding-top: 65px;
   padding-bottom: 90px;
@@ -1112,8 +1115,8 @@ h2.h2_kagikakko:after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 85%;
   margin: 0 auto;
 }
@@ -1314,7 +1317,7 @@ input[type="reset"] {
   right: 15px;
   margin-top: -6px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /*　closeというクラスがついたら形状変化　*/
@@ -1330,7 +1333,7 @@ input[type="reset"] {
   right: 15px;
   margin-top: -4px;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 /*アコーディオンで現れるエリア*/
@@ -1355,8 +1358,8 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   font-size: 1.1rem;
   margin-bottom: 20px;
   margin-top: 10px;
@@ -1390,11 +1393,11 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 5px;
   width: 60px;
   height: 60px;
@@ -1420,25 +1423,26 @@ footer {
   /*はじめは非表示*/
   opacity: 0;
   -webkit-transform: translateX(100px);
-          transform: translateX(100px);
+  transform: translateX(100px);
 }
 
 /*　左の動き　*/
 #page-top.LeftMove {
   -webkit-animation: LeftAnime 0.5s forwards;
-          animation: LeftAnime 0.5s forwards;
+  animation: LeftAnime 0.5s forwards;
 }
 
 @-webkit-keyframes LeftAnime {
   from {
     opacity: 0;
     -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    transform: translateX(100px);
   }
+
   to {
     opacity: 1;
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -1446,31 +1450,33 @@ footer {
   from {
     opacity: 0;
     -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    transform: translateX(100px);
   }
+
   to {
     opacity: 1;
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 /*　右の動き　*/
 #page-top.RightMove {
   -webkit-animation: RightAnime 0.5s forwards;
-          animation: RightAnime 0.5s forwards;
+  animation: RightAnime 0.5s forwards;
 }
 
 @-webkit-keyframes RightAnime {
   from {
     opacity: 1;
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
+
   to {
     opacity: 1;
     -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    transform: translateX(100px);
   }
 }
 
@@ -1478,12 +1484,13 @@ footer {
   from {
     opacity: 1;
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
+
   to {
     opacity: 1;
     -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    transform: translateX(100px);
   }
 }
 
@@ -1499,13 +1506,16 @@ footer {
   h2 {
     font-size: 18px;
   }
+
   .br_sp_only {
     display: block;
   }
+
   .blue_bg {
     font-size: 1.2rem;
     padding: 20px 20px;
   }
+
   /*==================================================================
   header　エリア
 ====================================================================*/
@@ -1513,40 +1523,48 @@ footer {
     height: 65px;
     padding-left: 5px;
   }
+
   .head_left {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
   }
+
   .head_left img {
     width: 90px;
   }
+
   .head_left span {
     font-size: 1rem;
     margin-bottom: 0;
   }
+
   .head_right .pc_btn {
     display: none;
   }
+
   .head_right .sp_btn {
     display: block;
     text-align: center;
     background: #da6b64;
     font-size: 1.2rem;
   }
+
   .head_right .sp_btn a {
     padding: 11px 13px;
     display: block;
   }
+
   .head_right .sp_btn a img {
     display: block;
     margin: 0 auto;
     margin-bottom: 3px;
   }
+
   /*==================================================================
 メインビジュアルエリア
 ====================================================================*/
@@ -1557,33 +1575,40 @@ footer {
     height: 330px;
     position: relative;
   }
+
   .mainvisual .mainvisual_wrap {
     position: absolute;
     width: 100%;
     top: 60%;
   }
+
   .mainvisual .mainvisual_wrap h1 {
     font-size: 1.8rem;
     margin-bottom: 10px;
     line-height: 30px;
   }
+
   .mainvisual .mainvisual_wrap img {
     width: 50%;
     margin-bottom: 20px;
   }
+
   .mainvisual .mainvisual_wrap p {
     font-size: 1.4rem;
   }
+
   /*==================================================================
   お問い合わせ＆資料請求はこちら　エリア
 ====================================================================*/
   #siryoseikyu {
     padding: 15px 5px;
   }
+
   #siryoseikyu h2 {
     font-size: 1.6rem;
     margin-bottom: 15px;
   }
+
   #siryoseikyu .font_color_red {
     font-size: 1.4rem;
     background: #fff;
@@ -1592,20 +1617,24 @@ footer {
     font-weight: normal;
     line-height: 1.2;
   }
+
   #siryoseikyu .btn {
     font-size: 2rem;
     margin-bottom: 30px;
     width: 95%;
   }
+
   #siryoseikyu p {
     width: 90%;
     font-size: 1.5rem;
     line-height: 2;
     margin: 0 auto 15px;
   }
+
   #siryoseikyu p .br_sp_only {
     display: block;
   }
+
   /*==================================================================
   エンジニアとして本当の自由を手に入れるためには？　エリア
 ====================================================================*/
@@ -1616,15 +1645,19 @@ footer {
     padding-left: 5px;
     padding-right: 5px;
   }
+
   #engineer_freedom p {
     padding: 0 30px;
   }
+
   #engineer_freedom .br_sp_only {
     display: block;
   }
+
   #engineer_freedom .engineer_freedom_lead1 {
     padding-top: 55px;
   }
+
   /*==================================================================
   　ノマドエンジニア育成講座　iSara[イサラ]とはエリア
 ====================================================================*/
@@ -1633,6 +1666,7 @@ footer {
     padding-left: 5px;
     padding-right: 5px;
   }
+
   .sec_icon {
     width: 60px;
     height: 60px;
@@ -1640,28 +1674,35 @@ footer {
     line-height: 60px;
     font-size: 1.2rem;
   }
+
   .about_lead {
     font-size: 1.6rem;
     line-height: 1.6;
   }
+
   .about_skill_wrap {
     padding: 15px 0;
     margin: 0 15px;
   }
+
   .about_skill_wrap h3 {
     font-size: 1.6rem;
     margin-bottom: 25px;
   }
+
   .about_skill_wrap .about_skill_items {
     font-size: 1rem;
   }
+
   .about_skill_wrap .about_skill_items .about_skill_item {
     margin-bottom: 25px;
     padding: 0 15px;
   }
+
   .about_skill_wrap .about_skill_items .about_skill_item:last-child {
     margin-bottom: 0;
   }
+
   /*==================================================================
   iSaraで「基本的なプログラミングスキル」は教えません　エリア
 ====================================================================*/
@@ -1673,13 +1714,16 @@ footer {
     padding-left: 10px;
     padding-right: 10px;
   }
+
   #no_skill .no_skill_item {
     padding: 15px;
   }
+
   .no_skill_items .no_skill_item {
     width: 100%;
     margin-bottom: 15px;
   }
+
   /*==================================================================
   青背景　プログラミングスキル以外が大切。　エリア
 ====================================================================*/
@@ -1689,18 +1733,23 @@ footer {
   #isara_manaberukoto {
     padding: 20px 0;
   }
+
   #isara_manaberukoto .isara_manaberukoto_lead1 {
     font-size: 1.6rem;
   }
+
   .isara_manaberukoto_items {
     margin-bottom: 30px;
   }
+
   .isara_manaberukoto_items .isara_manaberukoto_item {
     margin-bottom: 20px;
   }
+
   .isara_manaberukoto_items .isara_manaberukoto_item:last-child {
     margin-bottom: 0;
   }
+
   /*==================================================================
   iSara[イサラ]の３つのメリット　エリア
 ====================================================================*/
@@ -1709,31 +1758,39 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
   }
+
   #three_merit h2 span {
     font-size: 1.5rem;
   }
+
   h2.h2_kagikakko {
     padding: 20px 20px;
   }
+
   .three_merit_items .three_merit_item {
     width: 100%;
   }
+
   .three_merit_items .three_merit_item .three_merit_item_txt {
     padding: 0;
     font-size: 1.2rem;
     text-align: center;
   }
+
   .three_merit_items .three_merit_item .three_merit_item_txt .three_merit_item_txt_ttl {
     font-size: 1.4rem;
   }
+
   .three_merit_support_wrap {
     padding: 15px 10px;
     margin: 0 0 15px 0;
   }
+
   .three_merit_support_wrap h3 {
     font-size: 1.6rem;
     margin-bottom: 25px;
   }
+
   /*==================================================================
   　創業メンバー　エリア
 ====================================================================*/
@@ -1742,17 +1799,21 @@ footer {
     background-size: cover;
     background-position: center;
   }
+
   .sougyou_member_items {
     display: block;
   }
+
   .sougyou_member_items .sougyou_member_item {
     width: 100%;
   }
+
   .sougyou_member_items .sougyou_member_item .sougyou_member_item_txt {
     padding: 30px;
     margin-top: -25px;
     min-height: 0;
   }
+
   /*==================================================================
   ノマドエンジニアとして自由に稼ぐことは「 本当に 」可能なのか？　エリア
 ====================================================================*/
@@ -1769,11 +1830,13 @@ footer {
     margin-left: -20px;
     margin-bottom: -20px;
   }
+
   #question h2.h2_kagikakko {
     padding: 20px 20px;
     line-height: 2.3;
     font-size: 1.4rem;
   }
+
   #question h2.h2_kagikakko:before, #question h2.h2_kagikakko:after {
     position: absolute;
     content: '';
@@ -1782,26 +1845,31 @@ footer {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
+
   #question h2.h2_kagikakko:before {
     top: 0;
     left: 0;
     border-top: 4px solid #fff;
     border-left: 4px solid #fff;
   }
+
   #question h2.h2_kagikakko:after {
     bottom: 0;
     right: 0;
     border-bottom: 4px solid #fff;
     border-right: 4px solid #fff;
   }
+
   #answer h2 span {
     font-size: 1.2rem;
   }
+
   #answer .qa_kome {
     font-size: 1.2rem;
     margin: 0 auto;
     margin-bottom: 25px;
   }
+
   .qa_items {
     font-size: 1.8rem;
     color: #777;
@@ -1810,51 +1878,63 @@ footer {
     margin: 0 auto;
     text-align: left;
   }
+
   .qa_items .qa_item {
     margin-bottom: 60px;
     padding: 0 20px;
   }
+
   .qa_items .qa_item img {
     margin-right: 0;
     margin: 0 auto;
   }
+
   .qa_items .qa_item .qa_item_right {
     padding-top: 20px;
   }
+
   .qa_items .qa_item .qa_item_right .qa_item_right_name {
     text-align: center;
   }
+
   #answer {
     padding-top: 45px;
     padding-bottom: 50px;
   }
+
   #answer h2 {
     margin-bottom: 40px;
   }
+
   #answer h2 span {
     font-size: 1.2rem;
   }
+
   #answer .qa_kome {
     margin-bottom: 35px;
     font-size: 1.2rem;
   }
+
   .qa_items .qa_item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-bottom: 60px;
   }
+
   .qa_items .qa_item .qa_item_right {
     padding-top: 20px;
   }
+
   .qa_items .qa_item .qa_item_right .qa_item_right_name {
     font-size: 1.2rem;
     font-style: italic;
     text-decoration: underline;
     margin-top: 10px;
   }
+
   /*==================================================================
   iSara[イサラ]で学べる内容　エリア
 ====================================================================*/
@@ -1867,59 +1947,73 @@ footer {
     padding-bottom: 40px;
     font-weight: bold;
   }
+
   #gakusyu_naiyou h2 {
     margin-bottom: 15px;
   }
+
   #gakusyu_naiyou .gakusyu_naiyou_lead {
     margin-bottom: 30px;
   }
+
   .gakusyu_naiyou_items {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
+
   .gakusyu_naiyou_items .gakusyu_naiyou_item {
     margin-right: 0;
     width: 90%;
     margin-bottom: 15px;
   }
+
   .gakusyu_naiyou_items .gakusyu_naiyou_item .gakusyu_naiyou_item_ttl {
     padding: 15px;
   }
+
   /*==================================================================
   受講の流れ　エリア
 ====================================================================*/
   #jukou_nagare .accordion-area {
     display: block;
   }
+
   #jukou_nagare h2 {
     margin-bottom: 30px;
   }
+
   #jukou_nagare .jukou_nagare_flow_img {
     display: none;
   }
+
   #jukou_nagare .jukou_nagare_items {
     display: none;
   }
+
   #jukou_nagare .accordion-area section {
     background: #FEF5E0;
     text-align: left;
   }
+
   #jukou_nagare .accordion-area section .box {
     font-weight: bold;
     font-size: 1.2rem;
   }
+
   #jukou_nagare .accordion-area .jukou_nagare_item_right_lead1, #jukou_nagare .accordion-area .jukou_nagare_item_right_lead2, #jukou_nagare .accordion-area .jukou_nagare_item_right_lead3 {
     margin-bottom: 10px;
   }
+
   #jukou_nagare .accordion-area .jukou_nagare_item_right_lead3 {
     font-weight: normal;
   }
+
   #jukou_nagare .accordion-area li section .title {
     font-weight: bold;
     font-size: 1.5rem;
@@ -1929,9 +2023,10 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
+
   #jukou_nagare .accordion-area li section .skype_icon::before {
     content: '';
     position: absolute;
@@ -1943,6 +2038,7 @@ footer {
     background-size: contain;
     vertical-align: middle;
   }
+
   #jukou_nagare .accordion-area li section .jizenkadai_icon::before {
     content: '';
     position: absolute;
@@ -1954,6 +2050,7 @@ footer {
     background-size: contain;
     vertical-align: middle;
   }
+
   #jukou_nagare .accordion-area li section .tokou_icon::before {
     content: '';
     position: absolute;
@@ -1965,6 +2062,7 @@ footer {
     background-size: contain;
     vertical-align: middle;
   }
+
   #jukou_nagare .accordion-area li section .jitsuanken_icon::before {
     content: '';
     position: absolute;
@@ -1976,6 +2074,7 @@ footer {
     background-size: contain;
     vertical-align: middle;
   }
+
   #jukou_nagare .accordion-area li section .support_icon::before {
     content: '';
     position: absolute;
@@ -1987,6 +2086,7 @@ footer {
     background-size: contain;
     vertical-align: middle;
   }
+
   /*==================================================================
   　なぜバンコクなのか？エリア
 ====================================================================*/
@@ -1996,14 +2096,17 @@ footer {
     background-size: cover;
     padding: 30px;
   }
+
   #what_Bangkok .inner h2 {
     margin-bottom: 20px;
     font-size: 2.4rem;
     text-align: center;
   }
+
   #what_Bangkok .inner .what_Bangkok_items {
     font-size: 1.2rem;
   }
+
   /*==================================================================
   iSara受講生への参加特典　エリア
 ====================================================================*/
@@ -2013,38 +2116,48 @@ footer {
     font-weight: bold;
     font-size: 1.2rem;
   }
+
   #sanka_tokuten .inner {
     padding: 0 20px;
   }
+
   #sanka_tokuten h2 {
     margin-bottom: 20px;
     font-size: 1.8rem;
   }
+
   #sanka_tokuten .sanka_tokuten_lead {
     margin-bottom: 50px;
   }
+
   #sanka_tokuten .sanka_tokuten_lead span {
     color: #fff;
   }
+
   .sanka_tokuten_wrap {
     margin: 0;
   }
+
   .sanka_tokuten_wrap h3 {
     font-size: 1.8rem;
     width: 80%;
     top: -30px;
   }
+
   .sanka_tokuten_wrap .sanka_tokuten_items {
     padding: 50px 0;
   }
+
   .sanka_tokuten_wrap .sanka_tokuten_items .sanka_tokuten_item {
     width: 200px;
     height: 200px;
     margin-bottom: 20px;
   }
+
   .sanka_tokuten_wrap .sanka_tokuten_items .sanka_tokuten_item:last-of-type {
     margin-bottom: 0;
   }
+
   /*==================================================================
   iSaraはボランティアではありません　エリア
 ====================================================================*/
@@ -2052,16 +2165,20 @@ footer {
     background: url(../img/specialdetailsp.jpg) no-repeat;
     font-size: 1.2rem;
   }
+
   #no_volunteer .inner {
     padding: 0 20px;
   }
+
   #no_volunteer .inner h2 {
     font-size: 1.8rem;
   }
+
   #no_volunteer .inner .no_volunteer_kagikakko {
     font-size: 1.8rem;
     padding: 15px 30px;
   }
+
   /*==================================================================
   創業者からのメッセージ　エリア
 ====================================================================*/
@@ -2069,26 +2186,32 @@ footer {
     padding-top: 40px;
     padding-bottom: 60px;
   }
+
   #sougyosya_message .inner {
     padding: 0 20px;
   }
+
   #sougyosya_message .inner h2 {
     margin-bottom: 40px;
     font-size: 1.8rem;
   }
+
   #sougyosya_message .inner .sougyosya_message_lead1 {
     font-size: 1.4rem;
     margin-bottom: 20px;
   }
+
   .sougyosya_message_wrap {
     display: block;
     width: 100%;
   }
+
   .sougyosya_message_wrap .sougyosya_message_left {
     margin-right: 0;
     width: 100%;
     margin-bottom: 10px;
   }
+
   /*==================================================================
   資料請求フォーム　エリア
 ====================================================================*/
@@ -2097,12 +2220,15 @@ footer {
     padding-top: 50px;
     padding-bottom: 30px;
   }
+
   #yokuaru_question h2 {
     margin-bottom: 20px;
   }
+
   .title {
     padding: 3%;
   }
+
   /*==================================================================
   よくある質問　エリア
 ====================================================================*/
