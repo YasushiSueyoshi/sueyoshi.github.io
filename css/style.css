@@ -730,6 +730,77 @@ main {
   /*移り変わる速さを変更したい場合はこの数値を変更*/
 }
 
+/*  ボタン・見出しパターン集
+    画像透過+グラデーション＋テキスト
+-----------------------------------------------------------------------------------*/
+
+/*　画像の透過+グラデーション＋テキスト出現　*/
+
+.opacityText2 {
+  /*テキストの基点となる位置を定義*/
+  position: relative;
+}
+
+.opacityText2 span.mask {
+  position: relative;
+  /*グラデーションの基点となる位置を定義*/
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  display: block;
+  /*画像をくくるspanタグをブロック要素にする*/
+  line-height: 0;
+  /*行の高さを0にする*/
+}
+
+.opacityText2:hover span.mask::before {
+  /*hoverした時の変化*/
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(235, 126, 235, 0.6), rgba(104, 229, 93, 0.6));
+  /*背景色（グラデーション）*/
+}
+
+.opacityText2 img {
+  opacity: 1;
+  transition: .3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.opacityText2:hover img {
+  /*hoverした時の変化*/
+  opacity: 0.6;
+  /*透過具合を変更したい場合はこの数値を変更*/
+}
+
+.opacityText2 span.cap {
+  opacity: 0;
+  transition: .5s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+  position: absolute;
+  z-index: 3;
+  /*テキストを前面に出す*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  /*テキストの色を変えたい場合はここを修正*/
+  line-height: 1.5;
+  /*行の高さを1.5にする*/
+  font-size: 24px;
+}
+
+.opacityText2:hover span.cap {
+  /*hoverした時の変化*/
+  opacity: 1;
+  width: 75%;
+  text-align: center;
+}
+
 /* -----------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
 jQueryエリア cssここから
@@ -1985,8 +2056,5 @@ footer .copyright {
   .button_item:nth-child(n + 2) {
     margin-top: 15px;
   }
-
-
-
 
 }
