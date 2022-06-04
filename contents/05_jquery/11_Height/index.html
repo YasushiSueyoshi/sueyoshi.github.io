@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Height</title>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <style>
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+    html {
+      font-size: 62.5%;
+      font-family: Helvetica,Arial,sans-serif;
+    }
+    body {
+      background: #484848;
+      color: #dadada;
+    }
+    main {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 8rem;
+      font-weight: normal;
+      text-align: center;
+      margin: 50px 0;
+    }
+    .card_item {
+      display: flex;
+      justify-content: center;
+      font-size: 1.6rem;
+    }
+    .card_items {
+      width: 100%;
+      max-width: 199px;
+      border-right: 2px solid #484848;
+      background: #5D5D5D;
+    }
+    .card_items p {
+      padding: 15px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Height</h1>
+    <div class="card_item">
+      <div class="card_items">
+        <img src="img/img1.jpg" alt="" width="199" height="290">
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="card_items">
+        <img src="img/img2.jpg" alt=""  width="199" height="132">
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="card_items">
+        <img src="img/img3.jpg" alt=""  width="199" height="200">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="card_items">
+        <img src="img/img4.jpg" alt=""  width="199" height="299">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="card_items">
+        <img src="img/img5.jpg" alt=""  width="199" height="133">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+
+    </div><!-- /.card_item -->
+
+  </main>
+  <script>
+    $(function(){
+      // 高さの最大値を代入するための変数h
+      var h = 0;
+
+      // それぞれの要素の高さを調べる
+      $('.card_items').each(function(){
+        // 要素の高さを取得
+          if($(this).height() > h) {
+            h = $(this).height();
+          }
+      });
+      // 要素の高さを変数hの値に統一
+      $('.card_items').css('height', h + 'px');
+    });
+    </script>
+
+</body>
+</html>
