@@ -701,7 +701,7 @@ main {
   /*ここからエリアの絶対配置の指定*/
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 50px;
   left: 0;
   right: 0;
   /*ここまでエリアの絶対配置の指定*/
