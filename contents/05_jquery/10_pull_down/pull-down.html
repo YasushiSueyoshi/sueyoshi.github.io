@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プルダウン練習</title>
+  <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>プルダウン練習</h1>
+  <div id="form_area">
+    <select id="parent_area">
+      <option value="">カテゴリを選んでください</option>
+      <option value="a">那覇</option>
+      <option value="b">読谷</option>
+      <option value="c">糸満</option>
+    </select>
+    <select id="child_area">
+      <option value="">お住いの地域を選択してください</option>
+    </select>
+    <p id="sentaku_kekka"></p>
+  </div>
+<style>
+  html {
+    height: 100vh;
+  }
+  body {
+    background: linear-gradient(to bottom, #f6b0c9, #ffafac, #ffb889, #f7c96d, #c9de68) no-repeat;
+  }
+  h1 {
+    text-align: center;
+  }
+  #form_area {
+    text-align: center;
+  }
+#form_area select {
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+</style>
+
+
+
+
+
+<script>
+//2つ目の選択肢を配列で用意
+  (function ($) {
+  var products = {
+  a:[
+    '那覇_プラン1',
+    '那覇_プラン2',
+    '那覇_プラン3',
+  ],
+  b:[
+    '読谷_プラン1',
+    '読谷_プラン2',
+  ],
+  c:[
+    '糸満_プラン1',
+    '糸満_プラン2',
+    '糸満_プラン3',
+  ],
+};
+
+// 2つ目の選択肢を選んだ後、表示されるコンテンツを配列で用意
+  var contents = {
+  '那覇_プラン1': '那覇_プラン1_text',
+  '那覇_プラン2': '那覇_プラン2_text',
+  '那覇_プラン3': '那覇_プラン3_text',
+  '読谷_プラン1': '読谷_プラン1_text',
+  '読谷_プラン2': '読谷_プラン2_text',
+  '糸満_プラン1': '糸満_プラン1_text',
+  '糸満_プラン2': '糸満_プラン2_text',
+  '糸満_プラン3': '糸満_プラン3_text',
+};
+
+var noValue = $('#child_area').html();
+  // 1つ目のプルダウンが選択されたとき
+  $('#parent_area').change(function(){
+    // 1つめのプルダウンが変更されたら結果テーブルを非表示に
+    $('#sentaku_kekka').hide();
+
+    // 2つ目のプルダウンに要素を追加
+    $('#child_area').html(noValue);
+
+    // 1つ目のプルダウンで選んだ選択肢を定義
+    var device_select = $(this).val();
+
+  // 1つ目のプルダウンで選んだ選択肢
+  if(device_select){
+    //2つ目の選択肢を配列に、選択したデバイスを
+    var item = products[device_select];
+    // 0から順に代入
+    for(var i = 0; i < item.length; i++){
+    // 2つ目プルダウンに選択肢として追加
+    option = '<option value="' + item[i] + '">' + item[i] + '</option>';
+    $('#child_area').append(option);
+    }
+  }else{// もし2つ目プルダウンが空だった場合、表示させるコンテンツを空（表示させない）にする
+    $('#child_area').val('');
+    $('#sentaku_kekka').html('');
+  }
+});
+$('#child_area').change(function(){
+  var val = $(this).val();
+  if(val){
+    var contentsText = '<p>' + contents[val] + '</p>'
+    $('#sentaku_kekka').html(contentsText).hide().fadeIn(500);
+  }else if(device_select){
+    $('#sentaku_kekka').html('');
+  }else {
+    $('#sentaku_kekka').html('');
+  }
+});
+
+
+})(jQuery);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
