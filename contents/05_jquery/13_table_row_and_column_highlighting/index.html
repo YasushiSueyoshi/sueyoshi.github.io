@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>練習 | Table Row and Column Highlighting</title>
+  <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<style>
+  /* リセットCSS */
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+</style>
+</head>
+<body>
+
+  <style>
+
+    html {
+      background: #7d3a61;
+      font-family: Arial, sans-serif;
+      color: #503a47;
+    }
+    #wrap {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #fbc965;
+      font-size:3em;
+      font-weight: bold;
+      text-align: center;
+      margin: 70px 0;
+    }
+
+    table {
+      width: 50%;
+      /* min-width: 980px; */
+      margin: 0 auto;
+
+      border-collapse: separate;
+      border-spacing: 1px;
+      font-size: 1.1em;
+    }
+    td,th {
+      text-align: center;
+      font-size: 1.1em;
+      padding: 10px 25px;
+    }
+    th {
+      color: #fff;
+      background: #a76188;
+    }
+    td {
+      background: #fff;
+    }
+    /* セルのハイライト用 */
+    .target td, td.target {
+      background: #e8e8e8;
+    }
+
+      @media (max-width: 768px){
+        table {
+      transform:scale(.5);
+      transform-origin: top left;
+      border-collapse: separate;
+      }
+  </style>
+</body>
+
+<div id="wrap">
+  <h1>Table Row and Column Highlighting</h1>
+    <table>
+  <tr>
+    <th></th>
+    <th>A</th>
+    <th>B</th>
+    <th>C</th>
+    <th>D</th>
+    <th>G</th>
+    <th>E</th>
+    <th>F</th>
+  </tr>
+  <tr>
+    <th>a</th>
+    <td>1000</td>
+    <td>2000</td>
+    <td>3000</td>
+    <td>4000</td>
+    <td>5000</td>
+    <td>6000</td>
+    <td>7000</td>
+  </tr>
+  <tr>
+    <th>b</th>
+    <td>2000</td>
+    <td>3000</td>
+    <td>4000</td>
+    <td>5000</td>
+    <td>6000</td>
+    <td>7000</td>
+    <td>8000</td>
+  </tr>
+  <tr>
+    <th>c</th>
+    <td>3000</td>
+    <td>4000</td>
+    <td>5000</td>
+    <td>6000</td>
+    <td>7000</td>
+    <td>8000</td>
+    <td>9000</td>
+  </tr>
+  <tr>
+    <th>d</th>
+    <td>4000</td>
+    <td>5000</td>
+    <td>6000</td>
+    <td>7000</td>
+    <td>8000</td>
+    <td>9000</td>
+    <td>10000</td>
+  </tr>
+  <tr>
+    <th>e</th>
+    <td>5000</td>
+    <td>6000</td>
+    <td>7000</td>
+    <td>8000</td>
+    <td>9000</td>
+    <td>10000</td>
+    <td>11000</td>
+  </tr>
+  <tr>
+    <th>f</th>
+    <td>6000</td>
+    <td>7000</td>
+    <td>8000</td>
+    <td>9000</td>
+    <td>10000</td>
+    <td>11000</td>
+    <td>12000</td>
+  </tr>
+  <tr>
+    <th>g</th>
+    <td>7000</td>
+    <td>8000</td>
+    <td>9000</td>
+    <td>10000</td>
+    <td>11000</td>
+    <td>12000</td>
+    <td>13000</td>
+  </tr>
+  </table>
+</div>
+
+<script>
+  $(function(){
+  //セルをマウスオーバー
+  $('td').hover(function(){
+    
+    // 親要素（tr）にtargetクラスを付与
+    $(this).parent().addClass('target');
+    
+    // 親要素から見て自分が何番の子要素か調べる
+    var myIndex = $(this).index();
+    
+    // mrIndexに1足す
+    myIndex ++;
+    
+    // 各行の「myIndex●番目の子要素」にtargetクラスを付与
+    $("td:nth-child("+ myIndex +")").addClass("target");
+  },function(){
+      // マウスアウト時の処理
+      $('.target').removeClass('target');
+  });
+}); 
+</script>
+</html>
