@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtering</title>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+      v2.0 | 20110126
+      License: none (public domain)
+    */
+
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+
+      body {
+        line-height: 1;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+      }
+
+      blockquote,
+      q {
+        quotes: none;
+      }
+
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <style>
+      html {
+        font-size: 62.5%;
+        background: #e9eceb;
+      }
+      #wrap {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+        font-size: 8rem;
+        color: #717171;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .filter_btn {
+        text-align: center;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .filter_btn button {
+        font-size: 1.6rem;
+        background: #9fafaa;
+        color: #e9eceb;
+        padding: 10px 25px;
+        border-radius: 30px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        width: 95px;
+      }
+      .filter_btn button:hover {
+        background: #717171;
+      }
+      .item_parent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .item_child {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        float: left;
+
+      }
+      .item_child:nth-of-type(6n) {
+        margin-right: 0;
+      }
+      .red {
+        background: #d2334c;
+      }
+      .gray {
+        background: #ccc;
+      }
+      .blue {
+        background: #404669;
+      }
+      .yellow {
+        background: #f7d139;
+      }
+      @media (max-width: 768px) {
+        .filter_btn button {
+          margin-left: 5px;
+        }
+        .item_parent {
+          justify-content: space-around;
+        }
+        .item_child {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+
+    <div id="wrap">
+      <h1>Filtering</h1>
+      <div class="filter_btn">
+        <button value="all">All</button>
+        <button value="red">Red</button>
+        <button value="blue">Blue</button>
+        <button value="yellow">Yellow</button>
+        <button value="gray">Gray</button>
+        <button value="shirt">Shirt</button>
+        <button value="jacket">Jacket</button>
+        <button value="skirt">Skirt</button>
+        <button value="pants">Pants</button>
+      </div>
+
+      <ul class="item_parent">
+        <li class="item_child red skirt"><img src="img/skirt.png" alt="" /></li>
+        <li class="item_child gray jacket"><img src="img/jacket.png" alt="" /></li>
+        <li class="item_child yellow shirt"><img src="img/shirt.png" alt="" /></li>
+        <li class="item_child blue skirt"><img src="img/skirt.png" alt="" /></li>
+        <li class="item_child gray pants"><img src="img/pants.png" alt="" /></li>
+        <li class="item_child red shirt"><img src="img/shirt.png" alt="" /></li>
+        <li class="item_child blue shirt"><img src="img/shirt.png" alt="" /></li>
+        <li class="item_child yellow pants"><img src="img/pants.png" alt="" /></li>
+        <li class="item_child red jacket"><img src="img/jacket.png" alt="" /></li>
+        <li class="item_child gray shirt"><img src="img/shirt.png" alt="" /></li>
+        <li class="item_child yellow skirt"><img src="img/skirt.png" alt="" /></li>
+        <li class="item_child blue jacket"><img src="img/jacket.png" alt="" /></li>
+      </ul>
+    </div>
+
+    <script>
+      $(function () {
+        // フィルターボタンを押したとき
+        $(".filter_btn button").click(function () {
+          // value値を取得
+          var target = $(this).attr("value");
+
+          // 全てのli要素を調べる
+          $(".item_parent .item_child").each(function () {
+            // 一度すべてを非表示にする
+            $(this).animate({ "opacity": 0 }, 300, function () {
+              $(this).hide();
+
+              // フィルタリングの条件を満たしているか
+              if ($(this).hasClass(target) || target == "all") {
+                // 条件を満たしている場合は再表示
+                $(this).show();
+                $(this).animate({ "opacity": 1 }, 300);
+                $('.item_parent').css("justify-content","flex-start");
+                $('.item_child').css("margin-right","20px");
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
