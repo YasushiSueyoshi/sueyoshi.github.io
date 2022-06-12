@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>練習 | Accordion</title>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      html {
+        font-size: 62.5%;
+        background: #ececec;
+      }
+      a {
+        text-align: center;
+        display: block;
+        padding: 20px 0;
+        width: 50px;
+        height: 310px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      #wrap {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        font-size: 1.6rem;
+        color: #fff;
+      }
+      h1 {
+        text-align: center;
+        font-size: 8rem;
+        color: #47475a;
+        margin: 50px 0;
+      }
+      dt {
+        float: left;
+      }
+      dd {
+        float: left;
+        max-width: 100%;
+        width: 800px;
+        height: 350px;
+        overflow: hidden;
+        background: tomato;
+      }
+      dd p {
+        padding: 20px;
+        width: 740px;
+      }
+
+      dt:nth-of-type(1),
+      dd:nth-of-type(1) {
+        background: rgba(21, 21, 97, 0.977);
+      }
+      dt:nth-of-type(1) a:hover {
+        background: #2c54a4;
+      }
+
+      dt:nth-of-type(2),
+      dd:nth-of-type(2) {
+        background: #99140d;
+      }
+      dt:nth-of-type(2) a:hover {
+        background: #de3333;
+      }
+
+      dt:nth-of-type(3),
+      dd:nth-of-type(3) {
+        background: #066a2c;
+      }
+
+      dt:nth-of-type(3) a:hover {
+        background: #54db5d;
+      }
+      dt:nth-of-type(4),
+      dd:nth-of-type(4) {
+        background: #d9ae03;
+      }
+      dt:nth-of-type(4) a:hover {
+        background: #ffcc00;
+      }
+    </style>
+    <div id="wrap">
+      <h1>Accordion</h1>
+      <dl class="acd_area">
+        <dt><a class="current_btn" href="#acd_01">1</a></dt>
+        <dd id="acd_01" class="current">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </dd>
+        <dt>
+          <a href="#acd_02">2</a>
+        </dt>
+        <dd id="acd_02">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </dd>
+        <dt>
+          <a href="#acd_03">3</a>
+        </dt>
+        <dd id="acd_03">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </dd>
+        <dt>
+          <a href="#acd_04">4</a>
+        </dt>
+        <dd id="acd_04">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </dd>
+      </dl>
+    </div>
+    <script>
+      $(function () {
+        // 1つ目のアコーディオン以外のwidthを0pxにする
+        $('dd[id !="acd_01"]').css("width", "0px");
+        // アコーディオンの数字部分をclickしたとき
+        $("dl dt a").click(function () {
+          if (!$(this).hasClass("current_btn")) {
+            // 現在のコンテンツを縮める（widthを0pxにする）
+            $(".current").animate({ width: "0px" }, 300);
+            // 展開する要素の内容を取得
+            $($(this).attr("href")).animate({ width: "800px" }, 300);
+
+            // currentクラスを削除
+            $("dd").removeClass();
+            // 展開されたコンテンツにcurrentクラスを付与
+            $($(this).attr("href")).addClass("current");
+            // current_btnクラスを削除
+            $("a").removeClass();
+            // 選択されたタイトル（自分自身）にcurrent_btnクラスを付与
+            $(this).addClass("current_btn");
+          }
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>
