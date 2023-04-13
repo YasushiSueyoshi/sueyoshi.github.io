@@ -1,3 +1,7 @@
+// font
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Kiwi+Maru:wght@300;400;500&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
+
 /* 変数
 ----------------------------------------------------------------------------------------*/
 //color
@@ -10,8 +14,13 @@ $font-size-large: 48px;
 $font-size-middle: 24px;
 $font-size-base: 16px;
 $font-size-small: 14px;
+// font-familly
+$font-family-en: "Lato", sans-serif;
+$font-family-ja: "Noto Sans JP", sans-serif;
+
 //inner幅
 $layout-width-inner: 1200px;
+
 /* @mixin
 ----------------------------------------------------------------------------------------*/
 @mixin button($btn-width: 384px, $font-size-middle: 24px) {
@@ -79,15 +88,14 @@ body {
   padding: 0;
 }
 body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
-    "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: $font-family-ja;
   font-size: 16px;
   background: #fff;
   line-height: 1.6;
   color: $color-text;
   overflow-x: hidden;
   overflow-wrap: break-word;
-  padding-top: 100px;
+  padding-top: 70px;
   @include mq(sp) {
     padding-top: 60px;
   }
@@ -130,6 +138,7 @@ dd {
   }
   @include mq(sp) {
     padding: 0 16px;
+    width: 100%;
   }
 }
 .bg_gray {
@@ -141,9 +150,12 @@ dd {
     padding: 50px 0 60px 0;
   }
 }
+.section h2 {
+  font-family: $font-family-en;
+}
 /* ヘッダーエリア */
 header {
-  height: 100px;
+  height: 70px;
   width: 100%;
   background: $color-base; /* ヘッダーの色 */
   position: fixed; /* ヘッダー固定 */
@@ -180,8 +192,10 @@ header .head-left {
 
 header .head-right ul {
   display: flex; /* メニューの横並び */
-  line-height: 100px; /* メニュー上下中央寄せ（ヘッダーの高さを入れる） */
+  line-height: 70px; /* メニュー上下中央寄せ（ヘッダーの高さを入れる） */
   margin-left: auto;
+  font-family: $font-family-en;
+
   @include mq(tab) {
     display: none;
     height: auto;
@@ -200,7 +214,9 @@ header .head-right ul {
       font-size: $font-size-base;
       text-decoration: none; /* リンクのデフォルトの下線を消す */
       padding-bottom: 4.5px; /* リンクの文字から下線までの下幅 */
+      &.is-active,
       &:hover {
+        // transition: all 0.1s ease 0s;
         border-bottom: 3px solid #e81919; /* カーソルをメニューに乗せた時、赤線が出てくる */
       }
     }
@@ -215,78 +231,221 @@ header {
   }
 }
 // ハンバーガーメニュー
-/*ボタン外側※レイアウトによってpositionや形状は適宜変更*/
-.openbtn {
-  /*ボタン内側の基点となるためrelativeを指定。
-追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
-  position: relative;
-  background: $color-base;
-  border: 2px solid #fff;
+.hamburger_icon {
+  position: fixed;
+  top: 20px;
+  right: 16px;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
-  border-radius: 5px;
+  z-index: 300;
   display: none;
+  transition: transform 0.5s ease 0s;
+
   @include mq(tab) {
     display: block;
   }
   @include mq(sp) {
     display: block;
   }
-
-  span {
-    display: inline-block;
-    transition: all 0.4s; /*アニメーションの設定*/
-    position: absolute;
-    left: 10px;
-    height: 2px;
-    border-radius: 2px;
-    background: #fff;
-    &:nth-of-type(1) {
-      top: 9px;
-      width: 45%;
+  &.is-active {
+    transform: translateX(-200px);
+    .hamburger_icon__bar1 {
+      top: 8px;
+      transform: rotate(-45deg);
     }
-    &:nth-of-type(2) {
-      top: 17px;
-      width: 45%;
+    .hamburger_icon__bar2 {
+      display: none;
     }
-    &:nth-of-type(3) {
-      top: 25px;
-      width: 45%;
+    .hamburger_icon__bar3 {
+      top: 8px;
+      transform: rotate(45deg);
     }
   }
 }
-/*activeクラスが付与されると線が回転して×になる*/
+.hamburger_icon__bars {
+  width: 30px;
+  height: 20px;
+  display: block;
+  position: relative;
+}
+.hamburger_icon__bar1,
+.hamburger_icon__bar2,
+.hamburger_icon__bar3 {
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  top: 0;
+  left: 0;
+}
+.hamburger_icon__bar1 {
+  top: 0;
+}
+.hamburger_icon__bar2 {
+  top: 10px;
+}
+.hamburger_icon__bar3 {
+  top: 20px;
+}
+.hamburger_content {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(#000, 0.16);
+  z-index: 299;
+  transform: translateX(105%);
+  transition: transform 0.5s ease 0s;
+  &.is-active {
+    transform: translateX(0);
+  }
+}
+.hamburger_content__items {
+}
+.hamburger_content__item {
+  border-bottom: 1px #707070 dotted;
+  a {
+    display: block;
+    position: relative;
+    padding: 20px;
+    color: #707070;
+    text-decoration: none;
+    cursor: pointer;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 21px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 11px;
+      background: url(../img/arrow-b.png) no-repeat center center / contain;
+    }
+  }
+}
 
-.openbtn.active span {
-  &:nth-of-type(1) {
-    top: 11px;
+.hamburger_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000, 0.8);
+  z-index: 298;
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+/* Swiper----------------------------------------------------------------------------------------*/
+.swiper-button-next {
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  background: transparent url(../img/arrow-next.png) no-repeat center center /
+    contain;
+  right: calc(50% - #{$layout-width-inner / 2});
+  &::after {
+    display: none;
+  }
+  @include mq(tab) {
+    right: 10px;
+    top: 47%;
+  }
+  @include mq(sp) {
+    right: 10px;
+    top: 42%;
+  }
+}
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  background: transparent url(../img/arrow-prev.png) no-repeat center center /
+    contain;
+  left: calc(50% - #{$layout-width-inner / 2});
+  &::after {
+    display: none;
+  }
+  @include mq(tab) {
     left: 10px;
-    transform: translateY(6px) rotate(-135deg);
-    width: 50%;
+    top: 47%;
   }
-  &:nth-of-type(2) {
-    opacity: 0;
-  }
-  &:nth-of-type(3) {
-    top: 23px;
+  @include mq(sp) {
     left: 10px;
-    transform: translateY(-6px) rotate(135deg);
-    width: 50%;
+    top: 42%;
   }
+}
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 75px;
+  @include mq(sp) {
+    bottom: 75px;
+  }
+}
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  opacity: 1;
+}
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 8px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #2f7dc8;
 }
 
 /* メインビジュアルエリア
 ----------------------------------------------------------------------------------------*/
-.mainvisual {
-  height: 100vh;
-  // height: 100vh;
-  width: 100%;
+.mainvisual1 {
+  background: url(../img/mainvisual1.jpg) no-repeat;
+  // background-position: 0 -100px;
+  background-position: 0 50%;
+  @include mq(tab) {
+    background-position: 67% bottom;
+  }
+  @include mq(sp) {
+    background-position: right 32% center;
+  }
+}
+.mainvisual2 {
   background: url(../img/mainvisual2.jpg) no-repeat;
   background-position: top left 28%;
+}
+.mainvisual3 {
+  background: url(../img/mainvisual3.jpg) no-repeat;
+  background-position: 10% 70%;
+  @include mq(tab) {
+    background-position: 67% bottom;
+  }
+  @include mq(sp) {
+    background-position: top right 28%;
+  }
+}
+.mainvisual4 {
+  background: url(../img/mainvisual4.jpg) no-repeat;
+  background-position: 50% left 28%;
+  // background-position: 10% center;
+  @include mq(tab) {
+    background-position: 15% bottom;
+  }
+
+  @include mq(sp) {
+    background-position: top -45px left 20%;
+  }
+}
+.mainvisual {
+  height: 100vh;
+  width: 100%;
   background-size: cover;
 
   position: relative;
+  @include mq(tab) {
+    height: 93vh;
+  }
   @include mq(sp) {
     height: 100vh;
   }
@@ -298,7 +457,7 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     @include mq(sp) {
-      padding: 0 16px;
+      padding: 0 45px;
     }
     .mainvisual__txt__ttl {
       font-size: $font-size-h1;
@@ -341,6 +500,7 @@ header {
         color: #fff;
         text-decoration: none;
         box-shadow: 0 3px 6px rgba(#000, 0.16);
+        transition: all 0.3s ease 0s;
         @include mq(sp) {
           width: 80%;
           padding: 12px;
@@ -466,6 +626,7 @@ News　エリア
 }
 
 .news__data {
+  font-family: $font-family-en;
   width: 105px;
   @include mq(sp) {
     margin-bottom: 10px;
@@ -487,6 +648,9 @@ News　エリア
     &.is-red {
       background: #e81919;
     }
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -497,11 +661,17 @@ News　エリア
     width: 100%;
   }
   a {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.6;
+      transition: all 0.4s;
+    }
   }
 }
 
 .news__more {
   text-align: center;
+  font-family: $font-family-en;
   a {
     position: relative;
     color: #e81919;
@@ -615,6 +785,12 @@ Price　エリア
   margin-top: 5px;
   font-size: 13px;
   margin-left: 11px;
+  a {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 /*==================================================================
 Course Price　エリア
@@ -665,6 +841,7 @@ Course Price　エリア
 .price2__item__price__large {
   font-size: 48px;
   padding: 0 10px;
+  font-family: $font-family-en;
 }
 .price2__item__support {
   background: #fff;
@@ -965,6 +1142,10 @@ Blog　エリア
   a {
     font-size: $font-size-small;
     color: #999;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: #333;
+    }
   }
 }
 
@@ -1073,6 +1254,7 @@ Access エリア
     color: #fff;
     text-decoration: none;
     box-shadow: 0 3px 6px rgba(#000, 0.16);
+    transition: all 0.3s ease 0s;
     //icon
     &:before {
       content: "";
@@ -1088,6 +1270,7 @@ Access エリア
     }
     &:hover {
       background-color: #f88c4d;
+      opacity: 0.7;
     }
     @include mq(sp) {
       width: 80%;
@@ -1424,10 +1607,12 @@ Contact エリア
     box-shadow: 0 3px 6px rgba(#000, 0.16);
     appearance: none;
     font-family: inherit;
+    transition: all 0.3s ease 0s;
     //icon
 
     &:hover {
       background-color: #f88c4d;
+      cursor: pointer;
     }
     @include mq(sp) {
       width: 100%;
@@ -1437,6 +1622,116 @@ Contact エリア
   }
 }
 
+// モーダル
+.modal_contact {
+  position: fixed;
+  display: none;
+  z-index: 501;
+  max-width: calc(100% - 24px * 2);
+  width: 900px;
+  height: 652px;
+  max-height: calc(100% - 24px * 2);
+  background: #ffefdb;
+  box-shadow: 0 0 3px rgba(#000, 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 60px;
+  color: #707070;
+  @include mq(sp) {
+    padding: 25px;
+  }
+}
+.modal_contact__head {
+  position: relative;
+  font-size: $font-size-middle;
+  font-weight: bold;
+  padding-bottom: 24px;
+  text-align: center;
+
+  &::after {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: $color-base;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+}
+.modal_contact__content {
+  background: #fff;
+  margin-top: 40px;
+  height: calc(100% - 84px - 108px);
+  overflow: auto;
+}
+.modal_contact__sub-head {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: $color-base;
+  }
+}
+.modal_contact__text {
+  padding-left: 20px;
+  margin-bottom: 40px;
+  line-height: (24/ 16);
+  &:last-child {
+    margin-bottom: 10px;
+  }
+}
+.modal_contact__button {
+  text-align: center;
+  margin-top: 60px;
+  @include mq(sp) {
+    margin-top: 35px;
+  }
+  a {
+    display: inline-block;
+    width: 176px;
+    background: $color-base;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 3px rgba(#000, 0.16);
+    padding: 16px;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+.modal_contact__icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  top: -20px;
+  a {
+  }
+  img {
+  }
+}
+.modal_contact__background {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000, 0.3);
+  z-index: 500;
+}
+// footer
 footer {
   background: linear-gradient(to bottom, #666666, #333333);
   color: #fff;
@@ -1489,6 +1784,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-family: $font-family-en;
 
   li {
     &:not(:last-child) {
@@ -1498,6 +1794,11 @@ footer {
       }
     }
     a {
+      transition: all 0.3s ease 0s;
+      &:hover {
+        border-bottom: 1px solid #e81919;
+        transition: all 0.5s ease 0s;
+      }
     }
   }
 }
@@ -1530,6 +1831,7 @@ footer {
 
 .footer_copy {
   font-size: $font-size-small;
+  font-family: $font-family-en;
   text-align: center;
 }
 
@@ -1537,14 +1839,23 @@ footer {
   position: fixed;
   bottom: 24px;
   right: 24px;
+  opacity: 0.6;
+  z-index: 1;
+  display: none;
   @include mq(sp) {
     bottom: 45px;
     right: 12px;
   }
   a {
+    display: block;
     text-decoration: none;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
     img {
       width: 60px;
+      border-radius: 50%;
       @include mq(sp) {
         width: 40px;
       }
