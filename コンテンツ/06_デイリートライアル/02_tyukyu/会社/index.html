@@ -5,7 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex,nofollow" />
-    <title>末吉｜デイトラ中級練習</title>
+    <title>末吉｜練習</title>
+    <!-- swiper css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css"
+      integrity="sha512-aMup4I6BUl0dG4IBb0/f32270a5XP7H1xplAJ80uVKP6ejYCgZWcBudljdsointfHxn5o302Jbnq1FXsBaMuoQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- wow css-->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- 自作css -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -22,7 +33,7 @@
         <div class="head-right">
           <nav class="nav">
             <ul>
-              <li><a href="#card">Card</a></li>
+              <li><a href="#card" class="is-active">Card</a></li>
               <li><a href="#news">News</a></li>
               <li><a href="#price">Price</a></li>
               <li><a href="#voice">Voice</a></li>
@@ -35,34 +46,145 @@
             </ul>
           </nav>
           <!-- nav end -->
-          <!-- SP ハンバーガーメニュー -->
-          <div class="openbtn"><span></span><span></span><span></span></div>
         </div>
         <!-- .head-right end -->
       </div>
       <!-- .inner end -->
     </header>
-    <div class="mainvisual">
-      <div class="mainvisual__content">
-        <div class="mainvisual__txt__ttl">
-          I love animals <br class="br-for-sp" />very much.
+
+    <!-- ハンバーガーメニュー -->
+    <div class="hamburger_icon">
+      <div class="hamburger_icon__bars">
+        <div class="hamburger_icon__bar1"></div>
+        <div class="hamburger_icon__bar2"></div>
+        <div class="hamburger_icon__bar3"></div>
+      </div>
+    </div>
+    <!-- /.hamburger_icon -->
+
+    <div class="hamburger_content">
+      <div class="hamburger_content__items">
+        <div class="hamburger_content__item"><a href="#card">Card</a></div>
+        <div class="hamburger_content__item"><a href="#news">News</a></div>
+        <div class="hamburger_content__item"><a href="#price">Price</a></div>
+        <div class="hamburger_content__item"><a href="#voice">Voice</a></div>
+        <div class="hamburger_content__item"><a href="#blog">Blog</a></div>
+        <div class="hamburger_content__item">
+          <a href="#blog_tile">Blog Tile</a>
         </div>
-        <div class="mainvisual__txt__lead">
-          Animal AnimalAnimal Animal Animal Animal Animal Animal Animal Animal
-        </div>
-        <div class="mainvisual__btn">
-          <a href="#" class="btnshine">CONTACT</a>
+        <div class="hamburger_content__item"><a href="#access">Access</a></div>
+        <div class="hamburger_content__item"><a href="#time">Time</a></div>
+        <div class="hamburger_content__item"><a href="#movie">Movie</a></div>
+        <div class="hamburger_content__item">
+          <a href="#contact">Contact</a>
         </div>
       </div>
-      <!-- .mainvisual__content end -->
     </div>
-    <!-- .mainvisual end -->
+    <!-- /.hamburger_content -->
+
+    <div class="hamburger_background"></div>
+    <!-- /.hamburger_background -->
+
+    <!-- ▼スライダー ここから▼-->
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="mainvisual mainvisual1">
+            <div class="mainvisual__content">
+              <div class="mainvisual__txt__ttl">
+                I love animals <br class="br-for-sp" />very much. <br />①<br />
+              </div>
+              <div class="mainvisual__txt__lead">
+                Animal AnimalAnimal Animal Animal Animal Animal Animal Animal
+                Animal
+              </div>
+              <div class="mainvisual__btn">
+                <a href="#contact" class="btnshine">CONTACT</a>
+              </div>
+            </div>
+            <!-- .mainvisual__content end -->
+          </div>
+          <!-- .mainvisual end -->
+        </div>
+        <!-- .swiper-slide end -->
+
+        <div class="swiper-slide">
+          <div class="mainvisual mainvisual2">
+            <div class="mainvisual__content">
+              <div class="mainvisual__txt__ttl">
+                I love animals <br class="br-for-sp" />very much. <br />②<br />
+              </div>
+              <div class="mainvisual__txt__lead">
+                Animal AnimalAnimal Animal Animal Animal Animal Animal Animal
+                Animal
+              </div>
+              <div class="mainvisual__btn">
+                <a href="#contact" class="btnshine">CONTACT</a>
+              </div>
+            </div>
+            <!-- .mainvisual__content end -->
+          </div>
+          <!-- .mainvisual end -->
+        </div>
+        <!-- .swiper-slide end -->
+
+        <div class="swiper-slide">
+          <div class="mainvisual mainvisual3">
+            <div class="mainvisual__content">
+              <div class="mainvisual__txt__ttl">
+                I love animals <br class="br-for-sp" />very much. <br />③<br />
+              </div>
+              <div class="mainvisual__txt__lead">
+                Animal AnimalAnimal Animal Animal Animal Animal Animal Animal
+                Animal
+              </div>
+              <div class="mainvisual__btn">
+                <a href="#contact" class="btnshine">CONTACT</a>
+              </div>
+            </div>
+            <!-- .mainvisual__content end -->
+          </div>
+          <!-- .mainvisual end -->
+        </div>
+        <!-- .swiper-slide end -->
+
+        <div class="swiper-slide">
+          <div class="mainvisual mainvisual4">
+            <div class="mainvisual__content">
+              <div class="mainvisual__txt__ttl">
+                I love animals <br class="br-for-sp" />very much. <br />③<br />
+              </div>
+              <div class="mainvisual__txt__lead">
+                Animal AnimalAnimal Animal Animal Animal Animal Animal Animal
+                Animal
+              </div>
+              <div class="mainvisual__btn">
+                <a href="#contact" class="btnshine">CONTACT</a>
+              </div>
+            </div>
+            <!-- .mainvisual__content end -->
+          </div>
+          <!-- .mainvisual end -->
+        </div>
+        <!-- .swiper-slide end -->
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <!-- ▲スライダー ここまで▲ -->
 
     <section class="card_area section bg_gray" id="card">
       <div class="inner card_inner">
         <h2 class="card__head">Card</h2>
         <div class="card__items">
-          <div class="card__item">
+          <div class="card__item wow fadeIn">
             <div class="card__item-img">
               <img src="https://picsum.photos/352/195" alt="" />
             </div>
@@ -74,7 +196,7 @@
               nulla pariatur.
             </div>
           </div>
-          <div class="card__item">
+          <div class="card__item wow fadeInUp">
             <div class="card__item-img">
               <img src="https://picsum.photos/352/195" alt="" />
             </div>
@@ -86,7 +208,7 @@
               nulla pariatur.
             </div>
           </div>
-          <div class="card__item">
+          <div class="card__item wow flipInX">
             <div class="card__item-img">
               <img src="https://picsum.photos/352/195" alt="" />
             </div>
@@ -98,7 +220,7 @@
               nulla pariatur.
             </div>
           </div>
-          <div class="card__item">
+          <div class="card__item wow slideInDown">
             <div class="card__item-img">
               <img src="https://picsum.photos/352/195" alt="" />
             </div>
@@ -110,7 +232,7 @@
               nulla pariatur.
             </div>
           </div>
-          <div class="card__item">
+          <div class="card__item wow slideInUp">
             <div class="card__item-img">
               <img src="https://picsum.photos/352/195" alt="" />
             </div>
@@ -122,7 +244,7 @@
               nulla pariatur.
             </div>
           </div>
-          <div class="card__item">
+          <div class="card__item wow slideInRight">
             <div class="card__item-img">
               <img src="https://picsum.photos/352/195" alt="" />
             </div>
@@ -142,7 +264,7 @@
       <div class="inner">
         <h2 class="news__head">News</h2>
         <div class="news_items">
-          <div class="news__item">
+          <div class="news__item wow fadeIn">
             <div class="news__meta">
               <div class="news__data">2019-01-30</div>
               <!-- /.news__data -->
@@ -158,7 +280,7 @@
             <!-- /.news__ttl -->
           </div>
           <!-- /.news__item -->
-          <div class="news__item">
+          <div class="news__item wow fadeIn">
             <div class="news__meta">
               <div class="news__data">2019-01-30</div>
               <!-- /.news__data -->
@@ -176,7 +298,7 @@
             <!-- /.news__ttl -->
           </div>
           <!-- /.news__item -->
-          <div class="news__item">
+          <div class="news__item wow fadeIn">
             <div class="news__meta">
               <div class="news__data">2019-01-30</div>
               <!-- /.news__data -->
@@ -194,7 +316,7 @@
             <!-- /.news__ttl -->
           </div>
           <!-- /.news__item -->
-          <div class="news__item">
+          <div class="news__item wow fadeIn">
             <div class="news__meta">
               <div class="news__data">2019-01-30</div>
               <!-- /.news__data -->
@@ -210,7 +332,7 @@
             <!-- /.news__ttl -->
           </div>
           <!-- /.news__item -->
-          <div class="news__item">
+          <div class="news__item wow fadeIn">
             <div class="news__meta">
               <div class="news__data">2019-01-30</div>
               <!-- /.news__data -->
@@ -240,7 +362,7 @@
         <div class="price_area1">
           <h2 class="price__ttl1">Price</h2>
           <div class="price__cont">
-            <div class="price__left">
+            <div class="price__left wow slideInLeft">
               <img src="img/price-img.jpg" alt="" />
             </div>
             <!-- /.price_left -->
@@ -448,7 +570,7 @@
       <div class="inner">
         <h2 class="voice__ttl">Voice</h2>
         <div class="voice__items">
-          <div class="voice__item">
+          <div class="voice__item wow fadeIn">
             <div class="voice__item__left">
               <img src="https://picsum.photos/600/315" alt="" />
             </div>
@@ -469,7 +591,7 @@
             <!-- /.voice__item__right -->
           </div>
           <!-- /.voice__item -->
-          <div class="voice__item">
+          <div class="voice__item wow fadeIn">
             <div class="voice__item__left">
               <img src="https://picsum.photos/600/315" alt="" />
             </div>
@@ -490,7 +612,7 @@
             <!-- /.voice__item__right -->
           </div>
           <!-- /.voice__item -->
-          <div class="voice__item">
+          <div class="voice__item wow fadeIn">
             <div class="voice__item__left">
               <img src="https://picsum.photos/600/315" alt="" />
             </div>
@@ -522,7 +644,7 @@
       <div class="inner">
         <h2 class="blog__ttl">Blog</h2>
         <div class="blog__items">
-          <div class="blog__item">
+          <div class="blog__item wow fadeIn">
             <div class="blog__item__left">
               <img src="https://picsum.photos/401/244" alt="" />
             </div>
@@ -549,7 +671,7 @@
             <!-- /.blog__item__right -->
           </div>
           <!-- /.blog__item -->
-          <div class="blog__item">
+          <div class="blog__item wow fadeIn">
             <div class="blog__item__left">
               <img src="https://picsum.photos/401/244" alt="" />
             </div>
@@ -587,7 +709,7 @@
       <div class="inner">
         <h2 class="blog__tile2__ttl">Blog Tile</h2>
         <div class="blog__tile2__items">
-          <div class="blog__tile2__item">
+          <div class="blog__tile2__item wow bounce">
             <div class="blog__tile2__item__img">
               <img src="https://picsum.photos/352/195" alt="" />
               <div class="blog__tile2__item__img__label">ラベル</div>
@@ -603,7 +725,7 @@
             <!-- /.blog__tile2__item__txt -->
           </div>
           <!-- /.blog__tile2__item -->
-          <div class="blog__tile2__item">
+          <div class="blog__tile2__item wow bounce">
             <div class="blog__tile2__item__img">
               <img src="https://picsum.photos/352/195" alt="" />
               <div class="blog__tile2__item__img__label">ラベル</div>
@@ -619,7 +741,7 @@
             <!-- /.blog__tile2__item__txt -->
           </div>
           <!-- /.blog__tile2__item -->
-          <div class="blog__tile2__item">
+          <div class="blog__tile2__item wow bounce">
             <div class="blog__tile2__item__img">
               <img src="https://picsum.photos/352/195" alt="" />
               <div class="blog__tile2__item__img__label">ラベル</div>
@@ -635,7 +757,7 @@
             <!-- /.blog__tile2__item__txt -->
           </div>
           <!-- /.blog__tile2__item -->
-          <div class="blog__tile2__item">
+          <div class="blog__tile2__item wow bounce">
             <div class="blog__tile2__item__img">
               <img src="https://picsum.photos/352/195" alt="" />
               <div class="blog__tile2__item__img__label">ラベル</div>
@@ -651,7 +773,7 @@
             <!-- /.blog__tile2__item__txt -->
           </div>
           <!-- /.blog__tile2__item -->
-          <div class="blog__tile2__item">
+          <div class="blog__tile2__item wow bounce">
             <div class="blog__tile2__item__img">
               <img src="https://picsum.photos/352/195" alt="" />
               <div class="blog__tile2__item__img__label">ラベル</div>
@@ -861,7 +983,9 @@
             <div class="contact__area__cont__form__check">
               <label
                 ><input type="checkbox" name="" id="" /><span
-                  ><a href="#">プライバシーポリシー</a>に合意する</span
+                  ><a href="" class="js-is-open" data-target=".target-modal"
+                    >プライバシーポリシー</a
+                  >に合意する</span
                 ></label
               >
             </div>
@@ -879,6 +1003,100 @@
       <!-- /.inner -->
     </section>
     <!-- /.contact__area -->
+
+    <!-- modal エリア -->
+    <div class="modal_contact target-modal">
+      <div class="modal_contact__head">プライバシーポリシー</div>
+      <div class="modal_contact__content">
+        <div class="modal_contact__sub-head">TITLE</div>
+        <div class="modal_contact__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />orem
+          ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.orem ipsum dolor
+          sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. <br />orem ipsum dolor sit amet,
+          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.orem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </div>
+        <div class="modal_contact__sub-head">TITLE</div>
+        <div class="modal_contact__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />orem
+          ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.orem ipsum dolor
+          sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. <br />orem ipsum dolor sit amet,
+          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.orem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </div>
+        <div class="modal_contact__sub-head">TITLE</div>
+        <div class="modal_contact__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />orem
+          ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.orem ipsum dolor
+          sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. <br />orem ipsum dolor sit amet,
+          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.orem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </div>
+        <div class="modal_contact__sub-head">TITLE</div>
+        <div class="modal_contact__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />orem
+          ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.orem ipsum dolor
+          sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. <br />orem ipsum dolor sit amet,
+          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.orem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </div>
+        <div class="modal_contact__sub-head">TITLE</div>
+        <div class="modal_contact__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />orem
+          ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.orem ipsum dolor
+          sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. <br />orem ipsum dolor sit amet,
+          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua.orem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </div>
+      </div>
+      <!-- /.modal_contact__head -->
+      <div class="modal_contact__button">
+        <a class="js-is-close" href="" data-target=".target-modal">CLOSE</a>
+      </div>
+      <div class="modal_contact__icon">
+        <a class="js-is-close" href="" data-target=".target-modal"
+          ><img src="img/btn-batsu.png"
+        /></a>
+      </div>
+    </div>
+    <!-- /.modal_contact -->
+
+    <div class="modal_contact__background target-modal"></div>
 
     <footer class="footer__area">
       <div class="footer_inner inner">
@@ -945,12 +1163,23 @@
       <a href="#"><img src="../company/img/totop.png" /></a>
     </div>
     <!-- /.to_top -->
+
+    <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <!--自作のJS-->
+    <!-- WOW.js -->
+    <script src="js/wow.min.js"></script>
+    <!-- swiper js-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"
+      integrity="sha512-BABFxitBmYt44N6n1NIJkGOsNaVaCs/GpaJwDktrfkWIBFnMD6p5l9m+Kc/4SLJSJ4mYf+cstX98NYrsG/M9ag=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- 自作のJS -->
     <script src="js/script.js"></script>
   </body>
 </html>
