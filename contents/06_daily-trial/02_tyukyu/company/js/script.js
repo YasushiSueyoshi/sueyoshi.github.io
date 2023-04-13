@@ -80,8 +80,6 @@ $(function () {
 });
 
 // modal
-
-
 // 閉じるときの挙動
 $(function () {
   $('.js-is-close').click(function (e) {
@@ -89,6 +87,25 @@ $(function () {
     var target = $(this).data('target');
     $(target).hide();
   });
+
+
+  // 背景をクリックしたとき、モーダルを閉じる
+  $('.modal_contact__background').click(function () {
+    // 背景（自分自身）をフェードアウト、完了したら削除
+    $(this).fadeOut(function () {
+      $(this).hide();
+    });
+
+    // 背景をフェードアウト、完了したら隠す
+    $('.modal_contact').fadeOut(function () {
+      $(this).hide();
+
+    });
+  });
+  return false;
+
+
+
 });
 // 開く時の挙動
 $(function () {
