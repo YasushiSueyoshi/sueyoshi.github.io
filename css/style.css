@@ -2052,12 +2052,13 @@ footer .copyright {
     text-align: center;
   }
 
+/* 【HTML / CSS / jQuery】コーディング練習 エリア */
   .img_items {
     justify-content: space-between;
   }
 
   .img_item {
-    width: 100%;
+    width: 45%;
     margin-bottom: 60px;
     text-align: center;
   }
