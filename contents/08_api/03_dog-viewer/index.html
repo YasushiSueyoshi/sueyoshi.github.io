@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ランダムな犬の画像</title>
+  <style>
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 3.4rem;
+      margin: 20px 0;
+    }
+    #image-container {
+      padding: 0 20px;
+    }
+    img#dog-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+    button {
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    background-color: #28a6a7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin: 30px auto;
+}
+
+    button::after {
+    content: '';
+    display: inline-block;
+    margin-left: 15px;
+    width: 8px;
+    height: 8px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(-45deg);
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+    button:hover {
+      background-color: #298888;
+    }
+/* loadingのcss */
+    #image-container {
+    position: relative; /* 子要素を重ねるための基準 */
+    min-height: 300px; /* 画像読み込み前でも高さを確保 */
+  }
+#loading {
+  /* 最初は非表示にしておく */
+  display: none;
+
+  /* 画像コンテナの中央に配置するための設定 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 9.5rem; /* 文字を少し大きく */
+  color: #555;
+}
+  </style>
+</head>
+
+<body>
+  <h1>ランダムな犬の画像</h1>
+  <button id="change-btn">画像を変更</button>
+  <div id="image-container">
+    <img id="dog-image" src="" alt="犬の画像">
+    <div id="loading">Loading...</div>
+  </div>
+
+<script>
+  // 🐾 HTMLの要素を取得（画像、ローディング表示、ボタン）
+  const dogImageElement = document.getElementById('dog-image'); // 犬の画像を表示する <img> 要素
+  const loadingElement = document.getElementById('loading');    // ローディング中の表示用 <div> 要素
+  const changeBtn = document.getElementById('change-btn');      // 「画像を変更」ボタン
+
+  // 🐶 犬の画像を取得して表示する関数
+  async function fetchDogImage() {
+    // 1. ローディング表示を見せる（読み込み中だと分かるように）
+    loadingElement.style.display = 'block';
+
+    // 2. 古い画像を一旦非表示にする（新しい画像が来るまで隠す）
+    dogImageElement.style.display = 'none';
+
+    try {
+      // 3. 犬の画像APIにアクセスしてデータを取得
+      const response = await fetch('https://dog.ceo/api/breeds/image/random');
+
+      // 4. 取得したデータをJSON形式に変換
+      const data = await response.json();
+
+      // 5. 画像のURLを <img> タグにセット（画像を切り替える）
+      dogImageElement.src = data.message;
+
+      // 6. 新しい画像が読み込まれたら実行される処理
+      dogImageElement.onload = () => {
+        // ローディング表示を消す
+        loadingElement.style.display = 'none';
+
+        // 新しい画像を表示する
+        dogImageElement.style.display = 'block';
+      };
+
+    } catch (error) {
+      // 7. エラーが起きた場合（ネットワークなど）
+      console.error('画像の取得に失敗しました', error);
+
+      // ローディング表示にエラーメッセージを表示
+      loadingElement.textContent = '画像の取得に失敗しました';
+    }
+  }
+
+  // 🖱️ ボタンがクリックされたときに画像を変更するよう設定
+  changeBtn.addEventListener('click', fetchDogImage);
+
+  // 🌐 ページが読み込まれたときに最初の画像を表示
+  fetchDogImage();
+</script>
+
+</body>
+</html>
