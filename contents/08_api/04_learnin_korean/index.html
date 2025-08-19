@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>韓国語学習アプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>韓国語学習アプリ</h1>
+  <div id="tab-container">
+    <button id="tab-word" class="tab-btn active">単語</button>
+    <button id="tab-grammar" class="tab-btn">文法</button>
+  </div>
+  <div id="quiz-container">
+    <div id="question"></div>
+    <div id="choices"></div>
+    <button id="submit-btn">答える</button>
+    <div id="result"></div>
+    <button id="next-btn" style="display:none;">次の問題</button>
+  </div>
+  <div id="score-container">
+    <p>正解数: <span id="score">0</span></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
