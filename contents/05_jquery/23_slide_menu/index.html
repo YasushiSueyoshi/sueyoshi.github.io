@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex,nofollow" />
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<title>練習｜Slide Menu</title>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+<style>
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* コンテンツcss */
+body{
+	font-family:Arial, sans-serif;
+	-webkit-font-smoothing:antialiased;
+	overflow:hidden;
+}
+
+header{
+	position:relative;
+	padding:20px;
+	color:#40555F;
+	background:#58C8D0;
+}
+
+header h1{
+	margin-left:40px;
+	font-weight:bold;
+}
+
+button{
+	position:absolute;
+	top:10px;
+	left:20px;
+	background-color:transparent;
+	border:none;
+	cursor: pointer;
+	width:35px;
+	height:35px;
+}
+
+button img{
+	width:100%;
+}
+
+button:focus{
+	outline:none;
+}
+
+nav{
+	position:fixed;
+	top:0;
+	bottom:0;
+	width:250px;
+	margin-left:-250px;
+	background:#5C7079;
+}
+
+nav li{
+	list-style-type:none;
+}
+
+nav li a{
+	text-decoration:none;
+	display:block;
+	padding:20px 25px;
+	color:#FFF;
+	border-bottom:1px solid #40555F;
+}
+
+nav li a:hover{
+	background:#56676F;
+}
+
+main{
+	display:block;
+	padding:50px 0 20px;
+	color:#333;
+	background:#FFF;
+	width:100%;
+}
+
+section{
+	padding:0 25px;
+}
+
+section h1{
+	font-size:3em;
+	color:#40555F;
+	margin-bottom:10px;
+}
+
+section p{
+	color:#5C7079;
+	margin-bottom:50px;
+	line-height:1.5em;
+}
+  </style>
+  <h1>Slide Menu</h1>
+  <button><img src="img/button.png" alt="Menu"></button>
+</header>
+<nav>
+  <ul>
+    <li><a href="#">Menu1</a></li>
+    <li><a href="#">Menu2</a></li>
+    <li><a href="#">Menu3</a></li>
+    <li><a href="#">Menu4</a></li>
+  </ul>
+</nav>
+<main>
+  <section>
+    <h1>Title</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </section>
+  <section>
+    <h1>Title</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </section>
+  <section>
+    <h1>Title</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </section>
+</main>
+
+
+<script>
+$(function(){
+  // 変数dis：初期値250
+    let dis = 250;
+
+  // アイコンをクリック
+  $('button').click(function(){
+
+    // bodyの子要素(nav,header,main)のmargin-leftをそれぞれ250px増やす
+    $('body').children().animate({'margin-left' : '+=' + dis + 'px'}, 200);
+
+    // disに―1をかける
+    dis *= -1;
+
+  });
+});
+</script>
+</body>
+</html>

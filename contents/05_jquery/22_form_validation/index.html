@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <title>練習｜Form Validation</title>
+
+<title>Form Validation</title>
+<style>
+/* リセットcss */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126 License: none (public domain)*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* form_css */
+body{
+	font-family:Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background:#35495C;
+}
+
+main{
+	width:1000px;
+	margin:0 auto 50px;
+	display:block;
+}
+
+h1{
+	color:#FFCC00;
+	text-align:center;
+	font-size:3em;
+	padding:70px 0;
+	font-weight:bold;
+}
+
+main{
+	background:#FFF;
+	border-radius:15px;
+	padding:50px 40px;
+}
+
+main div{
+	margin-bottom:50px;
+}
+
+p{
+	font-size:2.5em;
+	color:#EC8519;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+
+p.alert{
+	font-size:1em;
+	font-weight:normal;
+	margin:10px 0;
+	color:#DC2900;
+}
+
+input[type="text"], textarea{
+	padding:5px;
+	font-size:1.3em;
+	color:#333;
+	border:1px solid #CCC;
+	background:#EFEFEF;
+}
+
+input[type="text"]{
+	width:300px;
+}
+
+textarea{
+	width:500px;
+	height:200px;
+}
+
+#submitBtn{
+	color:#35495C;
+	background:#FFCC00;
+	border:0;
+	border-radius:30px;
+	display:block;
+	margin:0 auto;
+	font-size:1.4em;
+	padding:10px 25px;
+	font-weight:bold;
+}
+
+#submitBtn:focus{
+	outline:none;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+  <h1>Form Validation<span style="font-size: 1rem;display:block; margin-top: 20px;">項目のチェックを行い、未入力・未選択のまま送信しようとするとエラーメッセージを表示する</span></h1>
+</header>
+<main>
+  <form action="form.php" method="post">
+    <div id="textSection">
+      <p><label for="text">Text</label></p>
+      <p class="alert">Alert : Text</p>
+      <input type="text" id="text" name="text" value="">
+    </div>
+    <div id="radioSection">
+      <p>Radio</p>
+      <p class="alert">Alert : Radio</p>
+      <input type="radio" id="radio1" name="radio" value="Radio1">
+      <label for="radio1">Radio1</label>
+      <input type="radio" id="radio2" name="radio" value="Radio2">
+      <label for="radio2">Radio2</label>
+      <input type="radio" id="radio3" name="radio" value="Radio3">
+      <label for="radio3">Radio3</label>
+    </div>
+    <div id="checkboxSection">
+      <p>Checkbox</p>
+      <p class="alert">Alert : Checkbox</p>
+      <input type="checkbox" id="checkbox1" name="checkbox" value="Checkbox1">
+      <label for="checkbox1">Checkbox1</label>
+      <input type="checkbox" id="checkbox2" name="checkbox" value="Checkbox2">
+      <label for="checkbox2">Checkbox2</label>
+      <input type="checkbox" id="checkbox3" name="checkbox" value="Checkbox3">
+      <label for="checkbox3">Checkbox3</label>
+      <input type="checkbox" id="checkbox4" name="checkbox" value="Checkbox4">
+      <label for="checkbox4">Checkbox4</label>
+      <input type="checkbox" id="checkbox5" name="checkbox" value="Checkbox5">
+      <label for="checkbox5">Checkbox5</label>
+    </div>
+    <div id="selectSection">
+      <p>Select</p>
+      <p class="alert">Alert : Select</p>
+      <select>
+        <option value="none">---</option>
+        <option value="Select1">Select1</option>
+        <option value="Select2">Select2</option>
+        <option value="Select3">Select3</option>
+      </select>
+    </div>
+    <div id="textareaSection">
+      <p>
+        <label for="textarea">TextArea</label>
+      </p>
+      <p class="alert">Alert : TextArea</p>
+      <textarea id="textarea" name="textarea"></textarea>
+    </div>
+    <input type="submit" value="Submit" id="submitBtn">
+  </form>
+</main>
+</div><!-- /.wrap -->
+<script>
+  $(function(){
+    // すべてのアラート文を一度非表示にする
+    $('.alert').hide();
+
+    // 送信ボタンをクリック
+    $('#submitBtn').click(function(){
+
+      // チェック用の変数sendFlag
+      let sendFlag = true;
+
+      // 一行入力フィールドのチェック
+      if(!$('#text').val()) {
+        // 入力が無い：アラート表示
+        $('#textSection .alert').show();
+        sendFlag = false; // 入力がなければfalseに
+      } else {
+        // 入力がある：アラート文を非表示
+        $('#textSection .alert').hide();
+      }
+      
+      
+      // 複数行入力フィールドのチェック
+      if(!$('#textarea').val()) {
+        // 入力が無い：アラート表示
+        $('#textareaSection .alert').show();
+        sendFlag = false; // 入力がなければfalseに
+      } else {
+        // 入力がある：アラート文を非表示
+        $('#textareaSection .alert').hide();
+      }
+      
+      
+      // セレクトボックスのチェック
+      if($('select').val() == 'none') {
+        // 入力が無い：アラート文を表示
+        $('#selectSection .alert').show();
+        sendFlag = false; // 「---」を選択していたならfalseに
+      } else {
+        // 入力がある：アラート文を非表示
+        $('#selectSection .alert').hide();
+      }
+
+      
+      // ラジオボタンのチェック
+      var radioChk =  $('input[name="radio"]:checked').length;
+      
+      // 選択されたラジオボタンの数を調べる
+      if(radioChk == 0) {
+        // 入力が無い：アラート文を表示
+        $('#radioSection .alert').show();
+        sendFlag = false; // 入力がなければfalseに
+      } else {
+        // 選択がある：アラート文を非表示
+        $('#radioSection .alert').hide();
+      }
+
+
+      // チェックボックスのチェック
+      var chkBokChk =  $('input[name="checkbox"]:checked').length;
+
+      // 選択されたチェックボックスの数を調べる
+      if(chkBokChk < 3) {
+        // 選択が3つ未満：アラート文を表示
+        $('#checkboxSection .alert').show();
+        sendFlag = false; // 選択が3つ未満ならfalseに
+      } else {
+        // 選択が3つ以上：アラート文を非表示
+        $('#checkboxSection .alert').hide();
+      }
+
+
+      // 変数sendFlagの値をチェック
+      if(sendFlag == false) {
+        return false; // falseであれば送信を許可しない（trueであれば送信おk）
+      }
+
+      // フォームが送信されないようにする
+      return false;
+    });
+  });
+</script>
+</body>
+</html>
