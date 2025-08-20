@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+body{
+	font-family:Arial, sans-serif;
+	-webkit-font-smoothing:antialiased;
+	background:#6D4A4A;
+	color:#A8DCDB;
+}
+
+li{
+	list-style-type:none;
+}
+
+#wrapper{
+	width:1000px;
+	margin:0 auto;
+}
+
+header h1{
+	font-size:3em;
+	font-weight:bold;
+	text-align:center;
+	padding:40px 25px;
+}
+
+#slide ul{
+	position:relative;
+}
+
+#slide li{
+	position:absolute;
+	width:100%;
+}
+
+#button{
+	padding-top:520px;
+	text-align:center;
+}
+
+#button ul{
+	display:inline-block;
+}
+
+#button ul li{
+	float:left;
+	margin-right:15px;
+}
+
+#button ul li:last-child{
+	margin-right:0;
+}
+
+#button ul li a{
+	text-indent:-9999px;
+	text-decoration:none;
+	display:block;
+	width:14px;
+	height:14px;
+	border-radius:7px;
+	background:#A8DCDB;
+}
+
+#button ul li a.target{
+	background:#41AFAD;
+}

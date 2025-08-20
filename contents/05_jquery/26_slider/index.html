@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<title>練習 | Slider</title>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<style>
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+	font-family:Arial, sans-serif;
+	-webkit-font-smoothing:antialiased;
+	background:#A8DCDB;
+	color:#715252;
+}
+
+#wrapper{
+	width:1000px;
+	margin:0 auto;
+}
+
+header h1{
+	font-size:3em;
+	font-weight:bold;
+	text-align:center;
+	padding:40px 25px;
+}
+
+#slide{
+	position:relative;
+	overflow:hidden;
+	height:500px;
+}
+
+#slide ul{
+	position:absolute;
+	width:3000px;
+}
+
+#slide li{
+	float:left;
+	width:1000px;
+	list-style-type:none;
+}
+
+button{
+	opacity:.6;
+	transition:opacity .2s;
+	border:none;
+	background:none;
+  cursor: pointer;
+}
+
+button:focus{
+	outline:none;
+}
+
+button:hover{
+	opacity:1;
+}
+
+#prevBtn{
+	position:absolute;
+	top:225px;
+	left:20px;
+}
+
+#nextBtn{
+	position:absolute;
+	top:225px;
+	right:20px;
+}
+
+p{
+	margin:50px 0;
+	line-height:2em;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+  <header>
+    <h1>Slider<span style="font-size: 1rem;display:block; margin-top: 20px;">スクロールによるスライドショー。ボタン切り替え、一定時間経過でも切り替え。</span></h1>
+  </header>
+  <div id="slide">
+    <ul>
+      <li><img src="img/img1.jpg" width="1000" height="500" alt="img1"></li>
+      <li><img src="img/img2.jpg" width="1000" height="500" alt="img2"></li>
+      <li><img src="img/img3.jpg" width="1000" height="500" alt="img3"></li>
+    </ul>
+    <button id="prevBtn"><img src="img/prev.png" width="29" height="50" alt="Prev"></button>
+    <button id="nextBtn"><img src="img/next.png" width="29" height="50" alt="Next"></button>
+  </div>
+</div>
+<!-- #wrapper end -->
+
+
+
+
+<script>
+$(function(){
+  // スクロールの方向　-1の時には左、1の時には右
+  var dir = -1;
+
+  // スクロールのインターバル(何秒ごとにスクロールさせるか。3000ミリ秒に設定)
+  var interval = 3000;
+
+  // スクロールのスピード（700ミリ秒に設定）
+  var duration = 700;
+
+  // タイマー用の変数
+  var timer;
+
+  // リストの順番を変更（3番目を1番最初にする）
+  $("#slide ul").prepend($("#slide li:last-child"));
+
+  // リストの位置を変更（画像1枚分ずらす）
+  $("#slide ul").css("left", -1000);
+
+  // 3000ミリ秒（変数intervalの値）ごとにslideTimer関数を実行
+  timer = setInterval(slideTimer, interval);
+
+  // slideTimer()関数
+  function slideTimer(){
+    // スクロール方向の判断
+    if(dir == -1){
+      // 画像1枚分左へスクロール
+      $("#slide ul").animate({"left" : "-=1000px"}, duration, function(){
+        // リストの順番を変更
+        $(this).append($("#slide li:first-child"));
+
+        // リストの位置を変更
+        $(this).css("left", -1000);
+      });
+    }else{
+      // 画像1枚分右へスクロール
+      $("#slide ul").animate({"left" : "+=1000px"}, duration, function(){
+        // リストの順番を変更
+        $(this).prepend($("#slide li:last-child"));
+
+        // リストの位置を変更
+        $(this).css("left", -1000);
+
+        // 左方向へリセット
+        dir = -1;
+      });
+    }
+  }
+
+  // 前へ戻るボタン
+  $("#prevBtn").click(function(){
+    // スクロール方向の切り替え（右）
+    dir = 1;
+
+    // タイマーを停止して再スタート
+    clearInterval(timer);
+    timer = setInterval(slideTimer, interval);
+
+    // 初回の関数実行
+    slideTimer();
+  });
+
+  // 次へ進むボタン
+  $("#nextBtn").click(function(){
+    // スクロール方向の切り替え（左）
+    dir = -1;
+
+    // タイマーを停止して再スタート
+    clearInterval(timer);
+    timer = setInterval(slideTimer, interval);
+
+    // 初回の関数実行
+    slideTimer();
+  });
+});
+</script>
+</body>
+</html>
