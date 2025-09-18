@@ -6,8 +6,7 @@
   <title>生成AIパスポート用語集 索引</title>
   <style>
     html {scroll-behavior: smooth;}
-    body { font-family: 'Yu Gothic', 'Meiryo', sans-serif; background: #f8f8fc; color: #222; width: 100%; max-width: 1000px; margin: auto;padding: 2em;}
-    h1 { text-align: center; margin-top: 1em; }
+    body { font-family: 'Yu Gothic', 'Meiryo', sans-serif; background: #f8f8fc; color: #222; width: 100%; max-width: 1000px; margin: auto;padding: 1em;box-sizing: border-box;overflow-x: hidden;}    h1 { text-align: center; margin-top: 1em; }
     h2 { background: #e0e7ff; padding: 0.3em 1em; border-radius: 8px; margin-top: 2em; }
     ul { list-style: none; padding-left: 0; }
     .anchor_wrap {
@@ -33,7 +32,6 @@
           padding: 0;
       }
       @media (max-width: 768px){
-
           .anchor_wrap li {
             padding: 0.3em 1em;
         }
@@ -43,6 +41,28 @@
       .desc { margin-left: 0.5em; color: #333; }
       .new-term { position: relative; }
       .new-term::before { content: "NEW"; color: #d00; font-weight: bold; font-size: 0.9em; background: #fff0f0; border-radius: 4px; padding: 0 0.3em; margin-right: 0.5em; vertical-align: middle; }
+      .pagetop {
+        height: 50px;
+        width: 50px;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        background: #fff;
+        border: solid 2px #000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .pagetop__arrow {
+        height: 10px;
+        width: 10px;
+        border-top: 3px solid #000;
+        border-right: 3px solid #000;
+        transform: translateY(20%) rotate(-45deg);
+    }
   </style>
 </head>
 <body>
@@ -433,5 +453,6 @@
     <li><span class="term">レイ・カートワイル</span><span class="desc"> ：2045年問題などの予測を行った未来学者で、シンギュラリティを提唱。</span></li>
   </ul>
 </div>
+<a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
 </body>
 </html>
