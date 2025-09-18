@@ -2,184 +2,436 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>生成AIパスポート用語集 索引</title>
   <style>
+    html {scroll-behavior: smooth;}
     body { font-family: 'Yu Gothic', 'Meiryo', sans-serif; background: #f8f8fc; color: #222; width: 100%; max-width: 1000px; margin: auto;padding: 2em;}
     h1 { text-align: center; margin-top: 1em; }
     h2 { background: #e0e7ff; padding: 0.3em 1em; border-radius: 8px; margin-top: 2em; }
     ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 0.7em; padding: 0.3em 0.7em; background: #fff; border-radius: 6px; box-shadow: 0 1px 2px #eee; }
-    .term { font-weight: bold; color: #2a3a7c; }
-    .desc { margin-left: 0.5em; color: #333; }
-    .new-term { position: relative; }
-    .new-term::before { content: "NEW"; color: #d00; font-weight: bold; font-size: 0.9em; background: #fff0f0; border-radius: 4px; padding: 0 0.3em; margin-right: 0.5em; vertical-align: middle; }
+    .anchor_wrap {
+      display: flex;
+      gap: 0 10px;
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: wrap;
+      }
+      @media (max-width: 768px){
+      .anchor_wrap a{
+        font-size: 0.8rem;
+        }
+        .anchor_wrap li {
+          padding: 0.3em 1em;
+      }
+      }
+      .anchor_items a {
+          color: #333;
+          font-weight: bold;
+          text-decoration: none;
+      }
+      .anchor_wrap li {
+        padding: 0.3em 1.3em;
+      }
+      @media (max-width: 768px){
+          .anchor_wrap li {
+            padding: 0.3em 1em;
+        }
+      }
+      li { margin-bottom: 0.7em; padding: 0.3em 0.7em; background: #fff; border-radius: 6px; box-shadow: 0 1px 2px #eee; }
+      .term { font-weight: bold; color: #2a3a7c; }
+      .desc { margin-left: 0.5em; color: #333; }
+      .new-term { position: relative; }
+      .new-term::before { content: "NEW"; color: #d00; font-weight: bold; font-size: 0.9em; background: #fff0f0; border-radius: 4px; padding: 0 0.3em; margin-right: 0.5em; vertical-align: middle; }
   </style>
 </head>
 <body>
   <h1>生成AIパスポート用語集 索引（あいうえお順）</h1>
 
+  <ul class="anchor_wrap alphabet_anchor_wrap">
+    <li class="anchor_items"><a href="#a">A</a></li>
+    <li class="anchor_items"><a href="#b">B</a></li>
+    <li class="anchor_items"><a href="#c">C</a></li>
+    <li class="anchor_items"><a href="#f">F</a></li>
+    <li class="anchor_items"><a href="#g">G</a></li>
+    <li class="anchor_items"><a href="#i">I</a></li>
+    <li class="anchor_items"><a href="#l">L</a></li>
+    <li class="anchor_items"><a href="#m">M</a></li>
+    <li class="anchor_items"><a href="#n">N</a></li>
+    <li class="anchor_items"><a href="#o">O</a></li>
+    <li class="anchor_items"><a href="#r">R</a></li>
+    <li class="anchor_items"><a href="#s">S</a></li>
+    <li class="anchor_items"><a href="#t">T</a></li>
+    <li class="anchor_items"><a href="#v">V</a></li>
+    <li class="anchor_items"><a href="#z">Z</a></li>
+  </ul>
+  <ul class="anchor_wrap aiueo_anchor_wrap">
+    <li class="anchor_items"><a href="#hiragana_a">あ</a></li>
+    <li class="anchor_items"><a href="#hiragana_i">い</a></li>
+    <li class="anchor_items"><a href="#hiragana_u">う</a></li>
+    <li class="anchor_items"><a href="#hiragana_e">え</a></li>
+    <li class="anchor_items"><a href="#hiragana_o">お</a></li>
+    <li class="anchor_items"><a href="#hiragana_ka">か</a></li>
+    <li class="anchor_items"><a href="#hiragana_ki">き</a></li>
+    <li class="anchor_items"><a href="#hiragana_ku">く</a></li>
+    <li class="anchor_items"><a href="#hiragana_ke">け</a></li>
+    <li class="anchor_items"><a href="#hiragana_ko">こ</a></li>
+    <li class="anchor_items"><a href="#hiragana_shi">し</a></li>
+    <li class="anchor_items"><a href="#hiragana_su">す</a></li>
+    <li class="anchor_items"><a href="#hiragana_se">せ</a></li>
+    <li class="anchor_items"><a href="#hiragana_so">そ</a></li>
+    <li class="anchor_items"><a href="#hiragana_ta">た</a></li>
+    <li class="anchor_items"><a href="#hiragana_ti">ち</a></li>
+    <li class="anchor_items"><a href="#hiragana_tu">つ</a></li>
+    <li class="anchor_items"><a href="#hiragana_te">て</a></li>
+    <li class="anchor_items"><a href="#hiragana_to">と</a></li>
+    <li class="anchor_items"><a href="#hiragana_ni">に</a></li>
+    <li class="anchor_items"><a href="#hiragana_no">の</a></li>
+    <li class="anchor_items"><a href="#hiragana_ha">は</a></li>
+    <li class="anchor_items"><a href="#hiragana_hi">ひ</a></li>
+    <li class="anchor_items"><a href="#hiragana_hu">ふ</a></li>
+    <li class="anchor_items"><a href="#hiragana_">へ</a></li>
+    <li class="anchor_items"><a href="#hiragana_ho">ほ</a></li>
+    <li class="anchor_items"><a href="#hiragana_ma">ま</a></li>
+    <li class="anchor_items"><a href="#hiragana_me">め</a></li>
+    <li class="anchor_items"><a href="#hiragana_yo">よ</a></li>
+    <li class="anchor_items"><a href="#hiragana_ra">ら</a></li>
+    <li class="anchor_items"><a href="#hiragana_ri">り</a></li>
+    <li class="anchor_items"><a href="#hiragana_ru">る</a></li>
+    <li class="anchor_items"><a href="#hiragana_re">れ</a></li>
+  </ul>
+
   <!-- 用語リストここから -->
-  <h2>あ</h2>
+<div class="alphabet">
+  <h2 id="a">A</h2>
   <ul>
-    <li><span class="term">AI</span><span class="desc"> : 人工知能（Artificial Intelligence）の総称で、人間の知的活動を模倣・拡張する技術やシステム。</span></li>
-    <li><span class="new-term term">AIガバナンス・ゴール</span><span class="desc"> : AI開発・利用において守るべき倫理や社会的責任を示す目標。</span></li>
-    <li><span class="new-term term">AI開発者(AI Developer)</span><span class="desc"> : AIを設計・実装・検証する技術者。</span></li>
-    <li><span class="term">AI効果</span><span class="desc"> : AIが普及するにつれ、かつてAIと見なされていた技術が当たり前の存在になってしまう現象。</span></li>
-    <li><span class="new-term term">AI提供者(AI Provider)</span><span class="desc"> : 開発したAI技術や製品を、ユーザーや企業に提供する事業者。</span></li>
-    <li><span class="new-term term">AI利用者(AI Business User)</span><span class="desc"> : 業務でAIサービスを導入・活用する企業や組織。</span></li>
-    <li><span class="new-term term">AIマネジメントシステム</span><span class="desc"> : AIに関する品質やリスクを一元管理する仕組み。国際標準化が進む。</span></li>
-    <li><span class="term">AIレベル1</span><span class="desc"> : 単純なプログラム、条件分岐、AI家電</span></li>
-    <li><span class="term">AIレベル2</span><span class="desc"> : ルールベース、チャットボット、音声認識、質疑応答</span></li>
-    <li><span class="term">AIレベル3</span><span class="desc"> : 機械学習、自らデータパターンを見出し、最適な出力を戻せる。検索エンジンなど</span></li>
-    <li><span class="term">AIレベル4</span><span class="desc"> : ディープラーニング、自ら特徴量の調整機能がある、自動運転技術</span></li>
-    <li><span class="new-term term">アカウンタビリティ</span><span class="desc"> : 自らの行動や結果について説明責任を果たすこと。</span></li>
-    <li><span class="term">アーキテクチャ</span><span class="desc"> : モデルやシステムの全体的な設計構造。</span></li>
-    <li><span class="term">アンチウイルスソフトウェア</span><span class="desc"> : マルウェアを検知・駆除するためのソフトウェア。</span></li>
-    <li><span class="new-term term">アライメント(Alignment)</span><span class="desc"> : AIの目的や行動が人間の価値観・倫理観に合致するように調整すること。</span></li>
-    <li><span class="term">ALBERT(a Lite BERT)</span><span class="desc"> : Google。BERTのパラメータを圧縮し、高速かつ軽量化したモデル。低コストのPCやスマホでも動く。</span></li>
-    <li><span class="term">Attention層</span><span class="desc"> : 入力シーケンス内の要素間の関連度を計算し、重要度を再重み付けして特徴を抽出する層。(Transformerモデル関連)</span></li>
-    <li><span class="term">AttentionMechanism</span><span class="desc"> : 注意機構全般を指し、入力の重要部分を強調して処理する手法。</span></li>
+    <li><span class="term">AI</span><span class="desc"> ：人工知能（Artificial Intelligence）の総称で、人間の知的活動を模倣・拡張する技術やシステム。</span>
+    </li>
+    <li><span class="term">AIガバナンス・ゴール</span><span class="desc"> ：AI開発・利用において守るべき倫理や社会的責任を示す目標。</span></li>
+    <li><span class="term">AIマネジメントシステム</span><span class="desc"> ：AIに関する品質やリスクを一元管理する仕組み。国際標準化が進む。</span></li>
+    <li><span class="term">AIレベル1</span><span class="desc"> ：単純なプログラム、条件分岐、AI家電</span></li>
+    <li><span class="term">AIレベル2</span><span class="desc"> ：ルールベース、チャットボット、音声認識、質疑応答</span></li>
+    <li><span class="term">AIレベル3</span><span class="desc"> ：機械学習、自らデータパターンを見出し、最適な出力を戻せる。検索エンジンなど</span></li>
+    <li><span class="term">AIレベル4</span><span class="desc"> ：ディープラーニング、自ら特徴量の調整機能がある、自動運転技術</span></li>
+    <li><span class="term">AI開発者(AI Developer)</span><span class="desc"> ：AIを設計・実装・検証する技術者。</span></li>
+    <li><span
+        class="term">AI活用原則：AIを活用する全ての人が守るべき原則として、「人間中心」、「安全性」、「公平性」、「プライバシー保護」、「セキュリティ確保」、「透明性」、「アカウンタビリティ（説明責任）」、「教育・リテラシー」、「公正競争確保」、「イノベーション」の10原則を掲げている。</span>
+    </li>
+    <li><span class="term">AI効果</span><span class="desc"> ：AIが普及するにつれ、かつてAIと見なされていた技術が当たり前の存在になってしまう現象。</span></li>
+    <li><span class="term">AI提供者(AI Provider)</span><span class="desc"> ：開発したAI技術や製品を、ユーザーや企業に提供する事業者。</span></li>
+    <li><span class="term">AI利用者(AI Business User)</span><span class="desc"> ：業務でAIサービスを導入・活用する企業や組織。</span></li>
+    <li><span class="term">AIの冬</span><span class="desc"> ：AIへの過剰な期待が失望に変わり、研究開発資金が激減した停滞期。</span></li>
+    <li><span class="term">AttentionMechanism </span><span class="desc"> ：注意機構全般を指し、入力の重要部分を強調して処理する手法。</span></li>
+    <li><span class="term">Attention層</span><span class="desc"> :
+        力シーケンス内の要素間の関連度を計算し、重要度を再重み付けして特徴を抽出する層。(Transformerモデル関連)</span></li>
+    <li><span class="term">弱いAI(ANI)</span><span class="desc"> ：特定のタスクに特化したAI。限られた範囲で高い性能を発揮する。</span></li>
+    <li><span class="term">強いAI(AGI)</span><span class="desc"> ：人間レベルの汎用的な知能を持つAI。多様な課題をこなせる。</span></li>
+    <li><span class="term">ALBERT(a Lite BERT)</span><span class="desc">
+          ：Google。BERTのパラメータを圧縮し、高速かつ軽量化したモデル。低コストのPCやスマホでも動く。</span></li>
+    <h2 id="b">B</h2>
+    <li><span class="term">BERTモデル</span><span class="desc"> ：2018.10
+        Google。双方向の文脈を学習するTransformerベースの言語モデル。MLMとNSPを採用。モデルサイズと学習時間が課題。</span></li>
+    <h2 id="c">C</h2>
+    <li><span class="term">ChatGPT</span><span class="desc">
+        ：GPTベースの対話特化型モデル。自然な会話が可能なチャットボット。強化学習を用いて人間のフィードバックを反映。ChatGenerativePre-trainedTransformer</span></li>
+    <li><span class="term">Claude</span><span class="desc"> ：Anthropic社の大規模言語モデル。安全性や倫理面を重視して開発されている。</span></li>
+    <li><span class="term">CNN(畳み込みニューラルネットワーク)</span><span class="desc"> ：画像処理などで用いられる、畳み込み演算を特徴とするニューラルネットワーク。</span>
+    </li>
+    <li><span class="term">Code Interpreter</span><span class="desc"> ：ChatGPTなどでコードを実行・解釈し、結果を返す機能。</span></li>
+    <li><span class="term">Context</span><span class="desc"> ：AIモデルが処理を行う際の参照情報や前後の文脈。</span></li>
+    <h2 id="f">F</h2>
+    <li><span class="term">Few-Shotプロンプティング</span><span class="desc"> ：少数の例示や補足情報を提示して、AIが期待される出力を学習しやすくする手法。</span></li>
+    <h2 id="g">G</h2>
+    <li><span class="term">GAN(敵対的生成ネットワーク)</span><span class="desc">
+        ：画像生成AIで利用。生成器と識別機を対立的に学習させ、リアルなデータを生成する手法。StyleGANはNVIDA社が開発した顔画像の生成特化。</span></li>
+    <li><span class="term">Gemini</span><span class="desc"> ：Google DeepMindが開発中とされる次世代の大規模言語モデルの名称。</span></li>
+    <li><span class="term">GPT-1</span><span class="desc"> ：2018 最初期のGPTモデル。自己回帰型言語モデルの可能性を示した。1億7000万パラメータ</span></li>
+    <li><span class="term">GPT-2</span><span class="desc"> ：2019
+        GPT-1より大幅にパラメータを増やし、文章生成の自然さや多様性を向上させたモデル。15億パラメータ。悪用のリスクあり限定公開</span></li>
+    <li><span class="term">GPT-3 :OpenAIが2020年に発表、1750億パラメータを持つ大規模言語モデルで、多様なタスクに対応可能。1750億パラメータ。調整なしでNLPタスクが実行可能</span>
+    </li>
+    <li><span class="term">GPT-3.5 :2022年、GPT-3の改良版。対話性能や推論能力を強化し、ChatGPTにも使用。3550億パラメータ。RLHFの仕組みを採用</span></li>
+    <li><span class="term">GPT-4</span><span class="desc">
+        ：2023年、OpenAIが開発した最新の大規模言語モデル。高い推論力とマルチモーダル(画像、音声など)対応が特徴。約1兆7600億のパラメータ</span></li>
+    <li><span class="term">GPT-4o</span><span class="desc"> ：多言語対応かつマルチモーダルなGPTである。</span></li>
+    <li><span class="term">GPTs</span><span class="desc"> ：GPTsとは、自然言語を入力するだけでオリジナルのチャットボットを作れるサービスです</span></li>
+    <li><span class="term">GPTモデル</span><span class="desc"> ：2018.6
+        OpenAI。Transformerベースの自己回帰言語モデル。大規模テキスト学習による生成能力が高い。</span></li>
+    <h2 id="i">I</h2>
+    <li><span class="term">Input Data</span><span class="desc"> ：モデルに入力するデータ。テキストや画像など様々な形態がある。</span></li>
+    <li><span class="term">InstructGPT</span><span class="desc"> ：GPT-3をベースに、ユーザーの指示に最適化されたモデル。RLHFの仕組みを採用</span></li>
+    <li><span class="term">Instruction</span><span class="desc"> ：AIに対して実行してほしい内容を明示的に指示する文面。</span></li>
+    <h2 id="l">L</h2>
+    <li><span class="term">LLM</span><span class="desc"> ：Large Language
+        Model（大規模言語モデル）の略。大規模データで学習した強力な言語モデル。TemperatureとTop-pのパラメータが設定</span></li>
+    <li><span class="term">LM</span><span class="desc"> ：Language Model（言語モデル）の略。言語の統計的性質を学習するモデル。</span></li>
+    <li><span class="term">LSTM(長・短期記憶)</span><span class="desc"> ：RNNの一種で、ゲート機構(forget gate,input gate,output
+        gate)により長期依存関係を学習しやすくしたモデル。1977年に提案</span></li>
+    <li><span class="term">Luma Dream Machine</span><span class="desc"> ：Luma AIが開発する3D生成やAR向けのAI技術プラットフォーム。</span></li>
+    <h2 id="m">M</h2>
+    <li><span class="term">MLM(Masked Language Model)</span><span class="desc">
+        ：一部の単語をマスクし、元の単語を推測させることで文脈理解を学習する手法。</span></li>
+    <h2 id="n">N</h2>
+    <li><span class="term">n-gramモデル</span><span class="desc">
+        ：n個連続する単語（文字）の頻度に基づいて文を生成・予測する単純な言語モデル。バイグラム(n=2)、トライグラム(n=3)</span></li>
+    <li><span class="term">NSP(Next Sentence Prediction)</span><span class="desc">
+        ：2つの文が連続しているかを学習させ、文章構造理解を深めるタスク。ある文の次に来る可能性のある文を予測。</span></li>
+    <h2 id="o">O</h2>
+    <li><span class="term">OpenAI</span><span class="desc"> ：GPTシリーズやChatGPTを開発するAI研究機関兼企業。</span></li>
+    <li><span class="term">Output Indicator</span><span class="desc"> ：モデルの出力に求められる指標や品質基準を示すもの。</span></li>
+    <h2 id="r">R</h2>
+    <li><span class="term">RNN</span><span class="desc"> ：回帰型ニューラルネットワーク過去の情報を記録しながら(回帰型)新しい入力を処理するという特性がある。</span></li>
+    <li><span class="term">RNN(回帰型[リカレント]ニューラルネットワーク)</span><span class="desc">
+        ：時系列データや文章など、シーケンスデータを扱うための再帰構造をもつネットワーク。短い依存関係には優れる</span></li>
+    <li><span class="term">RoBERTa</span><span class="desc"> ：2019年 FacebookAI。BERTを改良し、大規模データと長時間学習で精度を向上させたモデル。</span>
+    </li>
+    <li><span class="term">RLHF(Reinforcement Learning from Human Feedback)</span><span class="desc">
+        ：人間の評価を報酬として学習し、モデルの出力を最適化する手法。</span></li>
+    <li><span class="term">Runway Gen-3</span><span class="desc"> ：Runwayが提供する生成AIツールの一つ。動画生成・編集機能を備える。</span></li>
+    <h2 id="s">S</h2>
+    <li><span class="term">Sora</span><span class="desc"> ：OpenAIの動画生成AIツール</span></li>
+    <h2 id="t">T</h2>
+    <li><span class="term">Temperature</span><span class="desc"> ：生成モデルの出力における多様性(ランダム性)を制御するパラメータ。高いほど多様性が増す。</span></li>
+    <li><span class="term">Top-p</span><span class="desc"> ：生成モデルで上位の確率質量pに含まれる単語のみをサンプリングする手法（Nucleus
+        Sampling）。次に出力する単語を選択する際の手法</span></li>
+    <li><span class="term">Transformerモデル</span><span class="desc">
+        ：CNN,RNNを利用しないモデルとして模索、自己注意機構(Self-Attention)を中心とした高性能な深層学習モデル。</span></li>
+    <h2 id="v">V</h2>
+    <li><span class="term">VAE(変文自己符号化器)</span><span class="desc">
+        ：画像生成AIで利用。入力データを潜在空間にマッピングし、生成も可能な確率的オートエンコーダ(統計的アプローチ)。連続的で類似したデータの構造を保持できる。</span></li>
+    <h2 id="z">Z</h2>
+    <li><span class="term">Zero-Shotプロンプティング</span><span class="desc"> ：例示や追加説明なしで、直接タスクを指示してAIに応答させる手法。</span></li>
   </ul>
+</div>
 
-  <h2>い</h2>
+<div class="">
+  <h2 id="hiragana_a">あ</h2>
   <ul>
-    <li><span class="term">意匠権</span><span class="desc"> : 物品の形状や模様、色彩などのデザインを保護する権利。出願の日から最長25年</span></li>
-    <li><span class="term">InstructGPT</span><span class="desc"> : GPT-3をベースに、ユーザーの指示に最適化されたモデル。RLHFの仕組みを採用</span></li>
-    <li><span class="term">Instruction</span><span class="desc"> : AIに対して実行してほしい内容を明示的に指示する文面。</span></li>
-    <li><span class="new-term term">イノベーション</span><span class="desc"> : 新たな発想や技術を取り入れ、社会Alignmentや経済に変革をもたらすこと。AI基本原則(7つ)⑦</span></li>
-  </ul>
-
-  <h2>え</h2>
-  <ul>
-    <li><span class="term">営業秘密</span><span class="desc"> : 企業が秘密として管理する有用な情報。不正競争防止法で保護される。</span></li>
-    <li><span class="term">エキスパートシステム</span><span class="desc"> : 専門家の知識やルールをプログラム化し、専門家に近い推論を行うシステム。</span></li>
+    <li><span class="term">アーキテクチャ</span><span class="desc"> ：モデルやシステムの全体的な設計構造。</span></li>
+    <li><span class="term">アカウンタビリティ</span><span class="desc"> ：行為や決定の根拠を示し、説明・責任を負うこと。</span></li>
+    <li><span class="term">アカウンタビリティ</span><span class="desc"> ：自らの行動や結果について説明責任を果たすこと。</span></li>
+    <li><span class="term">アライメント(Alignment)</span><span class="desc"> ：AIの目的や行動が人間の価値観・倫理観に合致するように調整すること。</span></li>
+    <li><span class="term">安全性</span><span class="desc"> ：システムやサービスが人々に害を与えないよう、十分に保護された状態。</span></li>
+    <li><span class="term">安全性・公平性</span><span class="desc"> ：危険や不利益がなく、公平な扱いが行われることを重視する価値観。</span></li>
+    <li><span class="term">アンチウイルスソフトウェア</span><span class="desc"> ：マルウェアを検知・駆除するためのソフトウェア。</span></li>
+    <h2 id="hiragana_i">い</h2>
+    <li><span class="term">イノベーション</span><span class="desc"> ：新たな発想や技術を取り入れ、社会Alignmentや経済に変革をもたらすこと。。AI基本原則(7つ)⑦</span>
+    </li>
+    <li><span class="term">インターネットリテラシー</span><span class="desc"> ：ネット上の情報を正しく扱い、危険や詐欺を見極めるための知識・技能。</span></li>
+    <li><span class="term">意匠権</span><span class="desc"> ：物品の形状や模様、色彩などのデザインを保護する権利。出願の日から最長25年</span></li>
+    <li><span class="term">位置エンコーディング</span><span class="desc"> ：Transformerなどで順序情報を学習させるために入力に付与するベクトル。各単語の位置を数値化。</span>
+    </li>
+    <h2 id="hiragana_u">う</h2>
+    <li><span class="term">ヴァーナー・ヴィンジ</span><span class="desc"> ：シンギュラリティ概念を広めたSF作家・数学者。</span></li>
+    <li><span class="term">ヴィッシング</span><span class="desc"> ：電話や音声通話を利用したフィッシング詐欺。Vishing</span></li>
+    <h2 id="hiragana_e">え</h2>
+    <li><span class="term">営業秘密</span><span class="desc"> ：企業が秘密として管理する有用な情報。不正競争防止法で保護される。</span></li>
     <li><span class="term">エンコーダー</span><span class="desc"> : 入力データを潜在表現に圧縮するニューラルネットワーク構成要素。</span></li>
+    <li><span class="term">エキスパートシステム</span><span class="desc"> ：専門家の知識やルールをプログラム化し、専門家に近い推論を行うシステム。</span></li>
+    <h2 id="hiragana_o">お</h2>
+    <li><span class="term">重み</span><span class="desc"> ：ニューラルネットワークで入力に対して掛け合わされるパラメータ。学習によって更新される。重要性に差異を設ける</span></li>
   </ul>
+</div>
 
-  <h2>お</h2>
-  <ul>
-    <li><span class="term">OpenAI</span><span class="desc"> : GPTシリーズやChatGPTを開発するAI研究機関兼企業。</span></li>
-    <li><span class="term">Output Indicator</span><span class="desc"> : モデルの出力に求められる指標や品質基準を示すもの。</span></li>
+<div class="ka_gyo">
+    <h2 id="hiragana_ka">か</h2>
+    <ul>
+    <li><span class="term">隠れ層</span><span class="desc"> ：入力層と出力層の間にある層。中間表現を学習する役割を担う。モデルの表現力向上、過剰だと過学習に繋がる。</span></li>
+    <li><span class="term">過学習</span><span class="desc"> ：AIが与えられたデータに適応し過ぎてしまい、未知のデータに対する処理精度が落ちる現象</span></li>
+    <li><span class="term">画像のリサイズ</span><span class="desc"> ：画像のピクセル数を変更する処理。分析や学習でサイズを揃えるために行う。</span></li>
+    <li><span class="term">改正個人情報保護法</span><span class="desc"> ：個人情報保護法を改正し、国際的なデータ取扱いなどルールを強化した法。</span></li>
+    <li><span class="term">学習済みモデル</span><span class="desc"> ：すでにデータを使って学習が行われ、推論や予測に利用できる状態のモデル。</span></li>
+    <li><span class="term">環境・リスク分析</span><span class="desc"> ：AI活用に伴う社会的・技術的リスクを評価し、対策を検討するプロセス。</span></li>
+    <h2 id="hiragana_ki">き</h2>
+    <li><span class="term">機械学習</span><span class="desc"> ：データからパターンを学習し、予測や分類などを自動化する手法の総称。</span></li>
+    <li><span class="term">機微(センシティブ)情報</span><span class="desc"> ：差別や偏見に繋がる恐れがある、特に慎重な保護が必要な情報。</span></li>
+    <li><span class="term">偽情報(ディスインフォメーション)</span><span class="desc"> ：意図的に流布される虚偽や誤解を招く情報。</span></li>
+    <li><span class="term">強化学習</span><span class="desc"> ：報酬という特定の目的を設定し、報酬を最大化する行動を学習する枠組み。試行錯誤を通じて最適な方策を獲得する。</span>
+    </li>
+    <li><span class="term">教育・リテラシー</span><span class="desc"> ：AIや情報技術を正しく扱うために必要な知識・技能を習得すること。。AI基本原則(7つ)②</span></li>
+    <li><span class="term">教師あり学習</span><span class="desc">
+        ：正解ラベル付きのデータを用いて学習を行い、未知の入力に対してラベルを予測する手法。利用例・・・音声性のトレーニングに用いられる。</span></li>
+    <li><span class="term">教師なし学習</span><span class="desc"> ：ラベルのないデータから、その構造やパターンを発見する学習手法。</span></li>
+    <h2 id="hiragana_ku">く</h2>
+    <li><span class="term">クラスタリング</span><span class="desc"> ：教師なし学習の一種で、類似度の高いデータ同士をグループ化する手法。データの理解や分析、異常検知などに活用。</span>
+    </li>
+    <h2 id="hiragana_ke">け</h2>
+    <li><span class="term">限定提供データ</span><span class="desc"> ：提供先や用途が制限されたデータ。契約などで利用範囲を厳格に設定。限定提供性、相当量備蓄性、電磁的管理性。</span>
+    </li>
+    <h2 id="hiragana_ko">こ</h2>
+    <li><span class="term">個人識別番号</span><span class="desc"> ：個人を一意に特定する番号（例: マイナンバー）。</span></li>
+    <li><span class="term">個人情報取扱業者</span><span class="desc"> ：個人情報(データベース等)を事業で扱う者。適切な管理が法律で義務付けられる。</span></li>
+    <li><span class="term">個人情報保護委員会</span><span class="desc"> ：個人情報保護法の運用や監督を行う日本の行政機関。2016.1.1に設立。独立性が高い</span></li>
+    <li><span class="term">個人情報保護法</span><span class="desc"> ：個人情報の適正な管理・利用を目的とした日本の法律。</span></li>
+    <li><span class="term">公正競争確保</span><span class="desc">
+        ：事業者間の不正行為や独占的な活動を防ぎ、消費者や社会にとって公平・健全な市場環境を維持するための取り組みや制度。。AI基本原則(7つ)⑤</span></li>
+    <li><span class="term">公平性</span><span class="desc"> ：不当な差別や偏りがないよう、平等に扱う原則。⑥公平性・説明責任</span></li>
   </ul>
+</div>
 
-  <h2>か</h2>
-  <ul>
-    <li><span class="term">改正個人情報保護法</span><span class="desc"> : 個人情報保護法を改正し、国際的なデータ取扱いなどルールを強化した法。</span></li>
-    <li><span class="term">過学習</span><span class="desc"> : AIが与えられたデータに適応し過ぎてしまい、未知のデータに対する処理精度が落ちる現象</span></li>
-    <li><span class="term">学習済みモデル</span><span class="desc"> : すでにデータを使って学習が行われ、推論や予測に利用できる状態のモデル。</span></li>
-    <li><span class="term">機械学習</span><span class="desc"> : データからパターンを学習し、予測や分類などを自動化する手法の総称。</span></li>
-    <li><span class="term">機微(センシティブ)情報</span><span class="desc"> : 差別や偏見に繋がる恐れがある、特に慎重な保護が必要な情報。</span></li>
-    <li><span class="term">教師あり学習</span><span class="desc"> : 正解ラベル付きのデータを用いて学習を行い、未知の入力に対してラベルを予測する手法。利用例・・・音声性のトレーニングに用いられる。</span></li>
-    <li><span class="term">教師なし学習</span><span class="desc"> : ラベルのないデータから、その構造やパターンを発見する学習手法。</span></li>
-    <li><span class="term">クラスタリング</span><span class="desc"> : 教師なし学習の一種で、類似度の高いデータ同士をグループ化する手法。データの理解や分析、異常検知などに活用。</span></li>
-    <li><span class="new-term term">Claude</span><span class="desc"> : Anthropic社の大規模言語モデル。安全性や倫理面を重視して開発されている。</span></li>
-    <li><span class="term">強化学習</span><span class="desc"> : 報酬という特定の目的を設定し、報酬を最大化する行動を学習する枠組み。試行錯誤を通じて最適な方策を獲得する。</span></li>
-    <li><span class="term">強いAI(AGI)</span><span class="desc"> : 人間レベルの汎用的な知能を持つAI。多様な課題をこなせる。</span></li>
-    <li><span class="term">Context</span><span class="desc"> : AIモデルが処理を行う際の参照情報や前後の文脈。</span></li>
-    <li><span class="term">GAN(敵対的生成ネットワーク)</span><span class="desc"> : 画像生成AIで利用。生成器と識別機を対立的に学習させ、リアルなデータを生成する手法。StyleGANはNVIDA社が開発した顔画像の生成特化。</span></li>
-    <li><span class="new-term term">Gemini</span><span class="desc"> : Google DeepMindが開発中とされる次世代の大規模言語モデル。</span></li>
-    <li><span class="new-term term">GPT-3</span><span class="desc"> : OpenAIが2020年に発表、1750億パラメータを持つ大規模言語モデル。多様なタスクに対応可能。調整なしでNLPタスクが実行可能</span></li>
-    <li><span class="new-term term">GPT-4o</span><span class="desc"> : 多言語対応かつマルチモーダルなGPTである。</span></li>
-    <li><span class="new-term term">GPTs</span><span class="desc"> : 自然言語を入力するだけでオリジナルのチャットボットを作れるサービス。</span></li>
-  </ul>
 
-  <h2>さ</h2>
+<div class="sa_gyo">
+  <h2 id="hiragana_shi">し</h2>
   <ul>
-    <li><span class="term">シーケンスデータ</span><span class="desc"> : 連続性を持つデータ（テキスト・音声・時系列など）。</span></li>
-    <li><span class="term">シナプス</span><span class="desc"> : ニューロン同士を接続する部分。ニューラルネットワークにおける重みに相当する。</span></li>
-    <li><span class="term">自己回帰モデル</span><span class="desc"> : 1990-2000年　過去の値を用いて将来の値を予測する。GPTなどのモデルで利用（Autoregressive Model）。</span></li>
-    <li><span class="term">自己注意力(Self-Attention)</span><span class="desc"> : 要素同士が相互に注意を向ける機構。入力をQuery,Key,Valueの行列から各要素が他の要素とどれだけ関連性があるかを計算し、注意力スコアを計算。</span></li>
-    <li><span class="term">システム</span><span class="desc"> : 複数の要素が相互に作用し合って1つの機能を果たす仕組み全体。</span></li>
-    <li><span class="term">自然言語処理(NLP)</span><span class="desc"> : 人間の言語をコンピュータで扱う技術全般。理解・生成などを含む。テキスト生成AIで利用</span></li>
     <li><span class="term">識別機</span><span class="desc"> : GANで入力が本物か偽物かを判定するネットワーク。</span></li>
-    <li><span class="term">次元削減</span><span class="desc"> : 教師なし学習の一種で高次元データをより低次元へ圧縮し、情報の要点を抽出する手法。</span></li>
-    <li><span class="term">人工ニューロン(ノード) </span><span class="desc"> : 生物学的ニューロンを模倣した演算ユニットで、複数の入力を重み付けして出力する。</span></li>
-    <li><span class="term">重み</span><span class="desc"> : ニューラルネットワークで入力に対して掛け合わされるパラメータ。学習によって更新される。</span></li>
-    <li><span class="term">商標権</span><span class="desc"> : 商品やサービスの区別に用いられる商標の独占使用権。設定登録から10年</span></li>
-    <li><span class="term">情報の重みづけ</span><span class="desc"> : ニューラルネットワークで入力特徴に対して重要度を調整する仕組み。</span></li>
-    <li><span class="term">生成AI(ジェネレーティブAI)</span><span class="desc"> : テキストや画像、音声、動画など様々なコンテンツを生成する能力を持つAI。</span></li>
-    <li><span class="term">生成器</span><span class="desc"> : GANで偽データを生成するネットワーク。識別機を騙せるように学習する。</span></li>
-    <li><span class="new-term term">Sora</span><span class="desc"> : OpenAIの動画生成AIツール</span></li>
-    <li><span class="term">ソーシャルエンジニアリング攻撃</span><span class="desc"> : 人間の心理的な隙をつき、情報や権限を不正に取得する攻撃手法。</span></li>
+    <li><span class="term">次元削減</span><span class="desc"> ：教師なし学習の一種で高次元データをより低次元へ圧縮し、情報の要点を抽出する手法。</span></li>
+    <li><span class="term">自己回帰モデル</span><span class="desc"> ：1990-2000年　過去の値を用いて将来の値を予測する。GPTなどのモデルで利用（Autoregressive
+        Model）。</span></li>
+    <li><span class="term">自己注意力(Self-Attention) </span><span class="desc">
+        ：要素同士が相互に注意を向ける機構。入力をQuery,Key,Valueの行列から各要素が他の要素とどれだけ関連性があるかを計算し、注意力スコアを計算。</span></li>
+    <li><span class="term">シーケンスデータ</span><span class="desc"> ：連続性を持つデータ（テキスト・音声・時系列など）。</span></li>
+    <li><span class="term">シナプス</span><span class="desc"> ：ニューロン同士を接続する部分。ニューラルネットワークにおける重みに相当する。</span></li>
+    <li><span class="term">シンギュラリティ(技術的特異点)</span><span class="desc"> ：AIが人間の知能を超える理論上の転換点。社会に大きな変化をもたらすとされる。</span></li>
+    <li><span class="term">持続可能な社会(Sustainability)</span><span class="desc">
+        ：現在と将来の世代が共存し、環境・経済・社会のバランスを保ちながら発展する社会。</span></li>
+    <li><span class="term">商標権</span><span class="desc"> ：商品やサービスの区別に用いられる商標の独占使用権。設定登録から10年</span></li>
+    <li><span class="term">肖像権</span><span class="desc"> ：個人の顔や姿を無断で撮影・利用されないよう保護する権利。</span></li>
+    <li><span class="term">情報の重みづけ</span><span class="desc"> ：ニューラルネットワークで入力特徴に対して重要度を調整する仕組み。</span></li>
+    <li><span class="term">情報リテラシー</span><span class="desc"> ：情報を収集・評価・活用する能力。</span></li>
+    <li><span class="term">人工ニューロン(ノード)</span><span class="desc"> ：生物学的ニューロンを模倣した演算ユニットで、複数の入力を重み付けして出力する。</span></li>
+    <h2 id="hiragana_su">す</h2>
+    <li><span class="term">推論</span><span class="desc"> ：規則や知識に基づき、新たな結論や知見を導き出すプロセス。</span></li>
+    <li><span class="term">スピアフィッシング</span><span class="desc"> ：特定の個人や組織を狙ったフィッシング詐欺。より巧妙で標的に合わせた手口。</span></li>
+    <li><span class="term">スミッシング</span><span class="desc"> ：SMSを使ったフィッシング詐欺。URLをクリックさせ情報を盗む。Smishing</span></li>
+    <h2 id="hiragana_se">せ</h2>
+    <li><span class="term">生成器 </span><span class="desc"> : GANで偽データを生成するネットワーク。識別機を騙せるように学習する。</span></li>
+    <li><span class="term">制限付きボツマンマシン</span><span class="desc"> ：1986年　可視層と隠れ層の間にのみ結合をもつ簡易型ボルツマンマシン。データの生成や再構成に利用。</span>
+    </li>
+    <li><span class="term">正規化</span><span class="desc"> ：データを一定のスケールに揃え、学習の安定性を高める手法。L</span></li>
+    <li><span class="term">正則化</span><span class="desc">
+        ：過学習を防ぐために、パラメータを調整・制限して、モデルの複雑さを抑える手法（li・L2正則化など）。L2正則化はモデルのパラメータ値を0に近づける手法</span></li>
+    <li><span class="term">生成AI(ジェネレーティブAI)</span><span class="desc"> ：テキストや画像、音声、動画など様々なコンテンツを生成する能力を持つAI。</span></li>
+    <li><span class="term">セキュリティとプライバシー</span><span class="desc"> ：情報やシステムの安全性を確保し、個人や組織のプライバシーを保護する概念。</span></li>
+    <li><span class="term">セキュリティ確保</span><span class="desc"> ：情報やシステムを外部の脅威から守る対策。。AI基本原則(7つ)③プライバシーとセキュリティ</span></li>
+    <li><span class="term">セキュリティ確保</span><span class="desc"> ：情報資産を不正アクセスや漏洩から守るための対策を講じること。。AI基本原則(7つ)④</span></li>
+    <li><span class="term">潜在べクトル</span><span class="desc"> ：データを圧縮した内在的な表現ベクトル。生成モデルなどで利用される。</span></li>
+    <h2 id="hiragana_so">そ</h2>
+    <li><span class="term">ソーシャルエンジニアリング攻撃</span><span class="desc"> ：人間の心理的な隙をつき、情報や権限を不正に取得する攻撃手法。</span></li>
   </ul>
+</div>
 
-  <h2>た</h2>
+<div class="ta_gyo">
+  <h2 id="hiragana_ta">た</h2>
   <ul>
-    <li><span class="term">ダートマス会議</span><span class="desc"> : 1956年に開催され、AIという研究分野の名称と概念が正式に提案された会議。</span></li>
-    <li><span class="term">第一次AIブーム</span><span class="desc"> : 1950年代後半から1960年代にかけてのAI研究隆盛期。探索や推論に期待が集まった。1956ダートマス会議～</span></li>
-    <li><span class="term">第二次AIブーム</span><span class="desc"> : 1980年代にエキスパートシステムを中心にAI研究・開発が活発化した時期。</span></li>
-    <li><span class="term">第三次AIブーム</span><span class="desc"> : 2000年代後半～ ビッグデータやディープラーニングでAIが再興した時期。</span></li>
-    <li><span class="term">ディープラーニング</span><span class="desc"> : 多層のニューラルネットワークを用いた機械学習手法の総称。</span></li>
-    <li><span class="term">データセット</span><span class="desc"> : 学習や評価に用いるデータの集合。教師データ・テストデータなどに分割される。</span></li>
-    <li><span class="term">データ拡張技術</span><span class="desc"> : 学習用データを多様化するための手法全般。画像・文章・音声などで利用される。非現実的な変換を避ける。</span></li>
-    <li><span class="term">データの水増し(augmentation)</span><span class="desc"> : データを回転・反転などで増やし、汎化性能を向上させる手法。</span></li>
-    <li><span class="term">テクノロジーの理解</span><span class="desc"> : 科学技術の原理や活用方法を正しく把握すること。</span></li>
-    <li><span class="term">デコーダ</span><span class="desc"> : 潜在表現から元の形式に近い出力を再構成するニューラルネットワーク構成要素。</span></li>
-    <li><span class="term">特徴量</span><span class="desc"> : モデルが学習や推論に用いる、入力データの重要な指標やパターン。</span></li>
-    <li><span class="term">特許権</span><span class="desc"> : 新規発明に対して、一定期間独占的に実施できる権利。出願から20年</span></li>
-    <li><span class="term">ドロップアウト</span><span class="desc"> : 学習時にランダムにニューロンを無効化し、過学習を防ぐ手法。</span></li>
-    <li><span class="term">Transformerモデル</span><span class="desc"> : CNN,RNNを利用しないモデルとして模索、自己注意機構(Self-Attention)を中心とした高性能な深層学習モデル。</span></li>
+    <li><span class="term">ダートマス会議</span><span class="desc"> ：1956年に開催され、AIという研究分野の名称と概念が正式に提案された会議。</span></li>
+    <li><span class="term">第一次AIブーム</span><span class="desc">
+        ：1950年代後半から1960年代にかけてのAI研究隆盛期。探索や推論に期待が集まった。1956ダートマス会議～</span></li>
+    <li><span class="term">第三次AIブーム</span><span class="desc"> ：2000年代後半～ ビッグデータやディープラーニングでAIが再興した時期。</span></li>
+    <li><span class="term">第二次AIブーム</span><span class="desc"> ：1980年代にエキスパートシステムを中心にAI研究・開発が活発化した時期。</span></li>
+    <li><span class="term">畳み込み</span><span class="desc"> ：入力データの局所領域から特徴を抽出する演算処理。</span></li>
+    <li><span class="term">多様な背景を持つ人々が多様な幸せを追及できる社会(Diversity&Inclusion)</span><span class="desc">
+        ：人種・性別・年齢などの多様性を受け入れ、誰もが幸福を追求できる社会。</span></li>
+    <li><span class="term">探索</span><span class="desc"> ：問題空間を系統的に調べ、最適解や有望な解を見つけるプロセス。</span></li>
+    <h2 id="hiragana_ti">ち</h2>
+    <li><span class="term">知的財産権</span><span class="desc"> ：創作物や発明を保護する法律上の権利の総称。</span></li>
+    <li><span class="term">著作権</span><span class="desc"> ：文学や音楽などの著作物を創作した者に与えられる権利。</span></li>
+    <li><span class="term">著作権侵害</span><span class="desc"> ：無断で著作物を複製・公開・頒布するなど、著作権者の権利を侵害する行為。</span></li>
+    <h2 id="hiragana_tu">つ</h2>
+    <li><span class="term">強いAI(AGI)</span><span class="desc"> ：人間レベルの汎用的な知能を持つAI。多様な課題をこなせる。</span></li>
+    <h2 id="hiragana_te">て</h2>
+    <li><span class="term">ディープフェイク(深層偽造)技術</span><span class="desc"> ：AIを使って人物の動画や音声を本物のように加工・合成する技術。</span></li>
+    <li><span class="term">ディープラーニング</span><span class="desc"> ：多層のニューラルネットワークを用いた機械学習手法の総称。</span></li>
+    <li><span class="term">データセット</span><span class="desc"> ：学習や評価に用いるデータの集合。教師データ・テストデータなどに分割される。</span></li>
+    <li><span class="term">データの水増し(augmentation)</span><span class="desc"> ：データを回転・反転などで増やし、汎化性能を向上させる手法。</span></li>
+    <li><span class="term">データ拡張技術</span><span class="desc"> ：学習用データを多様化するための手法全般。画像・文章・音声などで利用される。非現実的な変換を避ける。</span>
+    </li>
+    <li><span class="term">テクノロジーの理解</span><span class="desc"> ：科学技術の原理や活用方法を正しく把握すること。</span></li>
+    <li><span class="term">デコーダ</span><span class="desc"> : 潜在表現から元の形式に近い出力を再構成するニューラルネットワーク構成要素</span></li>
+    <li><span class="term">デジタル市民権</span><span class="desc"> ：インターネット社会での権利と責任を理解し、適切に行動すること。</span></li>
+    <li><span class="term">転移学習</span><span class="desc"> ：あるタスクで得た学習済みモデルや知識を別のタスクに応用する手法。</span></li>
+    <h2 id="hiragana_to">と</h2>
+    <li><span class="term">透明性</span><span class="desc"> ：システムや意思決定プロセスを開示し、公正性や信頼を担保すること。</span></li>
+    <li><span class="term">透明性</span><span class="desc"> ：内部の情報やプロセスを必要に応じて開示し、理解や監督を可能にする。</span></li>
+    <li><span class="term">匿名加工情報</span><span class="desc">
+        ：個人が特定できないように加工されたデータ。第三者に提供する場合、個人情報保護法により、あらかじめその旨を公開する必要あり。</span></li>
+    <li><span class="term">特許権</span><span class="desc"> ：新規発明に対して、一定期間独占的に実施できる権利。出願から20年</span></li>
+    <li><span class="term">特徴量</span><span class="desc"> ：モデルが学習や推論に用いる、入力データの重要な指標やパターン。</span></li>
+    <li><span class="term">ドロップアウト</span><span class="desc"> ：学習時にランダムにニューロンを無効化し、過学習を防ぐ手法。</span></li>
   </ul>
+</div>
 
-  <h2>な</h2>
+<div class="na_gyo">
+  <h2 id="hiragana_ni">に</h2>
   <ul>
-    <li><span class="term">名誉棄損</span><span class="desc"> : 虚偽の情報などで他者の社会的評価を低下させる行為。</span></li>
-    <li><span class="term">ニューラル言語モデル</span><span class="desc"> : 人工ニューラルネットワークを用いた言語モデル。文章生成、翻訳、質疑応答など。RNNやTransformerなどが代表。</span></li>
-    <li><span class="term">ニューラルネットワーク</span><span class="desc"> : 多数の人口ニューロンを多層に結合したモデルで、複雑なパターン学習が可能。</span></li>
-    <li><span class="term">ニューロン</span><span class="desc"> : 脳神経細胞。ニューラルネットワークの基礎的概念のもととなる単位。活性化関数を用いて入力データを変換。</span></li>
-    <li><span class="term">n-gramモデル</span><span class="desc"> : n個連続する単語（文字）の頻度に基づいて文を生成・予測する単純な言語モデル。</span></li>
-    <li><span class="term">ノイズ</span><span class="desc"> : データに含まれる不要な変動や誤差。適切な量なら汎化性能を高める場合もある。</span></li>
-    <li><span class="term">ノーフリーランチ定理</span><span class="desc"> : どのアルゴリズムも、あらゆる問題設定において常に最良とは限らないという定理。</span></li>
-    <li><span class="term">NSP(Next Sentence Prediction)</span><span class="desc"> : 2つの文が連続しているかを学習させ、文章構造理解を深めるタスク。</span></li>
+    <li><span class="term">2045年問題</span><span class="desc"> ：レイ・カートワイルが提唱した、2045年にAIが人間を超える可能性があるとする議論。</span></li>
+    <li><span class="term">ニューラルネットワーク</span><span class="desc"> ：多数の人口ニューロンを多層に結合したモデルで、複雑なパターン学習が可能。</span></li>
+    <li><span class="term">ニューラル言語モデル</span><span class="desc">
+        ：人工ニューラルネットワークを用いた言語モデル。文章生成、翻訳、質疑応答など。RNNやTransformerなどが代表。</span></li>
+    <li><span class="term">ニューロン</span><span class="desc"> ：脳神経細胞。ニューラルネットワークの基礎的概念のもととなる単位。活性化関数を用いて入力データを変換。</span></li>
+    <li><span class="term">人間の尊厳が尊重される社会(Dignity)</span><span class="desc"> ：すべての人が固有の尊厳を持ち、その価値が認められる社会。</span></li>
+    <li><span class="term">人間中心</span><span class="desc"> ：AIやテクノロジー開発で、人間の尊厳や安全性を中心に設計すること。</span></li>
+    <li><span class="term">人間中心の考え方</span><span class="desc"> ：技術や制度を設計・運用する際、人間の価値や幸福を最優先に考慮する理念。AI基本原則(7つ)①人間中心</span>
+    </li>
+    <h2 id="hiragana_no">の</h2>
+    <li><span class="term">ノイズ</span><span class="desc"> ：データに含まれる不要な変動や誤差。適切な量なら汎化性能を高める場合もある。</span></li>
+    <li><span class="term">ノーフリーランチ定理</span><span class="desc"> ：どのアルゴリズムも、あらゆる問題設定において常に最良とは限らないという定理。</span></li>
   </ul>
+</div>
 
-  <h2>は</h2>
+<div class="ha_gyo">
+  <h2 id="hiragana_ha">は</h2>
   <ul>
-    <li><span class="term">バイアス</span><span class="desc"> : データや判断における偏り。公平性に影響を与える要因。</span></li>
-    <li><span class="term">パブリシティ権</span><span class="desc"> : 有名人などの氏名や肖像から生じる経済的利益を保護する権利。</span></li>
-    <li><span class="term">パラメータ</span><span class="desc"> : モデルが学習を通じて調整する数値（重みやバイアスなど）。</span></li>
-    <li><span class="term">半教師あり学習</span><span class="desc"> : わずかなラベル付きデータと大量のラベルなし(未知)データを併用して学習する手法。</span></li>
-    <li><span class="term">ビックデータ</span><span class="desc"> : 従来の技術では扱いきれないほど大量・多様・高速なデータの総称。</span></li>
-    <li><span class="term">弱いAI(ANI)</span><span class="desc"> : 特定のタスクに特化したAI。限られた範囲で高い性能を発揮する。</span></li>
-    <li><span class="term">不正競争防止法</span><span class="desc"> : 営業秘密の保護や他社の信用を傷つける行為を規制し、公正な競争を確保する法律。</span></li>
-    <li><span class="term">プレトレーニング</span><span class="desc"> : 大量のデータで事前学習を行うことで、下流タスクに応用しやすくする手法。</span></li>
-    <li><span class="term">プロンプト</span><span class="desc"> : AIに与える指示文やコンテキスト。出力の内容に大きな影響を与える。</span></li>
-    <li><span class="term">プロンプトエンジニアリング</span><span class="desc"> : AIに効果的な指示を与えるための設計・テクニック。</span></li>
-    <li><span class="term">ベイト攻撃</span><span class="desc"> : ユーザーが興味を持ちそうな「餌」（ベイト）を用意し、クリックやダウンロード、あるいは物理的な接触を誘導。</span></li>
-    <li><span class="term">変分自己符号化器(VAE)</span><span class="desc"> : 画像生成AIで利用。入力データを潜在空間にマッピングし、生成も可能な確率的オートエンコーダ。</span></li>
+    <li><span class="term">ハイパーパラメータ</span><span class="desc"> ：学習率やバッチサイズ、隠れ層の数など、学習過程で手動設定が必要なパラメータ。</span></li>
+    <li><span class="term">パブリシティ権</span><span class="desc"> ：有名人などの氏名や肖像から生じる経済的利益を保護する権利。</span></li>
+    <li><span class="term">パラメータ</span><span class="desc"> ：モデルが学習を通じて調整する数値（重みやバイアスなど）。</span></li>
+    <li><span class="term">ハルシネーション(Hallucination) :AIが事実に基づかない情報をあたかも真実のように生成する現象。</span></li>
+    <li><span class="term">半教師あり学習</span><span class="desc">
+        ：わずかなラベル付きデータと大量のラベルなし(未知)データを併用して学習する手法。精度は教師あり学習より低い。</span></li>
+    <h2 id="hiragana_hi">ひ</h2>
+    <li><span class="term">ビックデータ</span><span class="desc"> ：従来の技術では扱いきれないほど大量・多様・高速なデータの総称。</span></li>
+    <h2 id="hiragana_hu">ふ</h2>
+    <li><span class="term">ファインチューニング</span><span class="desc"> ：事前学習済みモデルを特定のタスクに適応させること。</span></li>
+    <li><span class="term">フィッシング詐欺</span><span class="desc"> ：偽のメールやサイトで個人情報を騙し取る行為。</span></li>
+    <li><span class="term">不正競争防止法</span><span class="desc"> ：営業秘密の保護や他社の信用を傷つける行為を規制し、公正な競争を確保する法律。</span></li>
+    <li><span class="term">プライバシー保護</span><span class="desc">
+        ：個人の情報や生活領域を尊重し、不正な利用や侵害を防止する。。AI基本原則(7つ)③プライバシーとセキュリティ</span></li>
+    <li><span class="term">ブラックメール</span><span class="desc"> ：脅迫的な内容で金銭や情報を要求する不正行為。</span></li>
+    <li><span class="term">プレテキスト</span><span class="desc"> ：架空の身分や状況を使い、ターゲットを信用させ情報を引き出す手口。ソーシャルエンジニアリングの一種</span></li>
+    <li><span class="term">プレトレーニング</span><span class="desc">
+        ：大量のデータで事前学習を行うことで、下流タスクに応用しやすくする手法。一般的な知識や言語のパターンを理解。特定タスク用にファインチューニングされてない。</span></li>
+    <li><span class="term">プロンプト</span><span class="desc"> ：AIに与える指示文やコンテキスト。出力の内容に大きな影響を与える。</span></li>
+    <li><span class="term">プロンプトエンジニアリング</span><span class="desc"> ：AIに効果的な指示を与えるための設計・テクニック。</span></li>
+    <h2 id="hiragana_">へ</h2>
+    <li><span class="term">ベイト攻撃</span><span class="desc"> ：ユーザーが興味を持ちそうな「餌」（ベイト）を用意し、クリックやダウンロード、あるいは物理的な接触を誘導。</span>
+    </li>
+    <h2 id="hiragana_ho">ほ</h2>
+    <li><span class="term">ボルツマンマシン</span><span class="desc">
+        ：1980年代後半　確率的なエネルギーモデルを用いるニューラルネットワークの一種。確立的に振る舞うユニット間の相互結合型ニューラルネットワーク。学習に時間かかりずきた</span></li>
   </ul>
+</div>
 
-  <h2>ま</h2>
+<div class="ma_gyo">
+  <h2 id="hiragana_ma">ま</h2>
   <ul>
-    <li><span class="term">マスキング</span><span class="desc"> : 個人情報の一部を伏せ字や置換することで、匿名性を高める技法。</span></li>
-    <li><span class="term">マルウェア</span><span class="desc"> : コンピュータに有害な動作をするソフトウェア。ウイルスやワームなどを含む。</span></li>
-    <li><span class="term">マルチモーダル</span><span class="desc"> : テキスト・画像・音声など複数のデータ形式を組み合わせて処理できるAI。</span></li>
-    <li><span class="term">MLM(Masked Language Model)</span><span class="desc"> : 一部の単語をマスクし、元の単語を推測させることで文脈理解を学習する手法。</span></li>
+    <li><span class="term">マスキング</span><span class="desc"> ：個人情報の一部を伏せ字や置換することで、匿名性を高める技法。</span></li>
+    <li><span class="term">マルウェア</span><span class="desc"> ：コンピュータに有害な動作をするソフトウェア。ウイルスやワームなどを含む。</span></li>
+    <li><span class="term">マルチモーダル</span><span class="desc"> ：テキスト・画像・音声など複数のデータ形式を組み合わせて処理できるAI。</span></li>
+    <h2 id="hiragana_me">め</h2>
+    <li><span class="term">名誉棄損</span><span class="desc"> ：虚偽の情報などで他者の社会的評価を低下させる行為。</span></li>
   </ul>
+</div>
 
-  <h2>や</h2>
+<div class="ya_gyo">
+  <h2 id="hiragana_yo">よ</h2>
   <ul>
-    <li><span class="term">有配慮個人情報</span><span class="desc"> : 人種や病歴など、取り扱いに配慮が必要とされる個人情報。</span></li>
+    <li><span class="term">用配慮個人情報</span><span class="desc"> ：人種や病歴など、取り扱いに配慮が必要とされる個人情報。</span></li>
+    <li><span class="term">弱いAI(ANI)</span><span class="desc"> ：特定のタスクに特化したAI。限られた範囲で高い性能を発揮する。</span></li>
   </ul>
+</div>
 
-  <h2>ら</h2>
+<div class="ra_gyo">
+  <h2 id="hiragana_ra">ら</h2>
   <ul>
-    <li><span class="term">ランサムウェア</span><span class="desc"> : ファイルを暗号化し、身代金を要求するマルウェア。</span></li>
-    <li><span class="term">リカント層</span><span class="desc"> : RNNの再帰的な構造を形成する層（リカレント層）。過去の状態を考慮する。音声のリアルタイム処理などで活用</span></li>
-    <li><span class="term">リマスタリング</span><span class="desc"> : 元データを高解像度化や画質向上する再処理。映像・音声などで用いられる。</span></li>
-    <li><span class="term">ルールベース</span><span class="desc"> : 事前に定義されたルール（条件と処理）に基づいて推論・判断を行うAI技術。</span></li>
-    <li><span class="new-term term">Luma Dream Machine</span><span class="desc"> : Luma AIが開発する3D生成やAR向けのAI技術プラットフォーム。</span></li>
-    <li><span class="term">レイ・カートワイル</span><span class="desc"> : 2045年問題などの予測を行った未来学者で、シンギュラリティを提唱。</span></li>
-    <li><span class="term">RoBERTa</span><span class="desc"> : 2019年 FacebookAI。BERTを改良し、大規模データと長時間学習で精度を向上させたモデル。</span></li>
-    <li><span class="term">RNN(回帰型[リカレント]ニューラルネットワーク)</span><span class="desc"> : 時系列データや文章など、シーケンスデータを扱うための再帰構造をもつネットワーク。</span></li>
-    <li><span class="term">RLHF(Reinforcement Learning from Human Feedback)</span><span class="desc"> : 人間の評価を報酬として学習し、モデルの出力を最適化する手法。</span></li>
-    <li><span class="new-term term">Runway Gen-3</span><span class="desc"> : Runwayが提供する生成AIツールの一つ。動画生成・編集機能を備える。</span></li>
+    <li><span class="term">ランサムウェア</span><span class="desc"> ：ファイルを暗号化し、身代金を要求するマルウェア。</span></li>
+    <h2 id="hiragana_ri">り</h2>
+    <li><span class="term">リカント層</span><span class="desc"> ：RNNの再帰的な構造を形成する層（リカレント層）。過去の状態を考慮する。音声のリアルタイム処理などで活用</span>
+    </li>
+    <li><span class="term">リマスタリング</span><span class="desc"> ：元データを高解像度化や画質向上する再処理。映像・音声などで用いられる。</span></li>
+    <h2 id="hiragana_ru">る</h2>
+    <li><span class="term">ルールベース</span><span class="desc"> ：事前に定義されたルール（条件と処理）に基づいて推論・判断を行うAI技術。</span></li>
+    <h2 id="hiragana_re">れ</h2>
+    <li><span class="term">レイ・カートワイル</span><span class="desc"> ：2045年問題などの予測を行った未来学者で、シンギュラリティを提唱。</span></li>
   </ul>
-
-  <h2>わ</h2>
-  <ul>
-    <li><span class="term">ワーム</span><span class="desc"> : コンピュータに有害な動作をするソフトウェアの一種。</span></li>
-  </ul>
-
+</div>
 </body>
 </html>
