@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             incorrectAnswers.forEach((item, index) => {
                 const reviewItem = document.createElement('div');
-                reviewItem.style.borderTop = '1px solid #eee';
+                reviewItem.style.borderTop = '3px solid rgb(159 159 159)';
                 reviewItem.style.padding = '15px 0';
                 reviewItem.style.textAlign = 'left';
 
