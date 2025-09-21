@@ -85,3 +85,50 @@ h1 {
 #tab-container {
   margin-top: 30px;
 }
+/* Page Peel Effect (User-provided CSS adapted for Bottom-Left) */
+#page-peel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 200px; /* Hover area */
+    height: 200px; /* Hover area */
+    cursor: pointer;
+    z-index: 9999;
+    backface-visibility: hidden;
+}
+
+#page-peel::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(225deg, white 50%,gray 53%,white 57%, gray 58%, white 75%);
+    box-shadow: 1px -1px 0px 0px;
+    transition: width 0.4s, height 0.4s;
+}
+
+#page-peel:hover::before {
+    width: 200px;
+    height: 200px;
+}
+
+#page-peel span {
+    position: absolute;
+    bottom: 40px;
+    left: -15px;
+    width: 150px;
+    text-align: center;
+    font-size: .75em;
+    font-weight: bold;
+    color: #333;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.4s 0.1s;
+    line-height: 1;
+}
+
+#page-peel:hover span {
+    opacity: 1;
+}
