@@ -23,14 +23,35 @@ body {
     box-sizing: border-box;
 }
 
-h1 {
-    color: #0056b3;
-    font-size: 2em;
-}
-
 h2 {
     color: #0056b3;
     font-size: 1.8em;
+}
+
+/* Custom Banner */
+#custom-banner {
+    width: 300px;
+    height: 150px;
+    background: #1a1a1a;
+    border: 3px solid #c7a04a;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto; /* Center the banner */
+    position: relative;
+    overflow: hidden;
+}
+
+#custom-banner h1 {
+    font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+    font-weight: bold;
+    color: #e5b400;
+    font-size: 1.8em;
+    line-height: 1.4;
+    text-shadow: 1px 1px 3px #000;
+    margin: 0;
+    padding: 0;
 }
 
 /* Screens */
