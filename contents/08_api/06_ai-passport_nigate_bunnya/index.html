@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>生成AIパスポート模擬試験</title>
     <link rel="stylesheet" href="style.css">
@@ -9,10 +10,12 @@
 <body>
     <div id="page-peel"><span>Gemini CLIで<br>問題作成/コード作成</span></div>
     <div id="quiz-container">
-            <h1>生成AIパスポート 集中トレーニング</h1>
+            <div id="custom-banner">
+                <h1>生成AIパスポート<br>苦手集中トレーニング</h1>
+            </div>
             <p>挑戦したいコースを選択してください。</p>
             <div id="menu-buttons" class="btn-grid-menu">
-                <button class="menu-btn" data-category="all">総合実力テスト</button>
+                <button class="menu-btn" data-category="all">総合演習</button>
                 <button class="menu-btn" data-category="Chapter 1">第1章 AIと生成AIの基礎知識</button>
                 <button class="menu-btn" data-category="Chapter 2">第2章 生成AIの技術</button>
                 <button class="menu-btn" data-category="Chapter 4">第4章 生成AIの活用と実践</button>
