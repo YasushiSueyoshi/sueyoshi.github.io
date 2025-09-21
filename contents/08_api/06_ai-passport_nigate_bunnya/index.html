@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成AIパスポート模擬試験</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="page-peel"><span>Gemini CLIで<br>問題作成/コード作成</span></div>
+    <div id="quiz-container">
+            <h1>生成AIパスポート 集中トレーニング</h1>
+            <p>挑戦したいコースを選択してください。</p>
+            <div id="menu-buttons" class="btn-grid-menu">
+                <button class="menu-btn" data-category="all">総合実力テスト</button>
+                <button class="menu-btn" data-category="Chapter 1">第1章 AIと生成AIの基礎知識</button>
+                <button class="menu-btn" data-category="Chapter 2">第2章 生成AIの技術</button>
+                <button class="menu-btn" data-category="Chapter 4">第4章 生成AIの活用と実践</button>
+            </div>
+
+        <div id="quiz-screen" class="hidden">
+            <div id="question-header">
+                <p id="question-counter"></p>
+                <p id="question-category"></p>
+                <button id="back-to-menu-btn">メニューに戻る</button>
+            </div>
+            <p id="question-text"></p>
+            <div id="answer-buttons" class="btn-grid">
+                <!-- Answer buttons will be inserted here by JavaScript -->
+            </div>
+            <div id="feedback">
+                <p id="feedback-text"></p>
+                <p id="feedback-explanation"></p>
+                <p id="feedback-source"></p>
+                <button id="next-button" class="hidden">次へ</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h2>試験結果</h2>
+            <p id="score-text"></p>
+            <p id="result-message"></p>
+            <button id="restart-button">メニューに戻る</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
