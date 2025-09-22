@@ -127,7 +127,11 @@ header .inner {
   margin: 30px 0 20px 150px;
   cursor: pointer;
 }
-
+@media (max-width: 768px){
+  #menu-bar {
+    margin: 30px 0 0px 150px;
+  }
+}
 .bar {
   height: 5px;
   width: 100%;
@@ -155,7 +159,11 @@ header .inner {
   padding: 0 22px;
   text-align: right;
 }
-
+@media (max-width: 768px){
+  .circle_nav ul {
+    padding: 0;
+  }
+}
 .circle_nav li {
   list-style: none;
   padding: 12px 0;
@@ -167,7 +175,11 @@ header .inner {
   font-size: 1.2rem;
   text-decoration: none;
 }
-
+@media (max-width: 768px){
+  .circle_nav li a {
+    font-size: 1rem;
+  }
+}
 .circle_nav li a:hover {
   font-weight: bold;
 }
@@ -213,7 +225,13 @@ header .inner {
   height: 460px;
   transform: translate(50%,-30%);
 }
-
+@media (max-width: 768px){
+  .change-bg {
+    width: 400px;
+    height: 400px;
+    transform: translate(50%, -25%);
+}
+}
 /* スタンダードハンバーガーメニュー */
 /* input[type="checkbox"] {
   opacity: 0;
