@@ -78,3 +78,24 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
   $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
 });
+
+// ハンバーガーメニューの挙動
+  function closeMenu() {
+    document.getElementById('menu-bg').classList.remove('change-bg');
+    document.getElementById('nav').classList.remove('change');
+    document.getElementById('menu-bar').classList.remove('change');
+  }
+
+  // ページ全体のクリックを監視
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('menu');
+    const nav = document.getElementById('nav');
+
+    // メニューが開いている状態かどうか
+    const isOpen = nav.classList.contains('change');
+
+    // クリックされた場所がメニュー内でなければ閉じる
+    if (isOpen && !menu.contains(e.target)) {
+      closeMenu();
+    }
+  });
