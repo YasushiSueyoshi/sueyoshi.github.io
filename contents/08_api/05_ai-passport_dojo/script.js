@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Asynchronously load question data from the external JSON file
     async function loadQuestions() {
         try {
-            const response = await fetch('data/questions.json');
+            const response = await fetch('data/questions_500.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
