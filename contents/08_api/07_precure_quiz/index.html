@@ -229,6 +229,9 @@
       margin-top: 10px;
       font-size: 0.95em;
     }
+    #page-peel {
+      display: none;
+    }
   }
   </style>
 </head>
@@ -244,7 +247,7 @@
     <div id="result" style="margin-top: 20px;"></div>
     <div id="details" style="margin-top: 20px;"></div>
     <div style="margin-top: 30px;">
-      <button class="next-question" onclick="renderQuestion(window.quizData)">次の問題へ</button>
+      <button class="next-question" onclick="renderQuestion(window.quizData)" ontouchend="event.preventDefault(); renderQuestion(window.quizData)">次の問題へ</button>
     </div>
 </div>
 
@@ -295,6 +298,7 @@
         const btn = document.createElement("button");
         btn.textContent = name;
         btn.onclick = () => checkAnswer(name, quiz);
+        btn.ontouchend = (e) => { e.preventDefault(); checkAnswer(name, quiz); };
         choicesDiv.appendChild(btn);
       });
     }
