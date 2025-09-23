@@ -1,0 +1,1055 @@
+[
+  {
+    "series_number": "シリーズ通算22作目",
+    "series_title": "キミとアイドルプリキュア♪",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=キミとアイドルプリキュア♪",
+    "broadcast_period": "2025年2月2日～",
+    "theme_songs": {
+      "opening": "「キミとアイドルプリキュア♪ Light Up！」石井あみ・熊田茜音・吉武千颯",
+      "ending": "「Trio Dreams」キュアアイドル（CV：松岡美里）＆キュアウインク（CV：髙橋ミナミ）＆キュアキュンキュン（CV：高森奈津美）"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアアイドル",
+        "civilian_name": "咲良うた",
+        "voice_actor": "松岡美里",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "キミと歌う、ハートのキラキラ！ 笑顔ニッコリ、キュアアイドル！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアアイドル"
+      },
+      {
+        "cure_name": "キュアウインク",
+        "civilian_name": "蒼風なな",
+        "voice_actor": "髙橋ミナミ",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "キミと瞬く、ハートの勇気！ お目目パッチン、キュアウインク！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアウインク"
+      },
+      {
+        "cure_name": "キュアキュンキュン",
+        "civilian_name": "紫雨こころ",
+        "voice_actor": "高森奈津美",
+        "grade_age": "中学2年生",
+        "main_color": "紫系",
+        "catchphrase": "キミと踊る、ハートのリズム！ 心キュンキュン、キュアキュンキュン！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアキュンキュン"
+      },
+      {
+        "cure_name": "キュアズキューン",
+        "civilian_name": "プリルン",
+        "voice_actor": "南條愛乃",
+        "grade_age": "不明",
+        "main_color": "白系",
+        "catchphrase": "ハートをプリっとロックオン！ キミとズッキュン、キュアズキューン！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアズキューン"
+      },
+      {
+        "cure_name": "キュアキッス",
+        "civilian_name": "メロロン",
+        "voice_actor": "花井美春",
+        "grade_age": "不明",
+        "main_color": "黒系",
+        "catchphrase": "ハートをメロっとひとりじめ！ キミと口づけ、キュアキッス！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアキッス"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算21作目",
+    "series_title": "わんだふるぷりきゅあ！",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=わんだふるぷりきゅあ！",
+    "broadcast_period": "2024年2月4日～2025年1月26日",
+    "theme_songs": {
+      "opening": "「わんだふるぷりきゅあ！evolution!!」吉武千颯",
+      "ending": "「FUN☆FUN☆わんだふるDAYS！」石井あみ＆後本萌葉, 「しあわせえぼりゅ～しょん♡」石井あみ＆後本萌葉"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアワンダフル",
+        "civilian_name": "犬飼こむぎ",
+        "voice_actor": "長縄まりあ",
+        "grade_age": "不明",
+        "main_color": "ピンク",
+        "catchphrase": "みんな大好き素敵な世界！キュアワンダフル！ いっしょに遊ぼ♪",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアワンダフル"
+      },
+      {
+        "cure_name": "キュアフレンディ",
+        "civilian_name": "犬飼いろは",
+        "voice_actor": "種﨑敦美",
+        "grade_age": "中学2年生",
+        "main_color": "紫系",
+        "catchphrase": "みんなの笑顔で彩る世界！キュアフレンディ！ あなたの声をきかせて",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアフレンディ"
+      },
+      {
+        "cure_name": "キュアニャミー",
+        "civilian_name": "猫屋敷ユキ",
+        "voice_actor": "松田颯水",
+        "grade_age": "不明",
+        "main_color": "白系",
+        "catchphrase": "気高くかわいくきらめく世界！キュアニャミー！仕方ない、構ってあげる",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアニャミー"
+      },
+      {
+        "cure_name": "キュアリリアン",
+        "civilian_name": "猫屋敷まゆ",
+        "voice_actor": "上田麗奈",
+        "grade_age": "不明",
+        "main_color": "青系",
+        "catchphrase": "結んで紡いでつながる世界！キュアリリアン！こわくない、こわくない",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアリリアン"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算20作目",
+    "series_title": "ひろがるスカイ！プリキュア",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=ひろがるスカイ！プリキュア",
+    "broadcast_period": "2023年2月5日～2024年1月28日",
+    "theme_songs": {
+      "opening": "「ひろがるスカイ！プリキュア ～Hero Girls～」石井あみ",
+      "ending": "「ヒロガリズム」石井あみ・吉武千颯, 「Dear Shine Sky」吉武千颯"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアスカイ",
+        "civilian_name": "ソラ・ハレワタール",
+        "voice_actor": "関根明良",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "無限にひろがる青い空！キュアスカイ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアスカイ"
+      },
+      {
+        "cure_name": "キュアプリズム",
+        "civilian_name": "虹ヶ丘ましろ",
+        "voice_actor": "加隈亜衣",
+        "grade_age": "中学2年生",
+        "main_color": "白（虹色）",
+        "catchphrase": "ふわりひろがる優しい光！キュアプリズム！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアプリズム"
+      },
+      {
+        "cure_name": "キュアウィング",
+        "civilian_name": "夕凪ツバサ",
+        "voice_actor": "村瀬歩",
+        "grade_age": "小学6年生",
+        "main_color": "黄系（オレンジ）",
+        "catchphrase": "天高くひろがる勇気！キュアウィング！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアウィング"
+      },
+      {
+        "cure_name": "キュアバタフライ",
+        "civilian_name": "聖あげは",
+        "voice_actor": "七瀬彩夏",
+        "grade_age": "高校3年生",
+        "main_color": "ピンク",
+        "catchphrase": "アゲてひろがるワンダホー！キュアバタフライ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアバタフライ"
+      },
+      {
+        "cure_name": "キュアマジェスティ",
+        "civilian_name": "プリンセス・エル",
+        "voice_actor": "古賀葵",
+        "grade_age": "1歳",
+        "main_color": "紫系",
+        "catchphrase": "降り立つ気高き神秘！キュアマジェスティ",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアマジェスティ"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算19作目",
+    "series_title": "デリシャスパーティ♡プリキュア",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=デリシャスパーティ♡プリキュア",
+    "broadcast_period": "2022年2月6日～2023年1月29日",
+    "theme_songs": {
+      "opening": "「Cheers!デリシャスパーティ プリキュア」Machico",
+      "ending": "「DELICIOUS HAPPY DAYS♪」吉武千颯"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアプレシャス",
+        "civilian_name": "和実ゆい",
+        "voice_actor": "菱川花菜",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "あつあつごはんで、みなぎるパワー！キュアプレシャス！おいしい笑顔で満たしてあげる！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアプレシャス"
+      },
+      {
+        "cure_name": "キュアスパイシー",
+        "civilian_name": "芙羽ここね",
+        "voice_actor": "清水理沙",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "ふわふわサンドde心にスパイス！キュアスパイシー！分け合うおいしさ、焼きつけるわ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアスパイシー"
+      },
+      {
+        "cure_name": "キュアヤムヤム",
+        "civilian_name": "華満らん",
+        "voice_actor": "井口裕香",
+        "grade_age": "中学2年生",
+        "main_color": "黄系",
+        "catchphrase": "きらめくヌードル・エモーション！ キュアヤムヤム！おいしいの独り占め、ゆるさないよ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアヤムヤム"
+      },
+      {
+        "cure_name": "キュアフィナーレ",
+        "civilian_name": "菓彩あまね",
+        "voice_actor": "茅野愛衣",
+        "grade_age": "中学3年生",
+        "main_color": "紫系",
+        "catchphrase": "ジェントルにゴージャスに、咲き誇るスウィートネス！キュアフィナーレ！食卓の最後を、このわたしが飾ろう",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアフィナーレ"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算18作目",
+    "series_title": "トロピカル〜ジュ！プリキュア",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=トロピカル〜ジュ！プリキュア",
+    "broadcast_period": "2021年2月28日～2022年1月30日",
+    "theme_songs": {
+      "opening": "「Viva! Spark!トロピカル～ジュ！プリキュア」Machico",
+      "ending": "「トロピカ I・N・G」吉武千颯, 「あこがれ Go My Way!!」北川理恵・吉武千颯"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアサマー",
+        "civilian_name": "夏海まなつ",
+        "voice_actor": "ファイルーズあい",
+        "grade_age": "中学1年生",
+        "main_color": "白（虹色）",
+        "catchphrase": "ときめく常夏！ キュアサマー！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアサマー"
+      },
+      {
+        "cure_name": "キュアコーラル",
+        "civilian_name": "涼村さんご",
+        "voice_actor": "花守ゆみり",
+        "grade_age": "中学1年生",
+        "main_color": "紫系",
+        "catchphrase": "きらめく宝石！ キュアコーラル！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアコーラル"
+      },
+      {
+        "cure_name": "キュアパパイア",
+        "civilian_name": "一之瀬みのり",
+        "voice_actor": "石川由依",
+        "grade_age": "中学2年生",
+        "main_color": "黄系",
+        "catchphrase": "ひらめく果実（フルーツ）！ キュアパパイア！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアパパイア"
+      },
+      {
+        "cure_name": "キュアフラミンゴ",
+        "civilian_name": "滝沢あすか",
+        "voice_actor": "瀬戸麻沙美",
+        "grade_age": "中学3年生",
+        "main_color": "赤系",
+        "catchphrase": "はためく翼！ キュアフラミンゴ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアフラミンゴ"
+      },
+      {
+        "cure_name": "キュアラメール",
+        "civilian_name": "ローラ",
+        "voice_actor": "日高里菜",
+        "grade_age": "中学1年生",
+        "main_color": "青系（水色）",
+        "catchphrase": "ゆらめく大海原（オーシャン）！ キュアラメール！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアラメール"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算17作目",
+    "series_title": "ヒーリングっど♥プリキュア",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=ヒーリングっど♥プリキュア",
+    "broadcast_period": "2020年2月2日～2021年2月21日",
+    "theme_songs": {
+      "opening": "「ヒーリングっどプリキュア Touch!!」北川理恵",
+      "ending": "「ミラクルっとLink Ring！」Machico"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアグレース",
+        "civilian_name": "花寺のどか",
+        "voice_actor": "悠木碧",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "重なる二つの花！キュアグレース！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアグレース"
+      },
+      {
+        "cure_name": "キュアフォンテーヌ",
+        "civilian_name": "沢泉ちゆ",
+        "voice_actor": "依田菜津",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "交わる二つの流れ！キュアフォンテーヌ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアフォンテーヌ"
+      },
+      {
+        "cure_name": "キュアスパークル",
+        "civilian_name": "平光ひなた",
+        "voice_actor": "河野ひより",
+        "grade_age": "中学2年生",
+        "main_color": "黄系",
+        "catchphrase": "溶け合う二つの光！キュアスパークル！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアスパークル"
+      },
+      {
+        "cure_name": "キュアアース",
+        "civilian_name": "風鈴アスミ",
+        "voice_actor": "三森すずこ",
+        "grade_age": "不明",
+        "main_color": "紫系",
+        "catchphrase": "時を経て繋がる二つの風！キュアアース！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアアース"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算16作目",
+    "series_title": "スター☆トゥインクルプリキュア",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=スター☆トゥインクルプリキュア",
+    "broadcast_period": "2019年2月3日～2020年1月26日",
+    "theme_songs": {
+      "opening": "「キラリ☆彡スター☆トゥインクルプリキュア」北川理恵",
+      "ending": "「パペピプ☆ロマンチック」吉武千颯"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアスター",
+        "civilian_name": "星奈ひかる",
+        "voice_actor": "成瀬瑛美",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "宇宙（そら）に輝くキラキラ星！キュアスター！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアスター"
+      },
+      {
+        "cure_name": "キュアミルキー",
+        "civilian_name": "羽衣ララ",
+        "voice_actor": "小原好美",
+        "grade_age": "中学2年生",
+        "main_color": "緑系（青よりのミントグリーン）",
+        "catchphrase": "天にあまねくミルキーウェイ！キュアミルキー！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアミルキー"
+      },
+      {
+        "cure_name": "キュアソレイユ",
+        "civilian_name": "天宮えれな",
+        "voice_actor": "安野希世乃",
+        "grade_age": "中学3年生",
+        "main_color": "黄系（オレンジ）",
+        "catchphrase": "宇宙を照らす！灼熱のきらめき！キュアソレイユ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアソレイユ"
+      },
+      {
+        "cure_name": "キュアセレーネ",
+        "civilian_name": "香久矢まどか",
+        "voice_actor": "小松未可子",
+        "grade_age": "中学3年生",
+        "main_color": "紫系",
+        "catchphrase": "夜空に輝く！神秘の月あかり！キュアセレーネ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアセレーネ"
+      },
+      {
+        "cure_name": "キュアコスモ",
+        "civilian_name": "ユニ",
+        "voice_actor": "上坂すみれ",
+        "grade_age": "不明",
+        "main_color": "青系（＋レインボー）",
+        "catchphrase": "銀河に光る虹色のスペクトル！キュアコスモ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアコスモ"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算15作目",
+    "series_title": "HUGっと！プリキュア",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=HUGっと！プリキュア",
+    "broadcast_period": "2018年2月4日～2019年1月27日",
+    "theme_songs": {
+      "opening": "「We can!! HUGっと!プリキュア」宮本佳那子",
+      "ending": "「HUGっと!未来☆ドリーマー」キュアエール(CV.引坂理絵)、キュアアンジュ(CV.本泉莉奈)、キュアエトワール(CV.小倉唯)"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアエール",
+        "civilian_name": "野乃はな",
+        "voice_actor": "引坂理絵",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "みんなを応援！元気のプリキュア！キュアエール！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアエール"
+      },
+      {
+        "cure_name": "キュアアンジュ",
+        "civilian_name": "薬師寺さあや",
+        "voice_actor": "本泉莉奈",
+        "grade_age": "中学2年生",
+        "main_color": "青系（水色）",
+        "catchphrase": "みんなを癒す！知恵のプリキュア！キュアアンジュ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアアンジュ"
+      },
+      {
+        "cure_name": "キュアエトワール",
+        "civilian_name": "輝木ほまれ",
+        "voice_actor": "小倉唯",
+        "grade_age": "中学2年生",
+        "main_color": "黄系（オレンジ）",
+        "catchphrase": "みんな輝け！力のプリキュア！キュアエトワール！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアエトワール"
+      },
+      {
+        "cure_name": "キュアマシェリ",
+        "civilian_name": "愛崎えみる",
+        "voice_actor": "田村奈央",
+        "grade_age": "小学6年生",
+        "main_color": "赤系（ピンクより）",
+        "catchphrase": "みんな大好き！愛のプリキュア！キュアマシェリ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアマシェリ"
+      },
+      {
+        "cure_name": "キュアアムール",
+        "civilian_name": "ルールー・アムール",
+        "voice_actor": "田村ゆかり",
+        "grade_age": "中学2年生",
+        "main_color": "紫系",
+        "catchphrase": "みんな大好き！愛のプリキュア！キュアアムール！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアアムール"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算14作目",
+    "series_title": "キラキラ☆プリキュアアラモード",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=キラキラ☆プリキュアアラモード",
+    "broadcast_period": "2017年2月5日～2018年1月28日",
+    "theme_songs": {
+      "opening": "「SHINE!! キラキラ☆プリキュアアラモード」駒形友梨",
+      "ending": "「レッツ・ラ・クッキン☆ショータイム」宮本佳那子"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアホイップ",
+        "civilian_name": "宇佐美いちか",
+        "voice_actor": "美山加恋",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "元気と笑顔を！レッツ・ラ・まぜまぜ！キュアホイップ！できあがり！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアホイップ"
+      },
+      {
+        "cure_name": "キュアカスタード",
+        "civilian_name": "有栖川ひまり",
+        "voice_actor": "福原遥",
+        "grade_age": "中学2年生",
+        "main_color": "黄系",
+        "catchphrase": "知性と勇気を！レッツ・ラ・まぜまぜ！キュアカスタード！できあがり！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアカスタード"
+      },
+      {
+        "cure_name": "キュアジェラート",
+        "civilian_name": "立神あおい",
+        "voice_actor": "村中知",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "自由と情熱を！レッツ・ラ・まぜまぜ！キュアジェラート！できあがり！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアジェラート"
+      },
+      {
+        "cure_name": "キュアマカロン",
+        "civilian_name": "琴爪ゆかり",
+        "voice_actor": "藤田咲",
+        "grade_age": "高校2年生",
+        "main_color": "紫系",
+        "catchphrase": "美しさとトキメキを！レッツ・ラ・まぜまぜ！キュアマカロン！できあがり！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアマカロン"
+      },
+      {
+        "cure_name": "キュアショコラ",
+        "civilian_name": "剣城あきら",
+        "voice_actor": "森なな子",
+        "grade_age": "高校2年生",
+        "main_color": "赤系",
+        "catchphrase": "強さと愛を！レッツ・ラ・まぜまぜ！キュアショコラ！できあがり！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアショコラ"
+      },
+      {
+        "cure_name": "キュアパルフェ",
+        "civilian_name": "キラ星シエル",
+        "voice_actor": "水瀬いのり",
+        "grade_age": "中学2年生",
+        "main_color": "緑系（＋レインボー）",
+        "catchphrase": "夢と希望を！レッツ・ラ・まぜまぜ！キュアパルフェ！できあがり！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアパルフェ"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算13作目",
+    "series_title": "魔法つかいプリキュア！",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=魔法つかいプリキュア！",
+    "broadcast_period": "2016年2月7日～2017年1月29日",
+    "theme_songs": {
+      "opening": "「Dokkin魔法つかいプリキュア!」北川理恵, 「Dokkin魔法つかいプリキュア！Part2」北川理恵",
+      "ending": "「CURE UP↑RAPA☆PA!～ほほえみになる魔法～」キュアミラクル(高橋李依)キュアマジカル(堀江由衣), 「魔法アラ・ドーモ！」キュアミラクル(高橋李依)キュアマジカル(堀江由衣)キュアフェリーチェ(早見沙織)"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアミラクル",
+        "civilian_name": "朝日奈みらい",
+        "voice_actor": "高橋李依",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "ふたりのきせき！キュアミラクル！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアミラクル"
+      },
+      {
+        "cure_name": "キュアマジカル",
+        "civilian_name": "十六夜リコ",
+        "voice_actor": "堀江由衣",
+        "grade_age": "中学2年生",
+        "main_color": "紫系",
+        "catchphrase": "ふたりのまほう！キュアマジカル！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアマジカル"
+      },
+      {
+        "cure_name": "キュアフェリーチェ",
+        "civilian_name": "花海ことは",
+        "voice_actor": "早見沙織",
+        "grade_age": "中学2年生",
+        "main_color": "緑系（明るいミントグリーン）",
+        "catchphrase": "あまねく命に祝福を！キュアフェリーチェ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアフェリーチェ"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算12作目",
+    "series_title": "Go!プリンセスプリキュア",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=Go!プリンセスプリキュア",
+    "broadcast_period": "2015年2月1日～2016年1月31日",
+    "theme_songs": {
+      "opening": "「Miracle Gо! プリンセスプリキュア」礒部花凛",
+      "ending": "「ドリーミング☆プリンセスプリキュア」北川理恵"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアフローラ",
+        "civilian_name": "春野はるか",
+        "voice_actor": "嶋村侑",
+        "grade_age": "中学1年生",
+        "main_color": "ピンク",
+        "catchphrase": "咲きほこる花のプリンセス！キュアフローラ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアフローラ"
+      },
+      {
+        "cure_name": "キュアマーメイド",
+        "civilian_name": "海藤みなみ",
+        "voice_actor": "浅野真澄",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "澄みわたる海のプリンセス！キュアマーメイド！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアマーメイド"
+      },
+      {
+        "cure_name": "キュアトゥインクル",
+        "civilian_name": "天ノ川きらら",
+        "voice_actor": "山村響",
+        "grade_age": "中学1年生",
+        "main_color": "黄系",
+        "catchphrase": "きらめく星のプリンセス！キュアトゥインクル！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアトゥインクル"
+      },
+      {
+        "cure_name": "キュアスカーレット",
+        "civilian_name": "紅城トワ",
+        "voice_actor": "沢城みゆき",
+        "grade_age": "中学1年生",
+        "main_color": "赤系",
+        "catchphrase": "深紅の炎のプリンセス！キュアスカーレット！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアスカーレット"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算11作目",
+    "series_title": "ハピネスチャージプリキュア！",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=ハピネスチャージプリキュア！",
+    "broadcast_period": "2014年2月2日～2015年1月25日",
+    "theme_songs": {
+      "opening": "「ハピネスチャージプリキュア！ＷＯＷ！」仲谷明香",
+      "ending": "「プリキュア・メモリ」吉田仁美"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアラブリー",
+        "civilian_name": "愛乃めぐみ",
+        "voice_actor": "中島愛",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "世界に広がるビッグな愛！キュアラブリー！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアラブリー"
+      },
+      {
+        "cure_name": "キュアプリンセス",
+        "civilian_name": "白雪ひめ",
+        "voice_actor": "潘めぐみ",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "天空に舞う蒼き風！キュアプリンセス！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアプリンセス"
+      },
+      {
+        "cure_name": "キュアハニー",
+        "civilian_name": "大森ゆうこ",
+        "voice_actor": "北川里奈",
+        "grade_age": "中学2年生",
+        "main_color": "黄系",
+        "catchphrase": "大地に実る命の光！キュアハニー！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアハニー"
+      },
+      {
+        "cure_name": "キュアフォーチュン",
+        "civilian_name": "氷川いおな",
+        "voice_actor": "戸松遥",
+        "grade_age": "中学2年生",
+        "main_color": "紫系",
+        "catchphrase": "夜空にきらめく希望の星！キュアフォーチュン！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアフォーチュン"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算10作目",
+    "series_title": "ドキドキ！プリキュア",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=ドキドキ！プリキュア",
+    "broadcast_period": "2013年2月3日～2014年1月26日",
+    "theme_songs": {
+      "opening": "「Happy Go Lucky！ドキドキ！プリキュア」黒沢ともよ",
+      "ending": "「この空の向こう」吉田仁美"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアハート",
+        "civilian_name": "相田マナ",
+        "voice_actor": "生天目仁美",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "みなぎる愛！キュアハート",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアハート"
+      },
+      {
+        "cure_name": "キュアダイヤモンド",
+        "civilian_name": "菱川六花",
+        "voice_actor": "寿美菜子",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "英知の光！キュアダイヤモンド！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアダイヤモンド"
+      },
+      {
+        "cure_name": "キュアロゼッタ",
+        "civilian_name": "四葉ありす",
+        "voice_actor": "渕上舞",
+        "grade_age": "中学2年生",
+        "main_color": "黄系",
+        "catchphrase": "ひだまりポカポカ！キュアロゼッタ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアロゼッタ"
+      },
+      {
+        "cure_name": "キュアソード",
+        "civilian_name": "剣崎真琴",
+        "voice_actor": "宮本佳那子",
+        "grade_age": "中学2年生",
+        "main_color": "紫系",
+        "catchphrase": "勇気の刃！キュアソード！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアソード"
+      },
+      {
+        "cure_name": "キュアエース",
+        "civilian_name": "円亜久里",
+        "voice_actor": "釘宮理恵",
+        "grade_age": "小学4年生",
+        "main_color": "赤系",
+        "catchphrase": "愛の切り札！キュアエース！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアエース"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算9作目",
+    "series_title": "スマイルプリキュア！",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=スマイルプリキュア！",
+    "broadcast_period": "2012年2月5日～2013年1月27日",
+    "theme_songs": {
+      "opening": "「Let's go!スマイルプリキュア!」池田彩",
+      "ending": "「イェイ!イェイ!イェイ!」吉田仁美, 「満開＊スマイル!」吉田仁美"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアハッピー",
+        "civilian_name": "星空みゆき",
+        "voice_actor": "福圓美里",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "キラキラ輝く未来の光！キュアハッピー！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアハッピー"
+      },
+      {
+        "cure_name": "キュアサニー",
+        "civilian_name": "日野あかね",
+        "voice_actor": "田野アサミ",
+        "grade_age": "中学2年生",
+        "main_color": "黄系（オレンジ）",
+        "catchphrase": "太陽サンサン熱血パワー！キュアサニー！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアサニー"
+      },
+      {
+        "cure_name": "キュアピース",
+        "civilian_name": "黄瀬やよい",
+        "voice_actor": "金元寿子",
+        "grade_age": "中学2年生",
+        "main_color": "黄系",
+        "catchphrase": "ピカピカぴかりん、じゃんけんポン♪キュアピース！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアピース"
+      },
+      {
+        "cure_name": "キュアマーチ",
+        "civilian_name": "緑川なお",
+        "voice_actor": "井上麻里奈",
+        "grade_age": "中学2年生",
+        "main_color": "緑系",
+        "catchphrase": "勇気リンリン直球勝負！キュアマーチ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアマーチ"
+      },
+      {
+        "cure_name": "キュアビューティ",
+        "civilian_name": "青木れいか",
+        "voice_actor": "西村ちなみ",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "しんしんと降り積もる清き心！キュアビューティ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアビューティ"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算8作目",
+    "series_title": "スイートプリキュア♪",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=スイートプリキュア♪",
+    "broadcast_period": "2011年2月6日～2012年1月29日",
+    "theme_songs": {
+      "opening": "「ラ♪ラ♪ラ♪スイートプリキュア♪」工藤真由",
+      "ending": "「ワンダフル↑パワフル↑ミュージック!!」池田彩"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアメロディ",
+        "civilian_name": "北条響",
+        "voice_actor": "小清水亜美",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "爪弾くは荒ぶる調べ！キュアメロディ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアメロディ"
+      },
+      {
+        "cure_name": "キュアリズム",
+        "civilian_name": "南野奏",
+        "voice_actor": "折笠富美子",
+        "grade_age": "中学2年生",
+        "main_color": "白",
+        "catchphrase": "爪弾くはたおやかな調べ！キュアリズム！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアリズム"
+      },
+      {
+        "cure_name": "キュアビート",
+        "civilian_name": "黒川エレン",
+        "voice_actor": "豊口めぐみ",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "爪弾くは魂の調べ！キュアビート！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアビート"
+      },
+      {
+        "cure_name": "キュアミューズ",
+        "civilian_name": "調辺アコ",
+        "voice_actor": "大久保瑠美",
+        "grade_age": "小学3年生",
+        "main_color": "黄系",
+        "catchphrase": "爪弾くは女神の調べ！キュアミューズ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアミューズ"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算7作目",
+    "series_title": "ハートキャッチプリキュア！",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=ハートキャッチプリキュア！",
+    "broadcast_period": "2010年2月7日～2011年1月30日",
+    "theme_songs": {
+      "opening": "「Alright!ハートキャッチプリキュア!」池田彩",
+      "ending": "「Tomorrow Song～あしたのうた～」工藤真由"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアブロッサム",
+        "civilian_name": "花咲つぼみ",
+        "voice_actor": "水樹奈々",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "大地に咲く一輪の花！キュアブロッサム！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアブロッサム"
+      },
+      {
+        "cure_name": "キュアマリン",
+        "civilian_name": "来海えりか",
+        "voice_actor": "水沢史絵",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "海風に揺れる一輪の花！キュアマリン！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアマリン"
+      },
+      {
+        "cure_name": "キュアサンシャイン",
+        "civilian_name": "明堂院いつき",
+        "voice_actor": "桑島法子",
+        "grade_age": "中学2年生",
+        "main_color": "黄系",
+        "catchphrase": "陽の光浴びる一輪の花！キュアサンシャイン！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアサンシャイン"
+      },
+      {
+        "cure_name": "キュアムーンライト",
+        "civilian_name": "月影ゆり",
+        "voice_actor": "久川綾",
+        "grade_age": "高校2年生",
+        "main_color": "紫系",
+        "catchphrase": "月光に冴える一輪の花！キュアムーンライト！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアムーンライト"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算6作目",
+    "series_title": "フレッシュプリキュア！",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=フレッシュプリキュア！",
+    "broadcast_period": "2009年2月1日～2010年1月31日",
+    "theme_songs": {
+      "opening": "「Let’s!フレッシュプリキュア!～Hybrid ver.～」茂家瑞季",
+      "ending": "「H@ppy Together!!!」林桃子"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアピーチ",
+        "civilian_name": "桃園ラブ",
+        "voice_actor": "沖佳苗",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "ピンクのハートは愛あるしるし！もぎたてフレッシュ！キュアピーチ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアピーチ"
+      },
+      {
+        "cure_name": "キュアベリー",
+        "civilian_name": "蒼乃美希",
+        "voice_actor": "喜多村英梨",
+        "grade_age": "中学2年生",
+        "main_color": "青系",
+        "catchphrase": "ブルーのハートは希望のしるし！つみたてフレッシュ！キュアベリー！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアベリー"
+      },
+      {
+        "cure_name": "キュアパイン",
+        "civilian_name": "山吹祈里",
+        "voice_actor": "中川亜紀子",
+        "grade_age": "中学2年生",
+        "main_color": "黄系",
+        "catchphrase": "イエローハートは祈りのしるし！とれたてフレッシュ！キュアパイン！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアパイン"
+      },
+      {
+        "cure_name": "キュアパッション",
+        "civilian_name": "東せつな",
+        "voice_actor": "小松由佳",
+        "grade_age": "中学2年生",
+        "main_color": "赤系",
+        "catchphrase": "真っ赤なハートは幸せのあかし！うれたてフレッシュ！キュアパッション！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアパッション"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算4・5作目",
+    "series_title": "Yes!プリキュア5・Yes!プリキュア5GoGo!",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=Yes!プリキュア5GoGo!",
+    "broadcast_period": "2007年2月4日～2009年1月25日",
+    "theme_songs": {
+      "Yes!プリキュア5": {
+        "opening": "「プリキュア5 スマイル go go!」工藤真由",
+        "ending": "「キラキラしちゃって My True Love!」宮本佳那子, 「ガンバランスdeダンス～夢みる奇跡たち～」宮本佳那子 with ぷりきゅあ5"
+      },
+      "Yes!プリキュア5GoGo!": {
+        "opening": "「プリキュア５、フル・スロットルGoGo!」工藤真由withぷりきゅあ5",
+        "ending": "「ガンバランスdeダンス～希望のリレー～」キュア・カルテット"
+      }
+    },
+    "cures": [
+      {
+        "cure_name": "キュアドリーム",
+        "civilian_name": "夢原のぞみ",
+        "voice_actor": "三瓶由布子",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "大いなる希望の力！キュアドリーム！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアドリーム"
+      },
+      {
+        "cure_name": "キュアルージュ",
+        "civilian_name": "夏木りん",
+        "voice_actor": "竹内順子",
+        "grade_age": "中学2年生",
+        "main_color": "赤系",
+        "catchphrase": "情熱の赤い炎！キュアルージュ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアルージュ"
+      },
+      {
+        "cure_name": "キュアレモネード",
+        "civilian_name": "春日野うらら",
+        "voice_actor": "伊瀬茉莉也",
+        "grade_age": "中学1年生",
+        "main_color": "黄系",
+        "catchphrase": "弾けるレモンの香り！キュアレモネード！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアレモネード"
+      },
+      {
+        "cure_name": "キュアミント",
+        "civilian_name": "秋元こまち",
+        "voice_actor": "永野愛",
+        "grade_age": "中学3年生",
+        "main_color": "緑系",
+        "catchphrase": "安らぎの緑の大地！キュアミント！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアミント"
+      },
+      {
+        "cure_name": "キュアアクア",
+        "civilian_name": "水無月かれん",
+        "voice_actor": "前田愛",
+        "grade_age": "中学3年生",
+        "main_color": "青系",
+        "catchphrase": "知性の青き泉！キュアアクア！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアアクア"
+      },
+      {
+        "cure_name": "ミルキィローズ",
+        "civilian_name": "美々野くるみ",
+        "voice_actor": "仙台エリ",
+        "grade_age": "中学2年生",
+        "main_color": "紫系",
+        "catchphrase": "青いバラは秘密の印！ミルキィローズ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=ミルキィローズ"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算3作目",
+    "series_title": "ふたりはプリキュア Splash Star",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=ふたりはプリキュア Splash Star",
+    "broadcast_period": "2006年2月5日～2007年1月28日",
+    "theme_songs": {
+      "opening": "「まかせて★スプラッシュ☆スター★」うちやえゆかwith Splash Stars",
+      "ending": "「ガンバランスdeダンス」五條真由美withフラッピ＆チョッピーズ"
+    },
+    "cures": [
+      {
+        "cure_name": "キュアブルーム",
+        "civilian_name": "日向咲",
+        "voice_actor": "樹元オリエ",
+        "grade_age": "中学2年生",
+        "main_color": "赤紫",
+        "catchphrase": "輝く金の花！キュアブルーム！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアブルーム"
+      },
+      {
+        "cure_name": "キュアイーグレット",
+        "civilian_name": "美翔舞",
+        "voice_actor": "榎本温子",
+        "grade_age": "中学2年生",
+        "main_color": "白（乳白色）",
+        "catchphrase": "きらめく銀の翼！キュアイーグレット！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアイーグレット"
+      },
+      {
+        "cure_name": "キュアブライト",
+        "civilian_name": "日向咲",
+        "voice_actor": "樹元オリエ",
+        "grade_age": "中学2年生",
+        "main_color": "黄緑",
+        "catchphrase": "天空に満ちる月！キュアブライト！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアブライト"
+      },
+      {
+        "cure_name": "キュアウィンディ",
+        "civilian_name": "美翔舞",
+        "voice_actor": "榎本温子",
+        "grade_age": "中学2年生",
+        "main_color": "水色",
+        "catchphrase": "大地に薫る風！キュアウィンディ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアウィンディ"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算1・2作目",
+    "series_title": "ふたりはプリキュア・ふたりはプリキュア Max Heart",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=ふたりはプリキュア Max Heart",
+    "broadcast_period": "2004年2月1日～2006年1月29日",
+    "theme_songs": {
+      "ふたりはプリキュア": {
+        "opening": "「DANZEN! ふたりはプリキュア」五條真由美",
+        "ending": "「ゲッチュウ!らぶらぶぅ？!」五條真由美"
+      },
+      "ふたりはプリキュア Max Heart": {
+        "opening": "「DANZEN! ふたりはプリキュア」(Ver.Max Heart)五條真由美",
+        "ending": "「ワンダー☆ウィンター☆ヤッター!!」五條真由美"
+      }
+    },
+    "cures": [
+      {
+        "cure_name": "キュアブラック",
+        "civilian_name": "美墨なぎさ",
+        "voice_actor": "本名陽子",
+        "grade_age": "中学2年生・3年生",
+        "main_color": "黒（ピンク）",
+        "catchphrase": "光の使者！キュアブラック！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアブラック"
+      },
+      {
+        "cure_name": "キュアホワイト",
+        "civilian_name": "雪城ほのか",
+        "voice_actor": "ゆかな",
+        "grade_age": "中学2年生・3年生",
+        "main_color": "白",
+        "catchphrase": "光の使者！キュアホワイト！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアホワイト"
+      },
+      {
+        "cure_name": "シャイニールミナス",
+        "civilian_name": "九条ひかり",
+        "voice_actor": "田中理恵",
+        "grade_age": "中学1年生",
+        "main_color": "ピンク（黄系）",
+        "catchphrase": "輝く命！シャイニールミナス！",
+        "cure_image": "https://www.google.com/search?udm=2&q=シャイニールミナス"
+      }
+    ]
+  }
+]
