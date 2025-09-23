@@ -306,6 +306,32 @@
       });
     }
 
+    function getMainColorCode(colorString) {
+      if (!colorString) return 'inherit';
+      const colorMap = {
+        "ピンク": "hotpink",
+        "赤紫": "mediumvioletred",
+        "赤": "red",
+        "青": "blue",
+        "水色": "deepskyblue",
+        "紫": "purple",
+        "黄": "gold",
+        "オレンジ": "darkorange",
+        "緑": "limegreen",
+        "黄緑": "yellowgreen",
+        "黒": "black",
+        "白": "#696969", // dimgray
+        "乳白": "#696969" // dimgray
+      };
+
+      for (const key in colorMap) {
+        if (colorString.includes(key)) {
+          return colorMap[key];
+        }
+      }
+      return 'inherit'; // マッチしない場合はデフォルト
+    }
+
     function checkAnswer(selected, quiz) {
       const correct = quiz.correct.cure_name;
       const resultDiv = document.getElementById("result");
@@ -325,8 +351,27 @@
       const s = quiz.series;
 
       resultDiv.innerHTML = selected === correct
-        ? "<span style='color:red;'>○せいかい！</span>"
-        : "<span style='color:blue;'>×ざんねん…</span>";
+        ? `<span style='color:red;'>○せいかい！</span>`
+        : `<span style='color:blue;'>×ざんねん…</span>`;
+
+      const colorName = c.main_color;
+      const colorCode = getMainColorCode(colorName);
+
+      let op = '情報なし';
+      let ed = '情報なし';
+
+      if (s.theme_songs) {
+        if (s.theme_songs.opening) {
+          // 通常の構造
+          op = s.theme_songs.opening;
+          ed = s.theme_songs.ending;
+        } else if (s.theme_songs[s.series_title]) {
+          // タイトルがキーになっている構造
+          const theme = s.theme_songs[s.series_title];
+          op = theme.opening;
+          ed = theme.ending;
+        }
+      }
 
       detailsDiv.innerHTML = `
         <div class="info-block">
@@ -336,7 +381,7 @@
             <li><strong>変身前：</strong>${c.civilian_name}</li>
             <li><strong>声優：</strong>${c.voice_actor}</li>
             <li><strong>学年：</strong>${c.grade_age}</li>
-            <li><strong>メインカラー：</strong>${c.main_color}</li>
+            <li><strong>メインカラー：</strong><span style="color: ${colorCode}; font-weight: bold;">${colorName || ''}</span></li>
             <li><strong>名乗り：</strong>${c.catchphrase}</li>
             <li><a href="${c.cure_image}" target="_blank" class="image-search-button">🔍 ${c.cure_name}の画像を検索する
   </a>
@@ -352,8 +397,8 @@
             <li><a href="${s.series_title_search_image}" target="_blank" class="image-search-button">🔍 「${s.series_title}」の画像を検索する</a></li>
             <li><strong>放送期間：</strong>${s.broadcast_period}</li>
             <li><strong>主題歌：</strong><br>
-              OP：${s.theme_songs.opening}<br>
-              ED：${s.theme_songs.ending}
+              OP：${op || '情報なし'}<br>
+              ED：${ed || '情報なし'}
             </li>
           </ul>
         </div>
