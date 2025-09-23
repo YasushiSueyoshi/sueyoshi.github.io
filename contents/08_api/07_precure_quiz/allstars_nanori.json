@@ -888,15 +888,11 @@
     ]
   },
   {
-    "series_number": "シリーズ通算4・5作目",
-    "series_title": "Yes!プリキュア5・Yes!プリキュア5GoGo!",
+    "series_number": "シリーズ通算5作目",
+    "series_title": "Yes!プリキュア5GoGo!",
     "series_title_search_image": "https://www.google.com/search?udm=2&q=Yes!プリキュア5GoGo!",
-    "broadcast_period": "2007年2月4日～2009年1月25日",
+    "broadcast_period": "2008年2月3日～2009年1月25日",
     "theme_songs": {
-      "Yes!プリキュア5": {
-        "opening": "「プリキュア5 スマイル go go!」工藤真由",
-        "ending": "「キラキラしちゃって My True Love!」宮本佳那子, 「ガンバランスdeダンス～夢みる奇跡たち～」宮本佳那子 with ぷりきゅあ5"
-      },
       "Yes!プリキュア5GoGo!": {
         "opening": "「プリキュア５、フル・スロットルGoGo!」工藤真由withぷりきゅあ5",
         "ending": "「ガンバランスdeダンス～希望のリレー～」キュア・カルテット"
@@ -960,9 +956,68 @@
     ]
   },
   {
+    "series_number": "シリーズ通算4作目",
+    "series_title": "Yes!プリキュア5",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=Yes!プリキュア5",
+    "broadcast_period": "2007年2月4日～2008年1月27日",
+    "theme_songs": {
+      "Yes!プリキュア5": {
+        "opening": "「プリキュア5 スマイル go go!」工藤真由",
+        "ending": "「キラキラしちゃって My True Love!」宮本佳那子, 「ガンバランスdeダンス～夢みる奇跡たち～」宮本佳那子 with ぷりきゅあ5"
+      }
+    },
+    "cures": [
+      {
+        "cure_name": "キュアドリーム",
+        "civilian_name": "夢原のぞみ",
+        "voice_actor": "三瓶由布子",
+        "grade_age": "中学2年生",
+        "main_color": "ピンク",
+        "catchphrase": "大いなる希望の力！キュアドリーム！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアドリーム"
+      },
+      {
+        "cure_name": "キュアルージュ",
+        "civilian_name": "夏木りん",
+        "voice_actor": "竹内順子",
+        "grade_age": "中学2年生",
+        "main_color": "赤系",
+        "catchphrase": "情熱の赤い炎！キュアルージュ！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアルージュ"
+      },
+      {
+        "cure_name": "キュアレモネード",
+        "civilian_name": "春日野うらら",
+        "voice_actor": "伊瀬茉莉也",
+        "grade_age": "中学1年生",
+        "main_color": "黄系",
+        "catchphrase": "弾けるレモンの香り！キュアレモネード！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアレモネード"
+      },
+      {
+        "cure_name": "キュアミント",
+        "civilian_name": "秋元こまち",
+        "voice_actor": "永野愛",
+        "grade_age": "中学3年生",
+        "main_color": "緑系",
+        "catchphrase": "安らぎの緑の大地！キュアミント！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアミント"
+      },
+      {
+        "cure_name": "キュアアクア",
+        "civilian_name": "水無月かれん",
+        "voice_actor": "前田愛",
+        "grade_age": "中学3年生",
+        "main_color": "青系",
+        "catchphrase": "知性の青き泉！キュアアクア！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアアクア"
+      }
+    ]
+  },
+  {
     "series_number": "シリーズ通算3作目",
     "series_title": "ふたりはプリキュア Splash Star",
-    "series_title_search_image": "https://www.google.com/search?udm=2&q=ふたりはプリキュア Splash Star",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=ふたりはプリキュア_Splash_Star",
     "broadcast_period": "2006年2月5日～2007年1月28日",
     "theme_songs": {
       "opening": "「まかせて★スプラッシュ☆スター★」うちやえゆかwith Splash Stars",
@@ -1008,15 +1063,11 @@
     ]
   },
   {
-    "series_number": "シリーズ通算1・2作目",
-    "series_title": "ふたりはプリキュア・ふたりはプリキュア Max Heart",
-    "series_title_search_image": "https://www.google.com/search?udm=2&q=ふたりはプリキュア Max Heart",
-    "broadcast_period": "2004年2月1日～2006年1月29日",
+    "series_number": "シリーズ通算2作目",
+    "series_title": "ふたりはプリキュア Max Heart",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=ふたりはプリキュア_Max_Heart",
+    "broadcast_period": "2005年2月6日～2006年1月29日",
     "theme_songs": {
-      "ふたりはプリキュア": {
-        "opening": "「DANZEN! ふたりはプリキュア」五條真由美",
-        "ending": "「ゲッチュウ!らぶらぶぅ？!」五條真由美"
-      },
       "ふたりはプリキュア Max Heart": {
         "opening": "「DANZEN! ふたりはプリキュア」(Ver.Max Heart)五條真由美",
         "ending": "「ワンダー☆ウィンター☆ヤッター!!」五條真由美"
@@ -1049,6 +1100,38 @@
         "main_color": "ピンク（黄系）",
         "catchphrase": "輝く命！シャイニールミナス！",
         "cure_image": "https://www.google.com/search?udm=2&q=シャイニールミナス"
+      }
+    ]
+  },
+  {
+    "series_number": "シリーズ通算1作目",
+    "series_title": "ふたりはプリキュア",
+    "series_title_search_image": "https://www.google.com/search?udm=2&q=ふたりはプリキュア",
+    "broadcast_period": "2004年2月1日～2005年1月30日",
+    "theme_songs": {
+      "ふたりはプリキュア": {
+        "opening": "「DANZEN! ふたりはプリキュア」五條真由美",
+        "ending": "「ゲッチュウ!らぶらぶぅ？!」五條真由美"
+      }
+    },
+    "cures": [
+      {
+        "cure_name": "キュアブラック",
+        "civilian_name": "美墨なぎさ",
+        "voice_actor": "本名陽子",
+        "grade_age": "中学2年生・3年生",
+        "main_color": "黒（ピンク）",
+        "catchphrase": "光の使者！キュアブラック！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアブラック"
+      },
+      {
+        "cure_name": "キュアホワイト",
+        "civilian_name": "雪城ほのか",
+        "voice_actor": "ゆかな",
+        "grade_age": "中学2年生・3年生",
+        "main_color": "白",
+        "catchphrase": "光の使者！キュアホワイト！",
+        "cure_image": "https://www.google.com/search?udm=2&q=キュアホワイト"
       }
     ]
   }
