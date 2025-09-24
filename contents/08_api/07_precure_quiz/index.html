@@ -434,6 +434,8 @@
   
         buttons.forEach(btn => {
           btn.disabled = true;
+          btn.onclick = null;
+          btn.ontouchend = null;
           if (btn.textContent === correct) {
             btn.classList.add("correct");
           } else if (btn.textContent === selected) {
