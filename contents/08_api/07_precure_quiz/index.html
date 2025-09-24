@@ -285,6 +285,7 @@
   <div id="mode-selection">
     <h3>出題範囲を選んでください</h3>
   </div>
+<a href="#" id="back-to-selection" style="display: none; text-align: center; display: block; margin-bottom: 15px;">シリーズ一覧へ戻る</a>
 <div id="quiz-container" style="display: none;">
     <div id="question"></div>
     <div id="choices"></div>
@@ -326,6 +327,7 @@
         selectedSeriesTitle = seriesTitle;
         document.getElementById('mode-selection').style.display = 'none';
         document.getElementById('quiz-container').style.display = 'block';
+        document.getElementById('back-to-selection').style.display = 'block';
         renderQuestion();
       }
   
@@ -504,6 +506,17 @@
       loadQuizData().then(data => {
         quizData = data;
         renderModeSelection(data);
+
+        document.getElementById('back-to-selection').addEventListener('click', (e) => {
+          e.preventDefault();
+          document.getElementById('quiz-container').style.display = 'none';
+          document.getElementById('back-to-selection').style.display = 'none';
+          document.getElementById('mode-selection').style.display = 'grid';
+          document.getElementById("question").innerHTML = "";
+          document.getElementById("choices").innerHTML = "";
+          document.getElementById("result").innerHTML = "";
+          document.getElementById("details").innerHTML = "";
+        });
       });
     </script></body>
 </html>
