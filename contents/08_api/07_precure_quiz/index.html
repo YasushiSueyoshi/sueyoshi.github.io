@@ -488,14 +488,36 @@
     const maskedCatchphrase = maskCureNameInCatchphrase(quiz.catchphrase, quiz.correct.cure_name);
     questionDiv.innerHTML = `<p><strong>問題：</strong>${maskedCatchphrase}</p>`;
 
+    let isScrolling = false;
+
+    window.addEventListener('touchmove', () => {
+      isScrolling = true;
+    });
+
+    window.addEventListener('touchend', () => {
+      setTimeout(() => { isScrolling = false; }, 100);
+    });
+
     quiz.choices.forEach(name => {
       const btn = document.createElement("button");
       btn.textContent = name;
-      const action = () => checkAnswer(name, quiz);
-      btn.onclick = action;
-      btn.ontouchend = (e) => { e.preventDefault(); action(); };
+
+      btn.addEventListener('click', () => {
+        if (!isScrolling) {
+          checkAnswer(name, quiz);
+        }
+      });
+
+      btn.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        if (!isScrolling) {
+          checkAnswer(name, quiz);
+        }
+      });
+
       choicesDiv.appendChild(btn);
     });
+
   }
 
   function getMainColorCode(colorString) {
