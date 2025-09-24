@@ -11,7 +11,7 @@
     body {
       font-family: sans-serif;
       padding: 20px;
-      max-width: 600px;
+      max-width: 1000px;
       margin: auto;
       background-color: #fff1f5;
       color: #333;
@@ -28,6 +28,7 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       width: 100%;
       max-width: 700px;
+      margin: 0 auto;
       padding: 30px;
       text-align: center;
       box-sizing: border-box;
@@ -239,9 +240,14 @@
 
 #mode-selection {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
   margin-bottom: 30px;
+}
+
+.check_all_wrap button {
+  all: revert;
+  cursor: pointer;
 }
 
 #mode-selection h3 {
@@ -250,29 +256,65 @@
   margin-bottom: 5px;
 }
 
-#mode-selection button {
-  display: block;
-  width: 100%;
-  padding: 12px 8px;
-  font-size: 0.9em;
-  font-weight: bold;
-  color: #d63384; /* ピンク系の文字色 */
-  background-color: #fff;
-  border: 2px solid #fbd6e2; /* ピンク系の枠線 */
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
 #mode-selection button:hover {
-  background-color: #ffe4ec; /* ホバー時に薄いピンクに */
+  background-color: #f980a3cf; /* ホバー時に薄いピンクに */
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #mode-selection .all-series-btn {
   grid-column: 1 / -1; /* このボタンだけ1行全体を使う */
+}
+
+#series-checkboxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#series-checkboxes label {
+  display: block;
+  padding: 12px 8px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #d63384;
+  background-color: #fff;
+  border: 2px solid #fbd6e2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+#series-checkboxes input[type="checkbox"] {
+  display: none;
+}
+
+#series-checkboxes input[type="checkbox"]:checked + label {
+  background-color: #ffe4ec;
+  border-color: #d63384;
+}
+
+#series-checkboxes .select-all-label {
+    border-style: dashed;
+}
+
+#start-quiz-btn {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f971af;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
   </style>
 </head>
@@ -283,9 +325,12 @@
 <h2>口上セリフから<br class="sp_br">プリキュアを当てるクイズ</h2>
 <p style="text-align: center;">ふたりはプリキュア～キミとアイドルプリキュアから出題</p>
   <div id="mode-selection">
-    <h3>出題範囲を選んでください</h3>
+    <h3>出題するシリーズを選ぼう</h3>
+    <div class="check_all_wrap" style="text-align: right; margin-bottom: 15px; grid-column: 1 / -1;">全シリーズを選択 <button type="button" name="check_all_on">ON</button><button type="button" name="check_all_off">OFF</button></div>
+    <div id="series-checkboxes"></div>
+    <button id="start-quiz-btn" style="grid-column: 1 / -1;">この範囲でクイズを始める</button>
   </div>
-<a href="#" id="back-to-selection" style="display: none; text-align: center; display: block; margin-bottom: 15px;">シリーズ一覧へ戻る</a>
+<a href="#" id="back-to-selection" style="display: none; text-align: center; margin-bottom: 15px;">シリーズ一覧へ戻る</a>
 <div id="quiz-container" style="display: none;">
     <div id="question"></div>
     <div id="choices"></div>
@@ -298,100 +343,131 @@
 
     <script>
       let quizData = [];
-      let selectedSeriesTitle = 'all';
+      let selectedSeriesTitles = [];
       let lastCorrectCureName = null;
-  
+
       function renderModeSelection(data) {
-        const modeSelectionDiv = document.getElementById('mode-selection');
-        modeSelectionDiv.innerHTML = '<h3>出題範囲を選んでください</h3>';
-  
-        const allBtn = document.createElement('button');
-        allBtn.textContent = 'すべてのシリーズから出題';
-        allBtn.classList.add('all-series-btn'); // CSS用のクラスを追加
-        allBtn.onclick = () => startQuiz('all');
-        allBtn.ontouchend = (e) => { e.preventDefault(); startQuiz('all'); };
-        modeSelectionDiv.appendChild(allBtn);
-  
-        data.forEach(series => {
-          const seriesBtn = document.createElement('button');
+        const checkboxesContainer = document.getElementById('series-checkboxes');
+        checkboxesContainer.innerHTML = ''; // Clear previous content
+
+        // Add individual series checkboxes
+        data.forEach((series, index) => {
+          const id = `series-${index}`;
+          const div = document.createElement('div');
+          const input = document.createElement('input');
+          input.type = 'checkbox';
+          input.id = id;
+          input.value = series.series_title;
+          input.classList.add('series-checkbox');
+          const label = document.createElement('label');
+          label.htmlFor = id;
           const seriesNumMatch = series.series_number.match(/\d+/);
-          const formattedSeriesNum = seriesNumMatch ? seriesNumMatch[0] : series.series_number; // 「シリーズ」を削除
-          seriesBtn.textContent = `${formattedSeriesNum}. ${series.series_title}`;
-          seriesBtn.onclick = () => startQuiz(series.series_title);
-          seriesBtn.ontouchend = (e) => { e.preventDefault(); startQuiz(series.series_title); };
-          modeSelectionDiv.appendChild(seriesBtn);
+          const formattedSeriesNum = seriesNumMatch ? seriesNumMatch[0] : series.series_number;
+          label.textContent = `${formattedSeriesNum}. ${series.series_title}`;
+          div.appendChild(input);
+          div.appendChild(label);
+          checkboxesContainer.appendChild(div);
+        });
+
+        // Event listeners for ON/OFF buttons
+        document.querySelector('[name="check_all_on"]').addEventListener('click', () => {
+            const seriesCheckboxes = document.querySelectorAll('.series-checkbox');
+            seriesCheckboxes.forEach(checkbox => {
+                checkbox.checked = true;
+            });
+        });
+
+        document.querySelector('[name="check_all_off"]').addEventListener('click', () => {
+            const seriesCheckboxes = document.querySelectorAll('.series-checkbox');
+            seriesCheckboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
         });
       }
-  
-      function startQuiz(seriesTitle) {
-        selectedSeriesTitle = seriesTitle;
+
+      function startQuiz() {
+        const selectedCheckboxes = document.querySelectorAll('#series-checkboxes input[type="checkbox"]:checked');
+        selectedSeriesTitles = Array.from(selectedCheckboxes).map(cb => cb.value).filter(val => val !== 'all');
+
+        if (selectedSeriesTitles.length === 0) {
+          alert('出題範囲を1つ以上選択してください。');
+          return;
+        }
+
         document.getElementById('mode-selection').style.display = 'none';
         document.getElementById('quiz-container').style.display = 'block';
         document.getElementById('back-to-selection').style.display = 'block';
         renderQuestion();
       }
-  
+
       async function loadQuizData() {
         const response = await fetch("allstars_nanori.json");
         const data = await response.json();
         return data;
       }
-  
+
       function shuffle(array) {
         return array.sort(() => Math.random() - 0.5);
       }
-  
+
       function maskCureNameInCatchphrase(catchphrase, cureName) {
         if (!cureName || !catchphrase) return catchphrase || '';
         return catchphrase.replace(new RegExp(cureName, "g"), "キュア●●●");
       }
-  
+
       function getRandomQuestion() {
-        let series;
-        if (selectedSeriesTitle === 'all') {
-          series = quizData[Math.floor(Math.random() * quizData.length)];
-        } else {
-          series = quizData.find(s => s.series_title === selectedSeriesTitle);
-          if (!series) { // フォールバック
-            series = quizData[Math.floor(Math.random() * quizData.length)];
-          }
+        const availableSeries = quizData.filter(s => selectedSeriesTitles.includes(s.series_title));
+        if (availableSeries.length === 0) {
+            // Fallback to all series if no valid series are selected (should not happen with the check in startQuiz)
+            const allCures = quizData.flatMap(s => s.cures);
+            const randomCure = allCures[Math.floor(Math.random() * allCures.length)];
+            const parentSeries = quizData.find(s => s.cures.includes(randomCure));
+            return {
+                catchphrase: randomCure.catchphrase,
+                correct: randomCure,
+                choices: shuffle(parentSeries.cures.map(c => c.cure_name)),
+                series: parentSeries
+            };
         }
-        
-        const cures = series.cures;
+
+        const randomSeries = availableSeries[Math.floor(Math.random() * availableSeries.length)];
+        const cures = randomSeries.cures;
         let potentialCure;
         
-        // 問題数が2つ以上あり、かつ前回と同じ問題が選ばれた場合は再抽選
         do {
           potentialCure = cures[Math.floor(Math.random() * cures.length)];
         } while (cures.length > 1 && potentialCure.cure_name === lastCorrectCureName);
         
         const correctCure = potentialCure;
-  
+
         return {
           catchphrase: correctCure.catchphrase,
           correct: correctCure,
           choices: shuffle(cures.map(c => c.cure_name)),
-          series: series
+          series: randomSeries
         };
       }
-  
+
       function renderQuestion() {
         const quiz = getRandomQuestion();
-        lastCorrectCureName = quiz.correct.cure_name; // 前回出題された問題のキャラ名を保存
-  
+        if (!quiz) { // Handle case where no question could be generated
+            document.getElementById("question").innerHTML = `<p>問題の生成に失敗しました。選択範囲を確認してください。</p>`;
+            return;
+        }
+        lastCorrectCureName = quiz.correct.cure_name;
+
         const questionDiv = document.getElementById("question");
         const choicesDiv = document.getElementById("choices");
         const resultDiv = document.getElementById("result");
         const detailsDiv = document.getElementById("details");
-  
+
         resultDiv.innerHTML = "";
         detailsDiv.innerHTML = "";
         choicesDiv.innerHTML = "";
-  
+
         const maskedCatchphrase = maskCureNameInCatchphrase(quiz.catchphrase, quiz.correct.cure_name);
         questionDiv.innerHTML = `<p><strong>問題：</strong>${maskedCatchphrase}</p>`;
-  
-  
+
         quiz.choices.forEach(name => {
           const btn = document.createElement("button");
           btn.textContent = name;
@@ -401,7 +477,7 @@
           choicesDiv.appendChild(btn);
         });
       }
-  
+
       function getMainColorCode(colorString) {
         if (!colorString) return 'inherit';
         const colorMap = {
@@ -419,21 +495,21 @@
           "白": "#696969", // dimgray
           "乳白": "#696969" // dimgray
         };
-  
+
         for (const key in colorMap) {
           if (colorString.includes(key)) {
             return colorMap[key];
           }
         }
-        return 'inherit'; // マッチしない場合はデフォルト
+        return 'inherit';
       }
-  
+
       function checkAnswer(selected, quiz) {
         const correct = quiz.correct.cure_name;
         const resultDiv = document.getElementById("result");
         const detailsDiv = document.getElementById("details");
         const buttons = document.querySelectorAll("#choices button");
-  
+
         buttons.forEach(btn => {
           btn.disabled = true;
           btn.onclick = null;
@@ -444,33 +520,31 @@
             btn.classList.add("incorrect");
           }
         });
-  
+
         const c = quiz.correct;
         const s = quiz.series;
-  
+
         resultDiv.innerHTML = selected === correct
           ? `<span style='color:red;'>○せいかい！</span>`
           : `<span style='color:blue;'>×ざんねん…</span>`;
-  
+
         const colorName = c.main_color;
         const colorCode = getMainColorCode(colorName);
-  
+
         let op = '情報なし';
         let ed = '情報なし';
-  
+
         if (s.theme_songs) {
           if (s.theme_songs.opening) {
-            // 通常の構造
             op = s.theme_songs.opening;
             ed = s.theme_songs.ending;
           } else if (s.theme_songs[s.series_title]) {
-            // タイトルがキーになっている構造
             const theme = s.theme_songs[s.series_title];
             op = theme.opening;
             ed = theme.ending;
           }
         }
-  
+
         detailsDiv.innerHTML = `
           <div class="info-block">
             <h3>正解キャラ情報</h3>
@@ -481,12 +555,10 @@
               <li><strong>学年：</strong>${c.grade_age}</li>
               <li><strong>メインカラー：</strong><span style="color: ${colorCode}; font-weight: bold;">${colorName || ''}</span></li>
               <li><strong>名乗り：</strong>${c.catchphrase}</li>
-              <li><a href="${c.cure_image}" target="_blank" class="image-search-button">🔍 ${c.cure_name}の画像を検索する
-    </a>
-  </li>
+              <li><a href="${c.cure_image}" target="_blank" class="image-search-button">🔍 ${c.cure_name}の画像を検索する</a></li>
             </ul>
           </div>
-  
+
           <div class="info-block">
             <h3>シリーズ情報</h3>
             <ul>
@@ -502,16 +574,18 @@
           </div>
         `;
       }
-  
+
       loadQuizData().then(data => {
         quizData = data;
         renderModeSelection(data);
+
+        document.getElementById('start-quiz-btn').addEventListener('click', startQuiz);
 
         document.getElementById('back-to-selection').addEventListener('click', (e) => {
           e.preventDefault();
           document.getElementById('quiz-container').style.display = 'none';
           document.getElementById('back-to-selection').style.display = 'none';
-          document.getElementById('mode-selection').style.display = 'grid';
+          document.getElementById('mode-selection').style.display = 'block'; // Changed from grid to block
           document.getElementById("question").innerHTML = "";
           document.getElementById("choices").innerHTML = "";
           document.getElementById("result").innerHTML = "";
