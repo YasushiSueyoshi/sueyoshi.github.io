@@ -6,7 +6,9 @@
     "broadcast_period": "2025年2月2日～",
     "theme_songs": {
       "opening": "「キミとアイドルプリキュア♪ Light Up！」石井あみ・熊田茜音・吉武千颯",
-      "ending": "「Trio Dreams」キュアアイドル（CV：松岡美里）＆キュアウインク（CV：髙橋ミナミ）＆キュアキュンキュン（CV：高森奈津美）"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=hYCs1sEZdsw",
+      "ending": "「Trio Dreams」キュアアイドル（CV：松岡美里）＆キュアウインク（CV：髙橋ミナミ）＆キュアキュンキュン（CV：高森奈津美）",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=9PXNMf7LJKE"
     },
     "cures": [
       {
@@ -63,7 +65,11 @@
     "broadcast_period": "2024年2月4日～2025年1月26日",
     "theme_songs": {
       "opening": "「わんだふるぷりきゅあ！evolution!!」吉武千颯",
-      "ending": "「FUN☆FUN☆わんだふるDAYS！」石井あみ＆後本萌葉, 「しあわせえぼりゅ～しょん♡」石井あみ＆後本萌葉"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=wfB-OvWKCvc",
+      "ending1": "「FUN☆FUN☆わんだふるDAYS！」石井あみ＆後本萌葉",
+      "ending1_youtube_url": "https://www.youtube.com/watch?v=RYSbKdeXlgg",
+      "ending2": "「しあわせえぼりゅ～しょん♡」石井あみ＆後本萌葉",
+      "ending2_youtube_url": "https://www.youtube.com/watch?v=1wu3115IyaQ"
     },
     "cures": [
       {
@@ -111,7 +117,11 @@
     "broadcast_period": "2023年2月5日～2024年1月28日",
     "theme_songs": {
       "opening": "「ひろがるスカイ！プリキュア ～Hero Girls～」石井あみ",
-      "ending": "「ヒロガリズム」石井あみ・吉武千颯, 「Dear Shine Sky」吉武千颯"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=PuJMfePEKr4",
+      "ending1": "「ヒロガリズム」石井あみ・吉武千颯",
+      "ending1_youtube_url": "https://www.youtube.com/watch?v=t8UtEPaq2Og",
+      "ending2": "「Dear Shine Sky」吉武千颯",
+      "ending2_youtube_url": "https://www.youtube.com/watch?v=tRe0cu2YPXk"
     },
     "cures": [
       {
@@ -168,7 +178,9 @@
     "broadcast_period": "2022年2月6日～2023年1月29日",
     "theme_songs": {
       "opening": "「Cheers!デリシャスパーティ プリキュア」Machico",
-      "ending": "「DELICIOUS HAPPY DAYS♪」吉武千颯"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=XXB6_KvfJuM",
+      "ending": "「DELICIOUS HAPPY DAYS♪」吉武千颯",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=1v8n-lEGnq4&t=11s"
     },
     "cures": [
       {
@@ -216,7 +228,11 @@
     "broadcast_period": "2021年2月28日～2022年1月30日",
     "theme_songs": {
       "opening": "「Viva! Spark!トロピカル～ジュ！プリキュア」Machico",
-      "ending": "「トロピカ I・N・G」吉武千颯, 「あこがれ Go My Way!!」北川理恵・吉武千颯"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=jZk_rwLgsC4",
+      "ending1": "「トロピカ I・N・G」吉武千颯",
+      "ending1_youtube_url": "https://www.youtube.com/watch?v=5oFA5iwNkXs&t=9s",
+      "ending2": "「あこがれ Go My Way!!」北川理恵・吉武千颯",
+      "ending2_youtube_url": "https://www.youtube.com/watch?v=gLGe8w0vuNg&t=10s"
     },
     "cures": [
       {
@@ -273,7 +289,9 @@
     "broadcast_period": "2020年2月2日～2021年2月21日",
     "theme_songs": {
       "opening": "「ヒーリングっどプリキュア Touch!!」北川理恵",
-      "ending": "「ミラクルっとLink Ring！」Machico"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=mfrw2yHIwlA",
+      "ending": "「ミラクルっとLink Ring！」Machico",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=gKeHjNc30Qc"
     },
     "cures": [
       {
@@ -321,7 +339,9 @@
     "broadcast_period": "2019年2月3日～2020年1月26日",
     "theme_songs": {
       "opening": "「キラリ☆彡スター☆トゥインクルプリキュア」北川理恵",
-      "ending": "「パペピプ☆ロマンチック」吉武千颯"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=orXl9RXE_k4",
+      "ending": "「パペピプ☆ロマンチック」吉武千颯",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=aJBIMmAjei8"
     },
     "cures": [
       {
@@ -378,7 +398,9 @@
     "broadcast_period": "2018年2月4日～2019年1月27日",
     "theme_songs": {
       "opening": "「We can!! HUGっと!プリキュア」宮本佳那子",
-      "ending": "「HUGっと!未来☆ドリーマー」キュアエール(CV.引坂理絵)、キュアアンジュ(CV.本泉莉奈)、キュアエトワール(CV.小倉唯)"
+      "opening_youtube_url": "https://youtu.be/s6spbJ-OnEw?si=Lir4zEeB5MyVGfYM&t=14",
+      "ending": "「HUGっと!未来☆ドリーマー」キュアエール(CV.引坂理絵)、キュアアンジュ(CV.本泉莉奈)、キュアエトワール(CV.小倉唯)",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=lJYMwyBqYjU"
     },
     "cures": [
       {
@@ -435,7 +457,9 @@
     "broadcast_period": "2017年2月5日～2018年1月28日",
     "theme_songs": {
       "opening": "「SHINE!! キラキラ☆プリキュアアラモード」駒形友梨",
-      "ending": "「レッツ・ラ・クッキン☆ショータイム」宮本佳那子"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=iEmUAhTJEXM",
+      "ending": "「レッツ・ラ・クッキン☆ショータイム」宮本佳那子",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=q0Ib86qUodw"
     },
     "cures": [
       {
@@ -500,8 +524,14 @@
     "series_title_search_image": "https://www.google.com/search?udm=2&q=魔法つかいプリキュア！",
     "broadcast_period": "2016年2月7日～2017年1月29日",
     "theme_songs": {
-      "opening": "「Dokkin魔法つかいプリキュア!」北川理恵, 「Dokkin魔法つかいプリキュア！Part2」北川理恵",
-      "ending": "「CURE UP↑RAPA☆PA!～ほほえみになる魔法～」キュアミラクル(高橋李依)キュアマジカル(堀江由衣), 「魔法アラ・ドーモ！」キュアミラクル(高橋李依)キュアマジカル(堀江由衣)キュアフェリーチェ(早見沙織)"
+      "opening1": "「Dokkin魔法つかいプリキュア!」北川理恵",
+      "opening1_youtube_url": "https://www.youtube.com/watch?v=h3WTJKaO1vQ",
+      "opening2": "「Dokkin魔法つかいプリキュア！Part2」北川理恵",
+      "opening2_youtube_url": "https://www.youtube.com/watch?v=aN_GU1X0omA",
+      "ending1": "「CURE UP↑RAPA☆PA!～ほほえみになる魔法～」キュアミラクル(高橋李依)キュアマジカル(堀江由衣)",
+      "ending1_youtube_url": "https://www.youtube.com/watch?v=6WnnpYjU0R8",
+      "ending2": "「魔法アラ・ドーモ！」キュアミラクル(高橋李依)キュアマジカル(堀江由衣)キュアフェリーチェ(早見沙織)",
+      "ending2_youtube_url": "https://www.youtube.com/watch?v=vVKNQgWPV04"
     },
     "cures": [
       {
@@ -540,7 +570,9 @@
     "broadcast_period": "2015年2月1日～2016年1月31日",
     "theme_songs": {
       "opening": "「Miracle Gо! プリンセスプリキュア」礒部花凛",
-      "ending": "「ドリーミング☆プリンセスプリキュア」北川理恵"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=9qEUd7TXACc",
+      "ending": "「ドリーミング☆プリンセスプリキュア」北川理恵",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=6RxY69GsOPk"
     },
     "cures": [
       {
@@ -588,7 +620,9 @@
     "broadcast_period": "2014年2月2日～2015年1月25日",
     "theme_songs": {
       "opening": "「ハピネスチャージプリキュア！ＷＯＷ！」仲谷明香",
-      "ending": "「プリキュア・メモリ」吉田仁美"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=g7ka2kXj9TY",
+      "ending": "「プリキュア・メモリ」吉田仁美",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=EwDefnJPMOU"
     },
     "cures": [
       {
@@ -636,7 +670,9 @@
     "broadcast_period": "2013年2月3日～2014年1月26日",
     "theme_songs": {
       "opening": "「Happy Go Lucky！ドキドキ！プリキュア」黒沢ともよ",
-      "ending": "「この空の向こう」吉田仁美"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=yD2aW840g-0",
+      "ending": "「この空の向こう」吉田仁美",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=Nvn3bqdchsI"
     },
     "cures": [
       {
@@ -693,7 +729,11 @@
     "broadcast_period": "2012年2月5日～2013年1月27日",
     "theme_songs": {
       "opening": "「Let's go!スマイルプリキュア!」池田彩",
-      "ending": "「イェイ!イェイ!イェイ!」吉田仁美, 「満開＊スマイル!」吉田仁美"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=k4smD-4IO8I",
+      "ending1": "「イェイ!イェイ!イェイ!」吉田仁美",
+      "ending1_youtube_url": "https://www.youtube.com/watch?v=vB07EbG5Q0Q",
+      "ending2": "「満開＊スマイル!」吉田仁美",
+      "ending2_youtube_url": "https://www.youtube.com/watch?v=5GTVhVThOL8&t=2s"
     },
     "cures": [
       {
@@ -750,7 +790,9 @@
     "broadcast_period": "2011年2月6日～2012年1月29日",
     "theme_songs": {
       "opening": "「ラ♪ラ♪ラ♪スイートプリキュア♪」工藤真由",
-      "ending": "「ワンダフル↑パワフル↑ミュージック!!」池田彩"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=61I30lAVT9A",
+      "ending": "「ワンダフル↑パワフル↑ミュージック!!」池田彩",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=C0ozrnTmyDc"
     },
     "cures": [
       {
@@ -798,7 +840,9 @@
     "broadcast_period": "2010年2月7日～2011年1月30日",
     "theme_songs": {
       "opening": "「Alright!ハートキャッチプリキュア!」池田彩",
-      "ending": "「Tomorrow Song～あしたのうた～」工藤真由"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=GZ8Awx_pzRg",
+      "ending": "「Tomorrow Song～あしたのうた～」工藤真由",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=EHWP9ZP-29s"
     },
     "cures": [
       {
@@ -846,7 +890,9 @@
     "broadcast_period": "2009年2月1日～2010年1月31日",
     "theme_songs": {
       "opening": "「Let’s!フレッシュプリキュア!～Hybrid ver.～」茂家瑞季",
-      "ending": "「H@ppy Together!!!」林桃子"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=D13Hju0b_PY",
+      "ending": "「H@ppy Together!!!」林桃子",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=xgTb_ogltp8&t=3s"
     },
     "cures": [
       {
@@ -893,10 +939,10 @@
     "series_title_search_image": "https://www.google.com/search?udm=2&q=Yes!プリキュア5GoGo!",
     "broadcast_period": "2008年2月3日～2009年1月25日",
     "theme_songs": {
-      "Yes!プリキュア5GoGo!": {
-        "opening": "「プリキュア５、フル・スロットルGoGo!」工藤真由withぷりきゅあ5",
-        "ending": "「ガンバランスdeダンス～希望のリレー～」キュア・カルテット"
-      }
+      "opening": "「プリキュア５、フル・スロットルGoGo!」工藤真由withぷりきゅあ5",
+      "opening_youtube_url": "https://www.youtube.com/watch?v=yNi6mIBLO-w",
+      "ending": "「ガンバランスdeダンス～希望のリレー～」キュア・カルテット",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=hY5k-z0clN0"
     },
     "cures": [
       {
@@ -961,10 +1007,12 @@
     "series_title_search_image": "https://www.google.com/search?udm=2&q=Yes!プリキュア5",
     "broadcast_period": "2007年2月4日～2008年1月27日",
     "theme_songs": {
-      "Yes!プリキュア5": {
-        "opening": "「プリキュア5 スマイル go go!」工藤真由",
-        "ending": "「キラキラしちゃって My True Love!」宮本佳那子, 「ガンバランスdeダンス～夢みる奇跡たち～」宮本佳那子 with ぷりきゅあ5"
-      }
+      "opening": "「プリキュア5 スマイル go go!」工藤真由",
+      "opening_youtube_url": "https://www.youtube.com/watch?v=jc2jjefHFrI",
+      "ending1": "「キラキラしちゃって My True Love!」宮本佳那子",
+      "ending1_youtube_url": "https://www.youtube.com/watch?v=fYvvy0OGEIM",
+      "ending2": "「ガンバランスdeダンス～夢みる奇跡たち～」宮本佳那子 with ぷりきゅあ5",
+      "ending2_youtube_url": "https://www.youtube.com/watch?v=HnghGxilLXc"
     },
     "cures": [
       {
@@ -1021,7 +1069,9 @@
     "broadcast_period": "2006年2月5日～2007年1月28日",
     "theme_songs": {
       "opening": "「まかせて★スプラッシュ☆スター★」うちやえゆかwith Splash Stars",
-      "ending": "「ガンバランスdeダンス」五條真由美withフラッピ＆チョッピーズ"
+      "opening_youtube_url": "https://www.youtube.com/watch?v=MvC7DDHiRx8",
+      "ending": "「ガンバランスdeダンス」五條真由美withフラッピ＆チョッピーズ",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=7VpLsxOhtmQ"
     },
     "cures": [
       {
@@ -1068,10 +1118,10 @@
     "series_title_search_image": "https://www.google.com/search?udm=2&q=ふたりはプリキュア_Max_Heart",
     "broadcast_period": "2005年2月6日～2006年1月29日",
     "theme_songs": {
-      "ふたりはプリキュア Max Heart": {
-        "opening": "「DANZEN! ふたりはプリキュア」(Ver.Max Heart)五條真由美",
-        "ending": "「ワンダー☆ウィンター☆ヤッター!!」五條真由美"
-      }
+      "opening": "「DANZEN! ふたりはプリキュア」(Ver.Max Heart)五條真由美",
+      "opening_youtube_url": "https://www.youtube.com/watch?v=SoeFWESFCP0",
+      "ending": "「ワンダー☆ウィンター☆ヤッター!!」五條真由美",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=723hP3rFM-k"
     },
     "cures": [
       {
@@ -1109,10 +1159,10 @@
     "series_title_search_image": "https://www.google.com/search?udm=2&q=ふたりはプリキュア",
     "broadcast_period": "2004年2月1日～2005年1月30日",
     "theme_songs": {
-      "ふたりはプリキュア": {
-        "opening": "「DANZEN! ふたりはプリキュア」五條真由美",
-        "ending": "「ゲッチュウ!らぶらぶぅ？!」五條真由美"
-      }
+      "opening": "「DANZEN! ふたりはプリキュア」五條真由美",
+      "opening_youtube_url": "https://www.youtube.com/watch?v=0ZZi4txjFdA",
+      "ending": "「ゲッチュウ!らぶらぶぅ？!」五條真由美",
+      "ending_youtube_url": "https://www.youtube.com/watch?v=_e67_lM8ItQ"
     },
     "cures": [
       {
