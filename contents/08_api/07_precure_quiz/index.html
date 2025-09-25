@@ -689,10 +689,37 @@ if (!edHtml) edHtml = '情報なし';
           </li>
         </ul>
       </div>
-
-      <button class="next-question" onclick="renderQuestion()" ontouchend="event.preventDefault(); renderQuestion()">次の問題へ</button>
     `;
+
+    const nextBtn = document.createElement("button");
+    nextBtn.className = "next-question";
+    nextBtn.textContent = "次の問題へ";
+
+    nextBtn.addEventListener("click", () => {
+      if (!isScrolling) renderQuestion();
+    });
+
+    nextBtn.addEventListener("touchend", (e) => {
+      e.preventDefault();
+      if (!isScrolling) renderQuestion();
+    });
+
+    detailsDiv.appendChild(nextBtn);
+
   }
+
+  document.querySelectorAll('.next-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (!isScrolling) renderQuestion();
+    });
+
+    btn.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      if (!isScrolling) renderQuestion();
+    });
+  });
+
+
 
   loadQuizData().then(data => {
     quizData = data;
