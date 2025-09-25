@@ -400,6 +400,17 @@
 
 <!-- ▼scriptここから▼ -->
 <script>
+  let isScrolling = false;
+  let touchMoved = false;
+
+  window.addEventListener('touchmove', () => {
+    isScrolling = true;
+  });
+
+  window.addEventListener('touchend', () => {
+    setTimeout(() => { isScrolling = false; }, 300);
+  });
+
   let quizData = [];
   let selectedSeriesTitles = [];
   let lastCorrectCureName = null;
@@ -705,6 +716,23 @@ if (!edHtml) edHtml = '情報なし';
     });
 
     detailsDiv.appendChild(nextBtn);
+
+    nextBtn.addEventListener('touchstart', () => {
+      touchMoved = false;
+    });
+
+    nextBtn.addEventListener('touchmove', () => {
+      touchMoved = true;
+    });
+
+    nextBtn.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      if (!touchMoved && !isScrolling) renderQuestion();
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+      if (!touchMoved && !isScrolling) renderQuestion();
+    });
 
   }
 
