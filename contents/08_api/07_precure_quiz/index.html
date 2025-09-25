@@ -153,17 +153,56 @@
       list-style: none;
       padding-left: 0;
       margin-top: 10px;
-      text-align-last: left;
     }
 
     .info-block li {
-      margin-bottom: 6px;
+      padding: 0.75em 0;
+      border-bottom: 1px solid #FFC0D9;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .info-block li:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: #FF90BC;
+      margin-right: 1em;
+    }
+
+    .info-value {
+      text-align: right;
+    }
+
+    .info-item-themes {
+      display: block;
+    }
+
+    .info-item-themes .info-value {
+      text-align: left;
+      padding-top: 0.5em;
+    }
+    .info-item-themes .info-value a{
+      color: #0017c1;
+      text-decoration: none;
+    }
+    .info-item-themes .info-value a:hover{
+      text-decoration-line: underline;
+    }
+
+    .info-item-full {
+      display: block;
+      text-align: center;
     }
 
     a.image-search-button {
       display: inline-block;
-      background-color: #FFC0D9; /* Sub Color */
-      color: #333;
+      background-color: #FF90BC;
+      color: #fff;
       text-decoration: none;
       padding: 10px 16px;
       border-radius: 6px;
@@ -174,9 +213,26 @@
     }
 
     a.image-search-button:hover {
-      background-color: #FF90BC; /* Base Color */
-      color: #fff;
+      text-align: center;
       transform: scale(1.03);
+    }
+
+    .icon--external-wrapper {
+      display: inline-block;
+      vertical-align: text-bottom;
+      margin-left: 0.25em;
+    }
+
+    .icon {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      fill: currentColor;
+    }
+
+    .icon--16px {
+      width: 16px;
+      height: 16px;
     }
 
     @keyframes wiggle {
@@ -314,7 +370,7 @@
     #series-checkboxes input[type="checkbox"]:checked+label {
       background-color: #FFC0D9; /* Sub Color */
       border-color: #FF90BC; /* Base Color */
-      color: #333;
+      color: #fff;
     }
 
     #series-checkboxes .select-all-label {
@@ -403,7 +459,7 @@
         padding: 12px 14px;
       }
 
-      .image-search-button {
+      a.image-search-button {
         display: block;
         text-align: center;
         margin-top: 10px;
@@ -433,7 +489,7 @@
         type="button" name="check_all_on">ON</button><button type="button" name="check_all_off">OFF</button></div>
 
     <div id="start-quiz-top" class="start-quiz-button">
-      <button id="start-quiz-btn-top" style="grid-column: 1 / -1;">この範囲でクイズを始める</button>
+      <button id="start-quiz-btn-top" style="grid-column: 1 / -1; margin-bottom: 1em;">この範囲でクイズを始める</button>
     </div>
 
     <div id="series-checkboxes"></div>
@@ -722,6 +778,7 @@
       const colorCode = getMainColorCode(colorName);
 
       // 🎵 主題歌の表示構築
+      const externalLinkIconSvg = `<span class="icon--external-wrapper"> <svg aria-label="新規タブで開きます" role="img" class="icon icon--16px icon--external"> <path xmlns="http://www.w3.org/2000/svg" d="M13 13H3V3H8V2H2V14H14V8H13V13Z" style="fill:inherit;"></path> <path xmlns="http://www.w3.org/2000/svg" d="M9.99844 2V3H12.2884L5.64844 9.65L6.34844 10.35L12.9984 3.71V6H13.9984V2H9.99844Z" style="fill:inherit;"></path> </svg> </span>`;
       let opHtml = '';
       let edHtml = '';
 
@@ -731,7 +788,7 @@
           const url = s.theme_songs[urlKey];
           const cleanValue = value.replace(/https?:\/\/\S+/g, '').trim();
           if (url) {
-            opHtml += `<a href="${url}" target="_blank">▶ ${cleanValue}</a><br>`;
+            opHtml += `<a href="${url}" target="_blank">${cleanValue}${externalLinkIconSvg}</a><br>`;
           } else {
             opHtml += `${cleanValue}<br>`;
           }
@@ -741,7 +798,7 @@
           const url = s.theme_songs[urlKey];
           const cleanValue = value.replace(/https?:\/\/\S+/g, '').trim();
           if (url) {
-            edHtml += `<a href="${url}" target="_blank">▶ ${cleanValue}</a><br>`;
+            edHtml += `<a href="${url}" target="_blank">${cleanValue}${externalLinkIconSvg}</a><br>`;
           } else {
             edHtml += `${cleanValue}<br>`;
           }
@@ -752,35 +809,37 @@
       if (!edHtml) edHtml = '情報なし';
 
 
-      detailsDiv.innerHTML = `
-        <div class="info-block">
-          <h3>正解キャラ情報</h3>
-          <ul>
-            <li><strong>名前：</strong>${c.cure_name}</li>
-            <li><strong>変身前：</strong>${c.civilian_name}</li>
-            <li><strong>声優：</strong>${c.voice_actor}</li>
-            <li><strong>学年/年齢：</strong>${c.grade_age}</li>
-            <li><strong>メインカラー：</strong><span style="color: ${colorCode}; font-weight: bold;">${colorName || ''}</span></li>
-            <li><strong>名乗り：</strong>${c.catchphrase}</li>
-            <li><a href="${c.cure_image}" target="_blank" class="image-search-button">🔍 ${c.cure_name}の画像を検索する</a></li>
-          </ul>
-        </div>
+              detailsDiv.innerHTML = `
+              <div class="info-block">
+                <h3>正解キャラ情報</h3>
+                <ul>
+                  <li><span class="info-label">名前</span><span class="info-value">${c.cure_name}</span></li>
+                  <li><span class="info-label">変身前</span><span class="info-value">${c.civilian_name}</span></li>
+                  <li><span class="info-label">声優</span><span class="info-value">${c.voice_actor}</span></li>
+                  <li><span class="info-label">学年/年齢</span><span class="info-value">${c.grade_age}</span></li>
+                  <li><span class="info-label">メインカラー</span><span class="info-value" style="color: ${colorCode}; font-weight: bold;">${colorName || ''}</span></li>
+                  <li class="info-item-themes"><span class="info-label">名乗り</span><span class="info-value">${c.catchphrase}</span></li>
+                  <li class="info-item-full" style="justify-content: center;"><a href="${c.cure_image}" target="_blank" class="image-search-button">🔍 ${c.cure_name}の画像を検索する</a></li>
+                </ul>
+              </div>
 
-        <div class="info-block">
-          <h3>シリーズ情報</h3>
-          <ul>
-            <li><strong>シリーズ：</strong>${s.series_number}</li>
-            <li><strong>タイトル：</strong>${s.series_title}</li>
-            <li><a href="${s.series_title_search_image}" target="_blank" class="image-search-button">🔍 「${s.series_title}」の画像を検索する</a></li>
-            <li><strong>放送期間：</strong>${s.broadcast_period}</li>
-            <li><strong>主題歌：</strong><br>
-              OP：<br>${opHtml}
-              ED：<br>${edHtml}
-            </li>
-          </ul>
-        </div>
-      `;
-
+              <div class="info-block">
+                <h3>シリーズ情報</h3>
+                <ul>
+                  <li><span class="info-label">シリーズ</span><span class="info-value">${s.series_number}</span></li>
+                  <li><span class="info-label">タイトル</span><span class="info-value">${s.series_title}</span></li>
+                  <li class="info-item-full" style="justify-content: center;"><a href="${s.series_title_search_image}" target="_blank" class="image-search-button">🔍 「${s.series_title}」の画像を検索する</a></li>
+                  <li><span class="info-label">放送期間</span><span class="info-value">${s.broadcast_period}</span></li>
+                  <li class="info-item-themes">
+                      <span class="info-label">主題歌</span>
+                      <span class="info-value">
+                        OP：<br>${opHtml}
+                        ED：<br>${edHtml}
+                      </span>
+                  </li>
+                </ul>
+              </div>
+            `;
       document.getElementById('next-question-btn-top').style.display = 'block';
 
       // Create and append the bottom button
