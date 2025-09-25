@@ -76,7 +76,9 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
       display: block;
-      margin: 30px auto 0;
+      margin: 0 auto;
+      margin-top: 1em;
+      text-align: center;
     }
 
     button.next-question:hover {
@@ -388,7 +390,7 @@
 <div id="quiz-container" style="display: none;">
     <div id="question"></div>
     <div id="choices"></div>
-    <div style="margin-top: 30px;">
+    <div style="margin-top: 2em;">
       <button class="next-question" onclick="renderQuestion()" ontouchend="event.preventDefault(); renderQuestion()">次の問題へ</button>
     </div>
     <div id="result" style="margin-top: 20px;"></div>
@@ -686,6 +688,8 @@ if (!edHtml) edHtml = '情報なし';
           </li>
         </ul>
       </div>
+
+      <button class="next-question" onclick="renderQuestion()" ontouchend="event.preventDefault(); renderQuestion()">次の問題へ</button>
     `;
   }
 
