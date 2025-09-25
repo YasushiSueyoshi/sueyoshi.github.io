@@ -11,11 +11,26 @@
   ------------------------------------------------------------------- */
     body {
       font-family: sans-serif;
-      padding: 20px;
+      padding: 0 20px;
       max-width: 1000px;
       margin: auto;
       background-color: #ffd7e7;
       color: #333;
+    }
+
+    header {
+      background-color: #FF90BC;
+      color: #F9F9E0;
+      padding: 1em 0;
+      text-align: center;
+      margin-bottom: 1.5em;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
     }
 
     .sp_br {
@@ -268,9 +283,7 @@
       bottom: 0;
       left: 0;
       width: 400px;
-      /* Hover area */
       height: 400px;
-      /* Hover area */
       cursor: pointer;
       z-index: 9999;
       backface-visibility: hidden;
@@ -304,7 +317,7 @@
       color: #333;
       transform: rotate(45deg);
       opacity: 0;
-      transition: opacity 0.4s 0.1s;
+      transition:  0.4s 0.1s;
       line-height: 1;
     }
 
@@ -376,7 +389,6 @@
     #series-checkboxes .select-all-label {
       border-style: dashed;
     }
-
     #start-quiz-btn-top,
     #start-quiz-btn {
       display: block;
@@ -393,12 +405,22 @@
       transition: background-color 0.3s ease;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
+      #start-quiz-btn-top {
+        display: none;
+      }
 
     /* レスポンシブ
   ------------------------------------------------------------------- */
     @media screen and (max-width: 600px) {
+      header {
+        margin-bottom: 0;
+        padding: .5em 0;
+      }
+      header h1 {
+        font-size: 1.2em;
+      }
       body {
-        padding: 10px;
+        padding: 0 10px;
       }
 
       .sp_br {
@@ -427,12 +449,14 @@
         line-height: 1;
         font-size: .75em;
       }
-
       #start-quiz-btn-top,
       #start-quiz-btn {
         width: 65%;
         font-size: .9em;
         padding: 10px;
+      }
+      #start-quiz-btn-top {
+        display: block;
       }
 
       #quiz-container {
@@ -479,8 +503,9 @@
     <span>プリキュアにドはまりした姪（3歳）が<br>ぶ厚いプリキュア図鑑からクイズ出しまくるので<br>急遽プリキュアの口上と名前を覚えることになり作成。<br>NotebookLMでプリキュア情報の整理JSON作成<br>Copilotでhtml/css/js作成<br>作成約6h</span>
   </div>
 
-  <h2>口上セリフから<br class="sp_br">プリキュアを当てるクイズ</h2>
-  <p style="text-align: center;">ふたりはプリキュア～キミとアイドルプリキュアから出題</p>
+  <header>
+    <h1>口上セリフからプリキュアを当てるクイズ</h1>
+  </header>
 
   <div id="mode-selection">
     <h3>出題するシリーズを選ぼう</h3>
@@ -500,7 +525,7 @@
 
   </div>
 
-  <a href="#" id="back-to-selection" style="display: none; text-align:center; margin-bottom: 15px;">シリーズ一覧へ戻る</a>
+  <a href="#" id="back-to-selection" style="display: none; text-align:center; margin: 1em 0;">シリーズ一覧へ戻る</a>
 
   <div id="quiz-container" style="display: none;">
     <div id="question"></div>
