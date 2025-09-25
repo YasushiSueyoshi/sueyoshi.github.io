@@ -82,6 +82,24 @@
     button.next-question:hover {
       background-color: #f8c1d6; /* ホバー時に少し濃く */
     }
+    button.inactive {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    button.correct,
+    button.incorrect {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button.correct:focus,
+    button.incorrect:focus,
+    button.correct:active,
+    button.incorrect:active {
+      outline: none;
+      box-shadow: none;
+      background-color: inherit;
+    }
+
     #result {
       font-size: 3rem;
       font-weight: bold;
@@ -193,83 +211,82 @@
         opacity: 1;
     }
     #mode-selection {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-bottom: 30px;
-}
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
 
-.check_all_wrap button {
-  all: revert;
-  cursor: pointer;
-}
+    .check_all_wrap button {
+      all: revert;
+      cursor: pointer;
+    }
 
-#mode-selection h3 {
-  grid-column: 1 / -1; /* 見出しは2カラムをまたぐように */
-  text-align: center;
-  margin-bottom: 5px;
-}
+    #mode-selection h3 {
+      grid-column: 1 / -1; /* 見出しは2カラムをまたぐように */
+      text-align: center;
+      margin-bottom: 5px;
+    }
 
-#mode-selection button:hover {
-  background-color: #f980a3cf; /* ホバー時に薄いピンクに */
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+    #mode-selection button:hover {
+      background-color: #f980a3cf; /* ホバー時に薄いピンクに */
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-#mode-selection .all-series-btn {
-  grid-column: 1 / -1; /* このボタンだけ1行全体を使う */
-}
+    #mode-selection .all-series-btn {
+      grid-column: 1 / -1; /* このボタンだけ1行全体を使う */
+    }
 
-#series-checkboxes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 20px;
-}
+    #series-checkboxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
 
-#series-checkboxes label {
-  display: block;
-  padding: 12px 8px;
-  font-size: 0.9em;
-  font-weight: bold;
-  color: #d63384;
-  background-color: #fff;
-  border: 2px solid #fbd6e2;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
+    #series-checkboxes label {
+      display: block;
+      padding: 12px 8px;
+      font-size: 0.9em;
+      font-weight: bold;
+      color: #d63384;
+      background-color: #fff;
+      border: 2px solid #fbd6e2;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
 
-#series-checkboxes input[type="checkbox"] {
-  display: none;
-}
+    #series-checkboxes input[type="checkbox"] {
+      display: none;
+    }
 
-#series-checkboxes input[type="checkbox"]:checked + label {
-  background-color: #ffe4ec;
-  border-color: #d63384;
-}
+    #series-checkboxes input[type="checkbox"]:checked + label {
+      background-color: #ffe4ec;
+      border-color: #d63384;
+    }
 
-#series-checkboxes .select-all-label {
-    border-style: dashed;
-}
+    #series-checkboxes .select-all-label {
+        border-style: dashed;
+    }
 
-#start-quiz-btn {
-    display: block;
-    width: 60%;
-    margin: 0 auto;
-    padding: 15px;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #fff;
-    background-color: #f971af;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
+    #start-quiz-btn-top, #start-quiz-btn {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+        padding: 15px;
+        font-size: 1em;
+        font-weight: bold;
+        color: #fff;
+        background-color: #f971af;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
   /* レスポンシブ
   ------------------------------------------------------------------- */
@@ -285,21 +302,27 @@
     }
     #series-checkboxes {
       grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 1fr; /* 行の高さを均等にする */
+      grid-auto-rows: 1fr;
+      gap: 5px;
     }
 
     #series-checkboxes label {
-      min-height: 35px;
+      min-height: 25px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      overflow-wrap: break-word; /* 長い単語を折り返す */
+      overflow-wrap: break-word;
       word-break: break-word;
       overflow: hidden;
-      line-height: 1.2;
+      line-height: 1;
+      font-size: .75em;
     }
-
+    #start-quiz-btn-top,#start-quiz-btn {
+        width: 65%;
+        font-size: .9em;
+        padding: 10px;
+    }
     #quiz-container {
         padding: 20px;
     }
@@ -342,11 +365,22 @@
 
 <h2>口上セリフから<br class="sp_br">プリキュアを当てるクイズ</h2>
 <p style="text-align: center;">ふたりはプリキュア～キミとアイドルプリキュアから出題</p>
+
   <div id="mode-selection">
     <h3>出題するシリーズを選ぼう</h3>
+
     <div class="check_all_wrap" style="text-align: right; margin-bottom: 15px; grid-column: 1 / -1;">全シリーズを選択 <button type="button" name="check_all_on">ON</button><button type="button" name="check_all_off">OFF</button></div>
+
+    <div id="start-quiz-top" class="start-quiz-button">
+        <button id="start-quiz-btn-top" style="grid-column: 1 / -1;">この範囲でクイズを始める</button>
+    </div>
+
     <div id="series-checkboxes"></div>
-    <button id="start-quiz-btn" style="grid-column: 1 / -1;">この範囲でクイズを始める</button>
+
+    <div id="start-quiz-bottom" class="start-quiz-button">
+      <button id="start-quiz-btn" style="grid-column: 1 / -1;">この範囲でクイズを始める</button>
+    </div>
+
   </div>
 
 <a href="#" id="back-to-selection" style="display: none; text-align: center; margin-bottom: 15px;">シリーズ一覧へ戻る</a>
@@ -361,6 +395,7 @@
     <div id="details" style="margin-top: 20px;"></div>
 </div>
 
+<!-- ▼scriptここから▼ -->
 <script>
   let quizData = [];
   let selectedSeriesTitles = [];
@@ -502,21 +537,29 @@
       const btn = document.createElement("button");
       btn.textContent = name;
 
-      btn.addEventListener('click', () => {
+      const handleClick = () => {
         if (!isScrolling) {
           checkAnswer(name, quiz);
         }
-      });
+      };
 
-      btn.addEventListener('touchend', (e) => {
+      const handleTouchEnd = (e) => {
         e.preventDefault();
         if (!isScrolling) {
           checkAnswer(name, quiz);
         }
-      });
+      };
+
+      btn.addEventListener('click', handleClick);
+      btn.addEventListener('touchend', handleTouchEnd);
+
+      // イベント解除用に保持
+      btn._handleClick = handleClick;
+      btn._handleTouchEnd = handleTouchEnd;
 
       choicesDiv.appendChild(btn);
-    });
+});
+
 
   }
 
@@ -554,14 +597,26 @@
 
     buttons.forEach(btn => {
       btn.disabled = true;
-      btn.onclick = null;
-      btn.ontouchend = null;
+
+      if (btn._handleClick) {
+        btn.removeEventListener('click', btn._handleClick);
+        btn._handleClick = null;
+      }
+
+      if (btn._handleTouchEnd) {
+        btn.removeEventListener('touchend', btn._handleTouchEnd);
+        btn._handleTouchEnd = null;
+      }
+
       if (btn.textContent === correct) {
         btn.classList.add("correct");
       } else if (btn.textContent === selected) {
         btn.classList.add("incorrect");
+      } else {
+        btn.classList.add("inactive"); // 未選択の選択肢にグレーアウトを適用
       }
     });
+
 
     const c = quiz.correct;
     const s = quiz.series;
@@ -638,7 +693,10 @@ if (!edHtml) edHtml = '情報なし';
     quizData = data;
     renderModeSelection(data);
 
-    document.getElementById('start-quiz-btn').addEventListener('click', startQuiz);
+    document.querySelectorAll('#start-quiz-btn, #start-quiz-btn-top').forEach(btn => {
+      btn.addEventListener('click', startQuiz);
+    });
+
 
     document.getElementById('back-to-selection').addEventListener('click', (e) => {
       e.preventDefault();
