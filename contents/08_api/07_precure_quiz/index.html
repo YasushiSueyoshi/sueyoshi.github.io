@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex,nofollow" />
   <title>口上セリフからプ●キュ●を当てるクイズ</title>
   <style>
-  /* PC
+    /* PC
   ------------------------------------------------------------------- */
     body {
       font-family: sans-serif;
@@ -16,12 +17,15 @@
       background-color: #fff1f5;
       color: #333;
     }
+
     .sp_br {
       display: none;
     }
+
     h2 {
       text-align: center;
     }
+
     #quiz-container {
       background-color: #ffffff;
       border-radius: 15px;
@@ -33,12 +37,14 @@
       text-align: center;
       box-sizing: border-box;
     }
+
     #question p {
       font-size: 1.1em;
       background-color: #f0f8ff;
       padding: 10px;
       border-left: 5px solid #87cefa;
     }
+
     #choices button {
       display: block;
       width: 100%;
@@ -52,18 +58,22 @@
       border: 2px solid #dee2e6;
       transition: background-color 0.2s, border-color 0.2s;
     }
+
     #choices button:hover:not([disabled]) {
-        background-color: #e9ecef;
-        border-color: #adb5bd;
+      background-color: #e9ecef;
+      border-color: #adb5bd;
     }
+
     #choices button.correct {
       border: 2px solid green;
       background-color: #ddfff6;
     }
+
     #choices button.incorrect {
       border: 2px solid red;
       background-color: #f7c3c3;
     }
+
     button.next-question {
       background-color: #fbd6e2;
       border: none;
@@ -82,12 +92,15 @@
     }
 
     button.next-question:hover {
-      background-color: #f8c1d6; /* ホバー時に少し濃く */
+      background-color: #f8c1d6;
+      /* ホバー時に少し濃く */
     }
+
     button.inactive {
       opacity: 0.5;
       pointer-events: none;
     }
+
     button.correct,
     button.incorrect {
       -webkit-tap-highlight-color: transparent;
@@ -107,18 +120,20 @@
       font-weight: bold;
       text-align: center;
     }
+
     .info-block {
       border: 4px solid #ccc;
       border-radius: 8px;
       padding: 15px 20px;
       margin-top: 20px;
       background-color: #fefefe;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
     .info-block h3 {
       margin-top: 0;
-      color: #d63384; /* ピンク系の見出し色 */
+      color: #d63384;
+      /* ピンク系の見出し色 */
       font-size: 1.2em;
       font-weight: bold;
       border-bottom: 1px solid #fbd6e2;
@@ -155,64 +170,82 @@
     }
 
     @keyframes wiggle {
-      0% { transform: rotate(0deg); }
-      25% { transform: rotate(-10deg); }
-      50% { transform: rotate(10deg); }
-      75% { transform: rotate(-10deg); }
-      100% { transform: rotate(0deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      25% {
+        transform: rotate(-10deg);
+      }
+
+      50% {
+        transform: rotate(10deg);
+      }
+
+      75% {
+        transform: rotate(-10deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
     }
 
     a.image-search-button:hover::before {
       animation: wiggle 0.4s ease;
       display: inline-block;
     }
+
     /* ページめくり*/
     #page-peel {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 400px; /* Hover area */
-        height: 400px; /* Hover area */
-        cursor: pointer;
-        z-index: 9999;
-        backface-visibility: hidden;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 400px;
+      /* Hover area */
+      height: 400px;
+      /* Hover area */
+      cursor: pointer;
+      z-index: 9999;
+      backface-visibility: hidden;
     }
 
     #page-peel::before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: "";
-        width: 15px;
-        height: 15px;
-        background: linear-gradient(225deg, white 50%,gray 53%,white 57%, gray 58%, white 65%);
-        box-shadow: 1px -1px 0px 0px;
-        transition: width 0.4s, height 0.4s;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 15px;
+      height: 15px;
+      background: linear-gradient(225deg, white 50%, gray 53%, white 57%, gray 58%, white 65%);
+      box-shadow: 1px -1px 0px 0px;
+      transition: width 0.4s, height 0.4s;
     }
 
     #page-peel:hover::before {
-        width: 400px;
-        height: 400px;
+      width: 400px;
+      height: 400px;
     }
 
     #page-peel span {
-        position: absolute;
-        bottom: 80px;
-        left: -30px;
-        width: 300px;
-        text-align: center;
-        font-size: .75em;
-        font-weight: bold;
-        color: #333;
-        transform: rotate(45deg);
-        opacity: 0;
-        transition: opacity 0.4s 0.1s;
-        line-height: 1;
+      position: absolute;
+      bottom: 80px;
+      left: -30px;
+      width: 300px;
+      text-align: center;
+      font-size: .75em;
+      font-weight: bold;
+      color: #333;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: opacity 0.4s 0.1s;
+      line-height: 1;
     }
 
     #page-peel:hover span {
-        opacity: 1;
+      opacity: 1;
     }
+
     #mode-selection {
       display: grid;
       grid-template-columns: 1fr;
@@ -226,19 +259,22 @@
     }
 
     #mode-selection h3 {
-      grid-column: 1 / -1; /* 見出しは2カラムをまたぐように */
+      grid-column: 1 / -1;
+      /* 見出しは2カラムをまたぐように */
       text-align: center;
       margin-bottom: 5px;
     }
 
     #mode-selection button:hover {
-      background-color: #f980a3cf; /* ホバー時に薄いピンクに */
+      background-color: #f980a3cf;
+      /* ホバー時に薄いピンクに */
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     #mode-selection .all-series-btn {
-      grid-column: 1 / -1; /* このボタンだけ1行全体を使う */
+      grid-column: 1 / -1;
+      /* このボタンだけ1行全体を使う */
     }
 
     #series-checkboxes {
@@ -266,116 +302,128 @@
       display: none;
     }
 
-    #series-checkboxes input[type="checkbox"]:checked + label {
+    #series-checkboxes input[type="checkbox"]:checked+label {
       background-color: #ffe4ec;
       border-color: #d63384;
     }
 
     #series-checkboxes .select-all-label {
-        border-style: dashed;
+      border-style: dashed;
     }
 
-    #start-quiz-btn-top, #start-quiz-btn {
-        display: block;
-        width: 60%;
-        margin: 0 auto;
-        padding: 15px;
-        font-size: 1em;
-        font-weight: bold;
-        color: #fff;
-        background-color: #f971af;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-  /* レスポンシブ
-  ------------------------------------------------------------------- */
-  @media screen and (max-width: 600px) {
-    body {
-      padding: 10px;
-    }
-    .sp_br {
+    #start-quiz-btn-top,
+    #start-quiz-btn {
       display: block;
-    }
-    h2 {
-      font-size: 1.2em;
-    }
-    #series-checkboxes {
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 1fr;
-      gap: 5px;
+      width: 60%;
+      margin: 0 auto;
+      padding: 15px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #fff;
+      background-color: #f971af;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
-    #series-checkboxes label {
-      min-height: 25px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow-wrap: break-word;
-      word-break: break-word;
-      overflow: hidden;
-      line-height: 1;
-      font-size: .75em;
-    }
-    #start-quiz-btn-top,#start-quiz-btn {
+    /* レスポンシブ
+  ------------------------------------------------------------------- */
+    @media screen and (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .sp_br {
+        display: block;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      #series-checkboxes {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr;
+        gap: 5px;
+      }
+
+      #series-checkboxes label {
+        min-height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        overflow: hidden;
+        line-height: 1;
+        font-size: .75em;
+      }
+
+      #start-quiz-btn-top,
+      #start-quiz-btn {
         width: 65%;
         font-size: .9em;
         padding: 10px;
-    }
-    #quiz-container {
+      }
+
+      #quiz-container {
         padding: 20px;
-    }
-    #question p {
-      font-size: 1em;
-      padding: 8px;
-    }
+      }
 
-    #choices button {
-      font-size: 0.95em;
-      padding: 10px;
-    }
+      #question p {
+        font-size: 1em;
+        padding: 8px;
+      }
 
-    .next-question {
-      width: 100%;
-      padding: 16px 20px;
-      font-size: 1em;
-    }
+      #choices button {
+        font-size: 0.95em;
+        padding: 10px;
+      }
 
-    .info-block {
-      padding: 12px 14px;
-    }
+      .next-question {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 1em;
+      }
 
-    .image-search-button {
-      display: block;
-      text-align: center;
-      margin-top: 10px;
-      font-size: 0.95em;
-    }
-    #page-peel {
-      display: none;
-    }
-  }
+      .info-block {
+        padding: 12px 14px;
+      }
 
+      .image-search-button {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 0.95em;
+      }
+
+      #page-peel {
+        display: none;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<div id="page-peel"><span>プリキュアにドはまりした姪（3歳）が<br>ぶ厚いプリキュア図鑑からクイズ出しまくるので<br>急遽プリキュアの口上と名前を覚えることになり作成。<br>NotebookLMでプリキュア情報の整理JSON作成<br>Copilotでhtml/css/js作成<br>作成約6h</span></div>
+  <div id="page-peel">
+    <span>プリキュアにドはまりした姪（3歳）が<br>ぶ厚いプリキュア図鑑からクイズ出しまくるので<br>急遽プリキュアの口上と名前を覚えることになり作成。<br>NotebookLMでプリキュア情報の整理JSON作成<br>Copilotでhtml/css/js作成<br>作成約6h</span>
+  </div>
 
-<h2>口上セリフから<br class="sp_br">プリキュアを当てるクイズ</h2>
-<p style="text-align: center;">ふたりはプリキュア～キミとアイドルプリキュアから出題</p>
+  <h2>口上セリフから<br class="sp_br">プリキュアを当てるクイズ</h2>
+  <p style="text-align: center;">ふたりはプリキュア～キミとアイドルプリキュアから出題</p>
 
   <div id="mode-selection">
     <h3>出題するシリーズを選ぼう</h3>
 
-    <div class="check_all_wrap" style="text-align: right; margin-bottom: 15px; grid-column: 1 / -1;">全シリーズを選択 <button type="button" name="check_all_on">ON</button><button type="button" name="check_all_off">OFF</button></div>
+    <div class="check_all_wrap" style="text-align: right; margin-bottom: 15px; grid-column: 1 / -1;">全シリーズを選択 <button
+        type="button" name="check_all_on">ON</button><button type="button" name="check_all_off">OFF</button></div>
 
     <div id="start-quiz-top" class="start-quiz-button">
-        <button id="start-quiz-btn-top" style="grid-column: 1 / -1;">この範囲でクイズを始める</button>
+      <button id="start-quiz-btn-top" style="grid-column: 1 / -1;">この範囲でクイズを始める</button>
     </div>
 
     <div id="series-checkboxes"></div>
@@ -386,391 +434,449 @@
 
   </div>
 
-<a href="#" id="back-to-selection" style="display: none; text-align:left; margin-bottom: 15px;">シリーズ一覧へ戻る</a>
+  <a href="#" id="back-to-selection" style="display: none; text-align:left; margin-bottom: 15px;">シリーズ一覧へ戻る</a>
 
-<div id="quiz-container" style="display: none;">
+  <div id="quiz-container" style="display: none;">
     <div id="question"></div>
     <div id="choices"></div>
     <div style="margin-top: 2em;">
-      <button class="next-question" onclick="renderQuestion()" ontouchend="event.preventDefault(); renderQuestion()">次の問題へ</button>
+      <button id="next-question-btn-top" class="next-question" style="display: none;">次の問題へ</button>
     </div>
     <div id="result" style="margin-top: 20px;"></div>
     <div id="details" style="margin-top: 20px;"></div>
-</div>
+  </div>
 
-<!-- ▼scriptここから▼ -->
-<script>
-  let isScrolling = false;
-  let touchMoved = false;
-
-  window.addEventListener('touchmove', () => {
-    isScrolling = true;
-  });
-
-  window.addEventListener('touchend', () => {
-    setTimeout(() => { isScrolling = false; }, 300);
-  });
-
-  let quizData = [];
-  let selectedSeriesTitles = [];
-  let lastCorrectCureName = null;
-
-  function renderModeSelection(data) {
-    const checkboxesContainer = document.getElementById('series-checkboxes');
-    checkboxesContainer.innerHTML = ''; // Clear previous content
-
-    // Add individual series checkboxes
-    data.forEach((series, index) => {
-      const id = `series-${index}`;
-      const div = document.createElement('div');
-      const input = document.createElement('input');
-      input.type = 'checkbox';
-      input.id = id;
-      input.value = series.series_title;
-      input.classList.add('series-checkbox');
-      const label = document.createElement('label');
-      label.htmlFor = id;
-      const seriesNumMatch = series.series_number.match(/\d+/);
-      const formattedSeriesNum = seriesNumMatch ? seriesNumMatch[0] : series.series_number;
-      label.textContent = `${formattedSeriesNum}. ${series.series_title}`;
-      div.appendChild(input);
-      div.appendChild(label);
-      checkboxesContainer.appendChild(div);
-    });
-
-    // Event listeners for ON/OFF buttons
-    document.querySelector('[name="check_all_on"]').addEventListener('click', () => {
-        const seriesCheckboxes = document.querySelectorAll('.series-checkbox');
-        seriesCheckboxes.forEach(checkbox => {
-            checkbox.checked = true;
-        });
-    });
-
-    document.querySelector('[name="check_all_off"]').addEventListener('click', () => {
-        const seriesCheckboxes = document.querySelectorAll('.series-checkbox');
-        seriesCheckboxes.forEach(checkbox => {
-            checkbox.checked = false;
-        });
-    });
-  }
-
-  function startQuiz() {
-    const selectedCheckboxes = document.querySelectorAll('#series-checkboxes input[type="checkbox"]:checked');
-    selectedSeriesTitles = Array.from(selectedCheckboxes).map(cb => cb.value).filter(val => val !== 'all');
-
-    if (selectedSeriesTitles.length === 0) {
-      alert('出題範囲を1つ以上選択してください。');
-      return;
-    }
-
-    document.getElementById('mode-selection').style.display = 'none';
-    document.getElementById('quiz-container').style.display = 'block';
-    document.getElementById('back-to-selection').style.display = 'block';
-    renderQuestion();
-  }
-
-  async function loadQuizData() {
-    const response = await fetch("allstars_nanori.json");
-    const data = await response.json();
-    return data;
-  }
-
-  function shuffle(array) {
-    return array.sort(() => Math.random() - 0.5);
-  }
-
-  function maskCureNameInCatchphrase(catchphrase, cureName) {
-    if (!cureName || !catchphrase) return catchphrase || '';
-    return catchphrase.replace(new RegExp(cureName, "g"), "キュア●●●");
-  }
-
-  function getRandomQuestion() {
-    const availableSeries = quizData.filter(s => selectedSeriesTitles.includes(s.series_title));
-    if (availableSeries.length === 0) {
-        // Fallback to all series if no valid series are selected (should not happen with the check in startQuiz)
-        const allCures = quizData.flatMap(s => s.cures);
-        const randomCure = allCures[Math.floor(Math.random() * allCures.length)];
-        const parentSeries = quizData.find(s => s.cures.includes(randomCure));
-        return {
-            catchphrase: randomCure.catchphrase,
-            correct: randomCure,
-            choices: shuffle(parentSeries.cures.map(c => c.cure_name)),
-            series: parentSeries
-        };
-    }
-
-    const randomSeries = availableSeries[Math.floor(Math.random() * availableSeries.length)];
-    const cures = randomSeries.cures;
-    let potentialCure;
-    
-    do {
-      potentialCure = cures[Math.floor(Math.random() * cures.length)];
-    } while (cures.length > 1 && potentialCure.cure_name === lastCorrectCureName);
-    
-    const correctCure = potentialCure;
-
-    return {
-      catchphrase: correctCure.catchphrase,
-      correct: correctCure,
-      choices: shuffle(cures.map(c => c.cure_name)),
-      series: randomSeries
-    };
-  }
-
-  function renderQuestion() {
-    const quiz = getRandomQuestion();
-    if (!quiz) { // Handle case where no question could be generated
-        document.getElementById("question").innerHTML = `<p>問題の生成に失敗しました。選択範囲を確認してください。</p>`;
-        return;
-    }
-    lastCorrectCureName = quiz.correct.cure_name;
-
-    const questionDiv = document.getElementById("question");
-    const choicesDiv = document.getElementById("choices");
-    const resultDiv = document.getElementById("result");
-    const detailsDiv = document.getElementById("details");
-
-    resultDiv.innerHTML = "";
-    detailsDiv.innerHTML = "";
-    choicesDiv.innerHTML = "";
-
-    const maskedCatchphrase = maskCureNameInCatchphrase(quiz.catchphrase, quiz.correct.cure_name);
-    questionDiv.innerHTML = `<p><strong>問題：</strong>${maskedCatchphrase}</p>`;
-
+  <!-- ▼scriptここから▼ -->
+  <script>
     let isScrolling = false;
+    let touchMoved = false;
 
     window.addEventListener('touchmove', () => {
       isScrolling = true;
     });
 
     window.addEventListener('touchend', () => {
-      setTimeout(() => { isScrolling = false; }, 100);
+      setTimeout(() => { isScrolling = false; }, 300);
     });
 
-    quiz.choices.forEach(name => {
-      const btn = document.createElement("button");
-      btn.textContent = name;
+    let quizData = [];
+    let selectedSeriesTitles = [];
+    let lastCorrectCureName = null;
 
-      const handleClick = () => {
-        if (!isScrolling) {
-          checkAnswer(name, quiz);
-        }
+    function renderModeSelection(data) {
+      const checkboxesContainer = document.getElementById('series-checkboxes');
+      checkboxesContainer.innerHTML = ''; // Clear previous content
+
+      // Add individual series checkboxes
+      data.forEach((series, index) => {
+        const id = `series-${index}`;
+        const div = document.createElement('div');
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = id;
+        input.value = series.series_title;
+        input.classList.add('series-checkbox');
+        const label = document.createElement('label');
+        label.htmlFor = id;
+        const seriesNumMatch = series.series_number.match(/\d+/);
+        const formattedSeriesNum = seriesNumMatch ? seriesNumMatch[0] : series.series_number;
+        label.textContent = `${formattedSeriesNum}. ${series.series_title}`;
+        div.appendChild(input);
+        div.appendChild(label);
+        checkboxesContainer.appendChild(div);
+      });
+
+      // Event listeners for ON/OFF buttons
+      document.querySelector('[name="check_all_on"]').addEventListener('click', () => {
+        const seriesCheckboxes = document.querySelectorAll('.series-checkbox');
+        seriesCheckboxes.forEach(checkbox => {
+          checkbox.checked = true;
+        });
+      });
+
+      document.querySelector('[name="check_all_off"]').addEventListener('click', () => {
+        const seriesCheckboxes = document.querySelectorAll('.series-checkbox');
+        seriesCheckboxes.forEach(checkbox => {
+          checkbox.checked = false;
+        });
+      });
+    }
+
+    function startQuiz() {
+      const selectedCheckboxes = document.querySelectorAll('#series-checkboxes input[type="checkbox"]:checked');
+      selectedSeriesTitles = Array.from(selectedCheckboxes).map(cb => cb.value).filter(val => val !== 'all');
+
+      if (selectedSeriesTitles.length === 0) {
+        alert('出題範囲を1つ以上選択してください。');
+        return;
+      }
+
+      document.getElementById('mode-selection').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+      document.getElementById('back-to-selection').style.display = 'block';
+      renderQuestion();
+    }
+
+    async function loadQuizData() {
+      const response = await fetch("allstars_nanori.json");
+      const data = await response.json();
+      return data;
+    }
+
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    function maskCureNameInCatchphrase(catchphrase, cureName) {
+      if (!cureName || !catchphrase) return catchphrase || '';
+      return catchphrase.replace(new RegExp(cureName, "g"), "キュア●●●");
+    }
+
+    function getRandomQuestion() {
+      const availableSeries = quizData.filter(s => selectedSeriesTitles.includes(s.series_title));
+      if (availableSeries.length === 0) {
+        // Fallback to all series if no valid series are selected (should not happen with the check in startQuiz)
+        const allCures = quizData.flatMap(s => s.cures);
+        const randomCure = allCures[Math.floor(Math.random() * allCures.length)];
+        const parentSeries = quizData.find(s => s.cures.includes(randomCure));
+        return {
+          catchphrase: randomCure.catchphrase,
+          correct: randomCure,
+          choices: shuffle(parentSeries.cures.map(c => c.cure_name)),
+          series: parentSeries
+        };
+      }
+
+      const randomSeries = availableSeries[Math.floor(Math.random() * availableSeries.length)];
+      const cures = randomSeries.cures;
+      let potentialCure;
+
+      do {
+        potentialCure = cures[Math.floor(Math.random() * cures.length)];
+      } while (cures.length > 1 && potentialCure.cure_name === lastCorrectCureName);
+
+      const correctCure = potentialCure;
+
+      return {
+        catchphrase: correctCure.catchphrase,
+        correct: correctCure,
+        choices: shuffle(cures.map(c => c.cure_name)),
+        series: randomSeries
+      };
+    }
+
+    function renderQuestion() {
+      document.getElementById('next-question-btn-top').style.display = 'none';
+      const quiz = getRandomQuestion();
+      if (!quiz) { // Handle case where no question could be generated
+        document.getElementById("question").innerHTML = `<p>問題の生成に失敗しました。選択範囲を確認してください。</p>`;
+        return;
+      }
+      lastCorrectCureName = quiz.correct.cure_name;
+
+      const questionDiv = document.getElementById("question");
+      const choicesDiv = document.getElementById("choices");
+      const resultDiv = document.getElementById("result");
+      const detailsDiv = document.getElementById("details");
+
+      resultDiv.innerHTML = "";
+      detailsDiv.innerHTML = "";
+      choicesDiv.innerHTML = "";
+
+      const maskedCatchphrase = maskCureNameInCatchphrase(quiz.catchphrase, quiz.correct.cure_name);
+      questionDiv.innerHTML = `<p><strong>問題：</strong>${maskedCatchphrase}</p>`;
+
+      quiz.choices.forEach(name => {
+        const btn = document.createElement("button");
+        btn.textContent = name;
+
+        const handleClick = () => {
+          if (!isScrolling) {
+            checkAnswer(name, quiz);
+          }
+        };
+
+        const handleTouchEnd = (e) => {
+          e.preventDefault();
+          if (!isScrolling) {
+            checkAnswer(name, quiz);
+          }
+        };
+
+        btn.addEventListener('click', handleClick);
+        btn.addEventListener('touchend', handleTouchEnd);
+
+        // イベント解除用に保持
+        btn._handleClick = handleClick;
+        btn._handleTouchEnd = handleTouchEnd;
+
+        choicesDiv.appendChild(btn);
+      });
+
+
+    }
+
+    function getMainColorCode(colorString) {
+      if (!colorString) return 'inherit';
+      const colorMap = {
+        "ピンク": "hotpink",
+        "赤紫": "mediumvioletred",
+        "赤": "red",
+        "青": "blue",
+        "水色": "deepskyblue",
+        "紫": "purple",
+        "黄": "gold",
+        "オレンジ": "darkorange",
+        "緑": "limegreen",
+        "黄緑": "yellowgreen",
+        "黒": "black",
+        "白": "#696969", // dimgray
+        "乳白": "#696969" // dimgray
       };
 
-      const handleTouchEnd = (e) => {
+      for (const key in colorMap) {
+        if (colorString.includes(key)) {
+          return colorMap[key];
+        }
+      }
+      return 'inherit';
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function checkAnswer(selected, quiz) {
+      const correct = quiz.correct.cure_name;
+      const resultDiv = document.getElementById("result");
+      const detailsDiv = document.getElementById("details");
+      const buttons = document.querySelectorAll("#choices button");
+
+      buttons.forEach(btn => {
+        btn.disabled = true;
+
+        if (btn._handleClick) {
+          btn.removeEventListener('click', btn._handleClick);
+          btn._handleClick = null;
+        }
+
+        if (btn._handleTouchEnd) {
+          btn.removeEventListener('touchend', btn._handleTouchEnd);
+          btn._handleTouchEnd = null;
+        }
+
+        if (btn.textContent === correct) {
+          btn.classList.add("correct");
+        } else if (btn.textContent === selected) {
+          btn.classList.add("incorrect");
+        } else {
+          btn.classList.add("inactive"); // 未選択の選択肢にグレーアウトを適用
+        }
+      });
+
+
+      const c = quiz.correct;
+      const s = quiz.series;
+
+      resultDiv.innerHTML = selected === correct
+        ? `<span style='color:red;'>○せいかい！</span>`
+        : `<span style='color:blue;'>×ざんねん…</span>`;
+
+      const colorName = c.main_color;
+      const colorCode = getMainColorCode(colorName);
+
+      // 🎵 主題歌の表示構築
+      let opHtml = '';
+      let edHtml = '';
+
+      for (const [key, value] of Object.entries(s.theme_songs || {})) {
+        if (key.startsWith('opening')) {
+          const urlKey = `${key}_youtube_url`;
+          const url = s.theme_songs[urlKey];
+          const cleanValue = value.replace(/https?:\/\/\S+/g, '').trim();
+          if (url) {
+            opHtml += `<a href="${url}" target="_blank">▶ ${cleanValue}</a><br>`;
+          } else {
+            opHtml += `${cleanValue}<br>`;
+          }
+        }
+        if (key.startsWith('ending')) {
+          const urlKey = `${key}_youtube_url`;
+          const url = s.theme_songs[urlKey];
+          const cleanValue = value.replace(/https?:\/\/\S+/g, '').trim();
+          if (url) {
+            edHtml += `<a href="${url}" target="_blank">▶ ${cleanValue}</a><br>`;
+          } else {
+            edHtml += `${cleanValue}<br>`;
+          }
+        }
+      }
+
+      if (!opHtml) opHtml = '情報なし';
+      if (!edHtml) edHtml = '情報なし';
+
+
+      detailsDiv.innerHTML = `
+        <div class="info-block">
+          <h3>正解キャラ情報</h3>
+          <ul>
+            <li><strong>名前：</strong>${c.cure_name}</li>
+            <li><strong>変身前：</strong>${c.civilian_name}</li>
+            <li><strong>声優：</strong>${c.voice_actor}</li>
+            <li><strong>学年/年齢：</strong>${c.grade_age}</li>
+            <li><strong>メインカラー：</strong><span style="color: ${colorCode}; font-weight: bold;">${colorName || ''}</span></li>
+            <li><strong>名乗り：</strong>${c.catchphrase}</li>
+            <li><a href="${c.cure_image}" target="_blank" class="image-search-button">🔍 ${c.cure_name}の画像を検索する</a></li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <h3>シリーズ情報</h3>
+          <ul>
+            <li><strong>シリーズ：</strong>${s.series_number}</li>
+            <li><strong>タイトル：</strong>${s.series_title}</li>
+            <li><a href="${s.series_title_search_image}" target="_blank" class="image-search-button">🔍 「${s.series_title}」の画像を検索する</a></li>
+            <li><strong>放送期間：</strong>${s.broadcast_period}</li>
+            <li><strong>主題歌：</strong><br>
+              OP：<br>${opHtml}
+              ED：<br>${edHtml}
+            </li>
+          </ul>
+        </div>
+      `;
+
+      document.getElementById('next-question-btn-top').style.display = 'block';
+
+      // Create and append the bottom button
+      const nextBtnBottom = document.createElement("button");
+      nextBtnBottom.className = "next-question";
+      nextBtnBottom.id = "next-question-btn-bottom";
+      nextBtnBottom.textContent = "次の問題へ";
+
+      let touchMovedOnBottomBtn = false;
+      nextBtnBottom.addEventListener("touchstart", () => {
+        touchMovedOnBottomBtn = false;
+      }, { passive: true });
+
+      nextBtnBottom.addEventListener("touchmove", () => {
+        touchMovedOnBottomBtn = true;
+      }, { passive: true });
+
+      nextBtnBottom.addEventListener("touchend", (e) => {
         e.preventDefault();
-        if (!isScrolling) {
-          checkAnswer(name, quiz);
+        if (!touchMovedOnBottomBtn && !isScrolling) {
+            renderQuestion();
         }
-      };
+      });
 
-      btn.addEventListener('click', handleClick);
-      btn.addEventListener('touchend', handleTouchEnd);
+      nextBtnBottom.addEventListener("click", () => {
+        if (!touchMovedOnBottomBtn && !isScrolling) {
+            renderQuestion();
+        }
+      });
 
-      // イベント解除用に保持
-      btn._handleClick = handleClick;
-      btn._handleTouchEnd = handleTouchEnd;
-
-      choicesDiv.appendChild(btn);
-});
-
-
-  }
-
-  function getMainColorCode(colorString) {
-    if (!colorString) return 'inherit';
-    const colorMap = {
-      "ピンク": "hotpink",
-      "赤紫": "mediumvioletred",
-      "赤": "red",
-      "青": "blue",
-      "水色": "deepskyblue",
-      "紫": "purple",
-      "黄": "gold",
-      "オレンジ": "darkorange",
-      "緑": "limegreen",
-      "黄緑": "yellowgreen",
-      "黒": "black",
-      "白": "#696969", // dimgray
-      "乳白": "#696969" // dimgray
-    };
-
-    for (const key in colorMap) {
-      if (colorString.includes(key)) {
-        return colorMap[key];
-      }
+      detailsDiv.appendChild(nextBtnBottom);
     }
-    return 'inherit';
-  }
 
-  function checkAnswer(selected, quiz) {
-    const correct = quiz.correct.cure_name;
-    const resultDiv = document.getElementById("result");
-    const detailsDiv = document.getElementById("details");
-    const buttons = document.querySelectorAll("#choices button");
 
-    buttons.forEach(btn => {
-      btn.disabled = true;
 
-      if (btn._handleClick) {
-        btn.removeEventListener('click', btn._handleClick);
-        btn._handleClick = null;
-      }
 
-      if (btn._handleTouchEnd) {
-        btn.removeEventListener('touchend', btn._handleTouchEnd);
-        btn._handleTouchEnd = null;
-      }
 
-      if (btn.textContent === correct) {
-        btn.classList.add("correct");
-      } else if (btn.textContent === selected) {
-        btn.classList.add("incorrect");
-      } else {
-        btn.classList.add("inactive"); // 未選択の選択肢にグレーアウトを適用
-      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    loadQuizData().then(data => {
+      quizData = data;
+      renderModeSelection(data);
+
+      document.querySelectorAll('#start-quiz-btn, #start-quiz-btn-top').forEach(btn => {
+        btn.addEventListener('click', startQuiz);
+      });
+
+      const topBtn = document.getElementById('next-question-btn-top');
+      let touchMovedOnTopBtn = false;
+
+      topBtn.addEventListener('touchstart', () => {
+        touchMovedOnTopBtn = false;
+      }, { passive: true });
+
+      topBtn.addEventListener('touchmove', () => {
+        touchMovedOnTopBtn = true;
+      }, { passive: true });
+
+      topBtn.addEventListener('touchend', (e) => {
+        if (!touchMovedOnTopBtn && !isScrolling) {
+          e.preventDefault();
+          renderQuestion();
+        }
+      });
+
+      topBtn.addEventListener('click', () => {
+        if (!touchMovedOnTopBtn && !isScrolling) {
+          renderQuestion();
+        }
+      });
+
+      document.getElementById('back-to-selection').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('quiz-container').style.display = 'none';
+        document.getElementById('back-to-selection').style.display = 'none';
+        document.getElementById('mode-selection').style.display = 'block'; // Changed from grid to block
+        document.getElementById("question").innerHTML = "";
+        document.getElementById("choices").innerHTML = "";
+        document.getElementById("result").innerHTML = "";
+        document.getElementById("details").innerHTML = "";
+      });
     });
-
-
-    const c = quiz.correct;
-    const s = quiz.series;
-
-    resultDiv.innerHTML = selected === correct
-    ? `<span style='color:red;'>○せいかい！</span>`
-    : `<span style='color:blue;'>×ざんねん…</span>`;
-
-    const colorName = c.main_color;
-    const colorCode = getMainColorCode(colorName);
-
-    // 🎵 主題歌の表示構築
-let opHtml = '';
-let edHtml = '';
-
-for (const [key, value] of Object.entries(s.theme_songs || {})) {
-  if (key.startsWith('opening')) {
-    const urlKey = `${key}_youtube_url`;
-    const url = s.theme_songs[urlKey];
-    const cleanValue = value.replace(/https?:\/\/\S+/g, '').trim();
-    if (url) {
-      opHtml += `<a href="${url}" target="_blank">▶ ${cleanValue}</a><br>`;
-    } else {
-      opHtml += `${cleanValue}<br>`;
-    }
-  }
-  if (key.startsWith('ending')) {
-    const urlKey = `${key}_youtube_url`;
-    const url = s.theme_songs[urlKey];
-    const cleanValue = value.replace(/https?:\/\/\S+/g, '').trim();
-    if (url) {
-      edHtml += `<a href="${url}" target="_blank">▶ ${cleanValue}</a><br>`;
-    } else {
-      edHtml += `${cleanValue}<br>`;
-    }
-  }
-}
-
-if (!opHtml) opHtml = '情報なし';
-if (!edHtml) edHtml = '情報なし';
-
-
-    detailsDiv.innerHTML = `
-      <div class="info-block">
-        <h3>正解キャラ情報</h3>
-        <ul>
-          <li><strong>名前：</strong>${c.cure_name}</li>
-          <li><strong>変身前：</strong>${c.civilian_name}</li>
-          <li><strong>声優：</strong>${c.voice_actor}</li>
-          <li><strong>学年/年齢：</strong>${c.grade_age}</li>
-          <li><strong>メインカラー：</strong><span style="color: ${colorCode}; font-weight: bold;">${colorName || ''}</span></li>
-          <li><strong>名乗り：</strong>${c.catchphrase}</li>
-          <li><a href="${c.cure_image}" target="_blank" class="image-search-button">🔍 ${c.cure_name}の画像を検索する</a></li>
-        </ul>
-      </div>
-
-      <div class="info-block">
-        <h3>シリーズ情報</h3>
-        <ul>
-          <li><strong>シリーズ：</strong>${s.series_number}</li>
-          <li><strong>タイトル：</strong>${s.series_title}</li>
-          <li><a href="${s.series_title_search_image}" target="_blank" class="image-search-button">🔍 「${s.series_title}」の画像を検索する</a></li>
-          <li><strong>放送期間：</strong>${s.broadcast_period}</li>
-          <li><strong>主題歌：</strong><br>
-            OP：<br>${opHtml}
-            ED：<br>${edHtml}
-          </li>
-        </ul>
-      </div>
-    `;
-
-    const nextBtn = document.createElement("button");
-    nextBtn.className = "next-question";
-    nextBtn.textContent = "次の問題へ";
-
-    nextBtn.addEventListener("click", () => {
-      if (!isScrolling) renderQuestion();
-    });
-
-    nextBtn.addEventListener("touchend", (e) => {
-      e.preventDefault();
-      if (!isScrolling) renderQuestion();
-    });
-
-    detailsDiv.appendChild(nextBtn);
-
-    nextBtn.addEventListener('touchstart', () => {
-      touchMoved = false;
-    });
-
-    nextBtn.addEventListener('touchmove', () => {
-      touchMoved = true;
-    });
-
-    nextBtn.addEventListener('touchend', (e) => {
-      e.preventDefault();
-      if (!touchMoved && !isScrolling) renderQuestion();
-    });
-
-    nextBtn.addEventListener('click', (e) => {
-      if (!touchMoved && !isScrolling) renderQuestion();
-    });
-
-  }
-
-  document.querySelectorAll('.next-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (!isScrolling) renderQuestion();
-    });
-
-    btn.addEventListener('touchend', (e) => {
-      e.preventDefault();
-      if (!isScrolling) renderQuestion();
-    });
-  });
-
-
-
-  loadQuizData().then(data => {
-    quizData = data;
-    renderModeSelection(data);
-
-    document.querySelectorAll('#start-quiz-btn, #start-quiz-btn-top').forEach(btn => {
-      btn.addEventListener('click', startQuiz);
-    });
-
-
-    document.getElementById('back-to-selection').addEventListener('click', (e) => {
-      e.preventDefault();
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('back-to-selection').style.display = 'none';
-      document.getElementById('mode-selection').style.display = 'block'; // Changed from grid to block
-      document.getElementById("question").innerHTML = "";
-      document.getElementById("choices").innerHTML = "";
-      document.getElementById("result").innerHTML = "";
-      document.getElementById("details").innerHTML = "";
-    });
-  });
-</script>
+  </script>
 
 
 </body>
+
 </html>
