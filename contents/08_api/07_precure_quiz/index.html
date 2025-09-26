@@ -201,11 +201,11 @@
       text-align: left;
       padding-top: 0.5em;
     }
-    .info-item-themes .info-value a{
+    .info-block .info-value a{
       color: #0017c1;
       text-decoration: none;
     }
-    .info-item-themes .info-value a:hover{
+    .info-block .info-value a:hover{
       text-decoration-line: underline;
     }
 
@@ -838,13 +838,12 @@
               <div class="info-block">
                 <h3>正解キャラ情報</h3>
                 <ul>
-                  <li><span class="info-label">名前</span><span class="info-value">${c.cure_name}</span></li>
+                  <li><span class="info-label">名前</span><span class="info-value"><a href="${c.cure_image}" target="_blank">${c.cure_name}${externalLinkIconSvg}</a></span></li>
                   <li><span class="info-label">変身前</span><span class="info-value">${c.civilian_name}</span></li>
                   <li><span class="info-label">声優</span><span class="info-value">${c.voice_actor}</span></li>
                   <li><span class="info-label">学年/年齢</span><span class="info-value">${c.grade_age}</span></li>
                   <li><span class="info-label">メインカラー</span><span class="info-value" style="color: ${colorCode}; font-weight: bold;">${colorName || ''}</span></li>
                   <li class="info-item-themes"><span class="info-label">名乗り</span><span class="info-value">${c.catchphrase}</span></li>
-                  <li class="info-item-full" style="justify-content: center;"><a href="${c.cure_image}" target="_blank" class="image-search-button">🔍 ${c.cure_name}の画像を検索する</a></li>
                 </ul>
               </div>
 
@@ -852,8 +851,7 @@
                 <h3>シリーズ情報</h3>
                 <ul>
                   <li><span class="info-label">シリーズ</span><span class="info-value">${s.series_number}</span></li>
-                  <li><span class="info-label">タイトル</span><span class="info-value">${s.series_title}</span></li>
-                  <li class="info-item-full" style="justify-content: center;"><a href="${s.series_title_search_image}" target="_blank" class="image-search-button">🔍 「${s.series_title}」の画像を検索する</a></li>
+                  <li><span class="info-label">タイトル</span><span class="info-value"><a href="${s.series_title_search_image}" target="_blank">${s.series_title}${externalLinkIconSvg}</a></span></li>
                   <li><span class="info-label">放送期間</span><span class="info-value">${s.broadcast_period}</span></li>
                   <li class="info-item-themes">
                       <span class="info-label">主題歌</span>
