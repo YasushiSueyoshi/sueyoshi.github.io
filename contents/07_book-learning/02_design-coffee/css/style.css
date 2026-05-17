@@ -88,7 +88,7 @@ header {
   }
 }
 .mainvisual_area {
-  background-image: url(/img/mv_pc.jpg);
+  background-image: url(../img/mv_pc.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -97,7 +97,7 @@ header {
   position: relative;
   margin-top: 60px;
   @media (width <= 768px) {
-    background-image: url(/img/mv_sp.jpg);
+    background-image: url(../img/mv_sp.jpg);
     background-position: top;
     height: calc(100vh - 120px);
     margin-top: 120px;
