@@ -1,61 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="制作した成果物まとめページ" />
-    <meta name="robots" content="noindex,nofollow" />
-    <title>末吉作成ページまとめ</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- ローディング画面 -->
-    <!-- <div id="splash">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="制作した成果物まとめページ">
+  <meta name="robots" content="noindex,nofollow">
+  <title>末吉作成ページまとめ</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- ローディング画面 -->
+  <!-- <div id="splash">
       <div id="splash_text"></div>
     </div> -->
 
-    <header>
-      <div class="inner">
-        <div class="head_h1">
-          <h1>末吉作成ページまとめ</h1>
+  <header>
+    <div class="inner">
+      <div class="head_h1">
+        <h1>末吉作成ページまとめ</h1>
+      </div>
+      <!-- /.head_h1 -->
+
+
+      <!-- 円形ハンバーガーメニュー -->
+      <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
         </div>
-        <!-- /.head_h1 -->
+        <nav class="circle_nav" id="nav">
+          <ul>
+            <li><a href="#app_sec" onclick="closeMenu()">Webアプリ</a></li>
+            <li><a href="#hidouki_sec" onclick="closeMenu()">非同期通信</a></li>
+            <li><a href="#cooding_sec" onclick="closeMenu()">コーディング練習</a></li>
+            <li><a href="#jquery_sec" onclick="closeMenu()">jQuery練習</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="menu-bg" id="menu-bg"></div>
 
 
-        <!-- 円形ハンバーガーメニュー -->
-        <div id="menu">
-          <div id="menu-bar" onclick="menuOnClick()">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-          </div>
-          <nav class="circle_nav" id="nav">
-            <ul>
-              <li><a href="#app_sec" onclick="closeMenu()">Webアプリ</a></li>
-              <li><a href="#hidouki_sec" onclick="closeMenu()">非同期通信</a></li>
-              <li><a href="#cooding_sec" onclick="closeMenu()">コーディング練習</a></li>
-              <li><a href="#jquery_sec" onclick="closeMenu()">jQuery練習</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="menu-bg" id="menu-bg"></div>
-
-
-        <!-- ▼スタンダードハンバーガーメニュー▼ -->
-        <!-- <input type="checkbox" id="check">
+      <!-- ▼スタンダードハンバーガーメニュー▼ -->
+      <!-- <input type="checkbox" id="check">
         <label for="check" class="hamburger">
           <span></span>
         </label>
@@ -67,578 +65,468 @@
             <li class="nav__item"><a href="#jquery_sec">jQuery練習</a></li>
           </ul>
         </nav> -->
-        <!-- ▲スタンダードハンバーガーメニュー ▲-->
+      <!-- ▲スタンダードハンバーガーメニュー ▲-->
 
-      </div>
-      <!-- /.inner -->
-    </header>
+    </div>
+    <!-- /.inner -->
+  </header>
 
 
-    <main>
-      <div class="inner">
+  <main>
+    <div class="inner">
 
-        <!---------------------------- Webアプリここから ---------------------------->
-        <section id="app_sec">
-          <h2>【生成AI】Webアプリとか</h2>
-          <div class="app_wrap">
-            <div class="app_item">
-              <a href="/sueyoshi.github.io/contents/08_api/04_learnin_korean/index.html" target="_blank"><img src="img/021_learnin_korean.png" alt="韓国語学習アプリ" width="150"></a>
-            </div>
-            <div class="app_item">
-              <a href="/sueyoshi.github.io/contents/08_api/05_ai-passport_dojo/ai-passport_dojo.html" target="_blank"><img src="img/022_ai-passport_dojo.svg" alt="生成AIパスポート問題 60本ノック" width="150"></a>
-            </div>
-            <div class="app_item">
-              <a href="/sueyoshi.github.io/contents/08_api/06_ai-passport_nigate_bunnya/index.html" target="_blank"><img src="img/023_ai-passport_nigate_bunnya.jpg" alt="生成AIパスポート苦手集中トレーニング" width="150"></a>
-            </div>
-            <div class="app_item">
-              <a href="/sueyoshi.github.io/contents/08_api/07_precure_quiz/index.html" target="_blank"><img src="img/024_precure_quiz.png" alt="PRECURE QUIZ" width="150"></a>
-            </div>
+      <!---------------------------- Webアプリここから ---------------------------->
+      <section id="app_sec">
+        <h2>【生成AI】Webアプリとか</h2>
+        <div class="app_wrap">
+          <div class="app_item">
+            <a href="/sueyoshi.github.io/contents/08_api/04_learnin_korean/index.html" target="_blank"><img
+                src="img/021_learnin_korean.png" alt="韓国語学習アプリ" width="150"></a>
           </div>
-        </section><!-- // #app_sec -->
-        <!---------------------------- //Webアプリここまで ---------------------------->
-
-        <!---------------------------- 非同期通信学習ここから ---------------------------->
-        <section id="hidouki_sec">
-          <h2>【非同期通信】ajaxとかAPIとか</h2>
-          <div class="hidouki_wrap">
-            <div class="hidouki_item">
-              <a href="/sueyoshi.github.io/contents/08_api/01_poke_api/index.html" target="_blank"><img src="img/018_pokeapi_logo.png" alt="PokeApi" width="150"></a>
-            </div>
-            <div class="hidouki_item">
-              <a href="/sueyoshi.github.io/contents/08_api/02_weather_api/index.html" target="_blank"><img src="img/019_weather_api.svg" alt="weather_api" width="150"></a>
-            </div>
-            <div class="hidouki_item">
-              <a href="/sueyoshi.github.io/contents/08_api/03_dog-viewer/index.html" target="_blank"><img src="img/020_random-dog.webp" alt="random-dog" width="450"></a>
-            </div>
+          <div class="app_item">
+            <a href="/sueyoshi.github.io/contents/08_api/05_ai-passport_dojo/ai-passport_dojo.html" target="_blank"><img
+                src="img/022_ai-passport_dojo.svg" alt="生成AIパスポート問題 60本ノック" width="150"></a>
           </div>
-        </section><!-- // #hidouki_sec -->
-        <!---------------------------- //非同期通信学習ここまで ---------------------------->
+          <div class="app_item">
+            <a href="/sueyoshi.github.io/contents/08_api/06_ai-passport_nigate_bunnya/index.html" target="_blank"><img
+                src="img/023_ai-passport_nigate_bunnya.jpg" alt="生成AIパスポート苦手集中トレーニング" width="150"></a>
+          </div>
+          <div class="app_item">
+            <a href="/sueyoshi.github.io/contents/08_api/07_precure_quiz/index.html" target="_blank"><img
+                src="img/024_precure_quiz.png" alt="PRECURE QUIZ" width="150"></a>
+          </div>
+        </div>
+      </section><!-- // #app_sec -->
+      <!---------------------------- //Webアプリここまで ---------------------------->
 
-        <!---------------------------- html/css 練習ここから ---------------------------->
-        <section id="cooding_sec">
-          <h2>【HTML / CSS / Vanilla JS / jQuery】コーディング練習</h2>
-          <ul class="img_items">
+      <!---------------------------- 非同期通信学習ここから ---------------------------->
+      <section id="hidouki_sec">
+        <h2>【非同期通信】ajaxとかAPIとか</h2>
+        <div class="hidouki_wrap">
+          <div class="hidouki_item">
+            <a href="/sueyoshi.github.io/contents/08_api/01_poke_api/index.html" target="_blank"><img
+                src="img/018_pokeapi_logo.png" alt="PokeApi" width="150"></a>
+          </div>
+          <div class="hidouki_item">
+            <a href="/sueyoshi.github.io/contents/08_api/02_weather_api/index.html" target="_blank"><img
+                src="img/019_weather_api.svg" alt="weather_api" width="150"></a>
+          </div>
+          <div class="hidouki_item">
+            <a href="/sueyoshi.github.io/contents/08_api/03_dog-viewer/index.html" target="_blank"><img
+                src="img/020_random-dog.webp" alt="random-dog" width="450"></a>
+          </div>
+        </div>
+      </section><!-- // #hidouki_sec -->
+      <!---------------------------- //非同期通信学習ここまで ---------------------------->
 
-            <li class="img_item opacity">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/07_book-learning/01_1satsude-subete-minitsuku-javascript-nyumon-kouza/"
-              >
-                <img class="img_item_img" src="img/017.webp" alt="" />
-                <div class="img_item_ttl">JavaScriptのみで動きを付ける</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">
-                  ライブラリやjQueryを使用せずにJSのみでコーディング練習
-                </p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-
-            <li class="img_item opacityText2">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/06_daily-trial/02_tyukyu/company/"
-              >
-                <span class="mask"
-                  ><img class="img_item_img" src="img/016.webp" alt="" /><span
-                    class="cap"
-                    >formとSCSSの練習</span
-                  ></span
-                >
-                <!-- /.mask -->
-                <div class="img_item_ttl">JSライブラリ</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">
-                  ライブラリ
-                  Swiper（スライダー）とwow!（アニメーション）を使用してのコーディング練習
-                </p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-
-            <li class="img_item opacityText2">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/03-tyukyu/04_part/"
-              >
-                <span class="mask"
-                  ><img class="img_item_img" src="img/015.webp" alt="" /><span
-                    class="cap"
-                    >パーツのスニペット化</span
-                  ></span
-                >
-                <!-- /.mask -->
-                <div class="img_item_ttl">ボタン・見出しパターン集</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">パーツデザイン練習</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-
-            <li class="img_item lineText">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/02-syokyu/03_Japanese-snack-store/"
-              >
-                <span class="mask"
-                  ><img class="img_item_img" src="img/011.webp" alt="" /><span
-                    class="cap"
-                    >縦書きレイアウト</span
-                  ></span
-                ><!-- /.mask -->
-                <div class="img_item_ttl">創作</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">ストアサイト（和菓子）</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-
-            <li class="img_item opacityText">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/03-tyukyu/01_travel-blog/"
-              >
-                <span class="mask"
-                  ><img class="img_item_img" src="img/012.webp" alt="" /><span
-                    class="cap"
-                    >2カラム&3カラム</span
-                  ></span
-                >
-                <!-- /.mask -->
-                <div class="img_item_ttl">Travel Blog</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">ブログサイト。ローディング画面練習。</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-
-            <li class="img_item zoomInText">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/03-tyukyu/02_coffee-cafe-store/"
-              >
-                <span class="mask"
-                  ><img class="img_item_img" src="img/013.webp" alt="" /><span
-                    class="cap"
-                    >パララックス</span
-                  ></span
-                >
-                <!-- /.mask -->
-                <div class="img_item_ttl">COFFEE</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">ストアサイト（カフェ）</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
+      <!---------------------------- html/css 練習ここから ---------------------------->
+      <section id="cooding_sec">
+        <h2>【HTML / CSS / Vanilla JS / jQuery】コーディング練習</h2>
+        <ul class="img_items">
 
 
 
-            <li class="img_item img_item01 zoom_in">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/01-nyumon/06_profile-site/"
-              >
-                <span class="mask">
-                  <img class="img_item_img" src="img/01.webp" alt="" /> </span
-                ><!-- /.mask -->
-                <div class="img_item_ttl">KAKERU MIYAICHI</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">プロフィールサイト / 1カラム</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-            <li class="img_item zoom_out">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/01-nyumon/01_jewelry-brand/"
-              >
-                <span class="mask">
-                  <img class="img_item_img" src="img/02.webp" alt="" /> </span
-                ><!-- /.mask -->
+          <li class="img_item hamon">
+            <a target="_blank"
+              href="/sueyoshi.github.io/contents/07_book-learning/01_1satsude-subete-minitsuku-javascript-nyumon-kouza/">
+              <span class="mask"><img class="img_item_img" src="img/025_design-coffee.webp"
+                  alt="" /></span><!-- /.mask -->
+              <div class="img_item_ttl">CSSのネスト練習</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">
+                珈琲専門店 / トップ、お問い合わせページ
+              </p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
 
-                <div class="img_item_ttl">Wooden Jewelry</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">
-                  ブランドサイト（ジュエリー）/ 1カラム
-                </p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-            <li class="img_item zoom_in_rotate_right">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/01-nyumon/04_photo/"
-              >
-                <span class="mask">
-                  <img class="img_item_img" src="img/03.webp" alt="" /> </span
-                ><!-- /.mask -->
-                <div class="img_item_ttl">PHOTO BOOK</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">フォトサイト / 1カラム</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-            <li class="img_item zoom_in_rotate_left">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/01-nyumon/05_photo2/"
-              >
-                <span class="mask"
-                  ><img class="img_item_img" src="img/04.webp" alt="" /> </span
-                ><!-- /.mask -->
-                <div class="img_item_ttl">PHOTO BOOK 2</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">フォトサイト / 1カラム</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-            <li class="img_item sepia">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/01-nyumon/03_recipe-top/"
-              >
-                <img class="img_item_img" src="img/05.webp" alt="" />
-                <div class="img_item_ttl">Recipe Diary</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">レシピサイト / トップページ</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-            <li class="img_item monochrome">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/01-nyumon/02_recipe-recipe/"
-              >
-                <img class="img_item_img" src="img/06.webp" alt="" />
-                <div class="img_item_ttl">Recipe Diary</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">レシピサイト / レシピページ</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-            <li class="img_item blur">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/02-syokyu/01_portfolio-site/"
-              >
-                <img class="img_item_img" src="img/07.webp" alt="" />
-                <div class="img_item_ttl">Xxxxx Ashley - Photographer</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">ポートフォリオサイト / 1カラム</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-            <li class="img_item opacity">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/02-syokyu/02_book-store/"
-              >
-                <img class="img_item_img" src="img/08.webp" alt="" />
-                <div class="img_item_ttl">Mag88 - Book & Magazine</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">ストアサイト（書店）/ トップページ</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-            <li class="img_item shine">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/02-syokyu/04_clothes-store/"
-              >
-                <span class="mask"
-                  ><img class="img_item_img" src="img/09.webp" alt="" /></span
-                ><!-- /.mask -->
-                <div class="img_item_ttl">TOTALLY</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">ECサイト（アパレル）/ 商品ページ</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
-            <li class="img_item hamon">
-              <a
-                target="_blank"
-                href="/sueyoshi.github.io/contents/02-syokyu/05_website-design-company/"
-              >
-                <span class="mask"
-                  ><img class="img_item_img" src="img/010.webp" alt="" /></span
-                ><!-- /.mask -->
-                <div class="img_item_ttl">Web Entertainment Design</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">コーポレートサイト / 1カラム</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
+          <li class="img_item shine">
+            <a target="_blank"
+              href="/sueyoshi.github.io/contents/07_book-learning/01_1satsude-subete-minitsuku-javascript-nyumon-kouza/">
+              <span class="mask"><img class="img_item_img" src="img/017.webp" alt="" /></span><!-- /.mask -->
+              <div class="img_item_ttl">JavaScriptのみで動きを付ける</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">ライブラリやjQueryを使用せずにJSのみでコーディング練習</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
 
-            <li class="img_item flipZ2">
-              <a target="_blank" href="/sueyoshi.github.io/contents/04_isara/">
-                <span class="mask"
-                  ><img class="img_item_img" src="img/014.webp" alt="" /><span
-                    class="cap"
-                    >回転Z軸2＋テキストが出現</span
-                  ></span
-                >
-                <!-- /.mask -->
-                <div class="img_item_ttl">isara</div>
-                <!-- /.img_item_ttl -->
-                <p class="img_item_txt">バンコクのノマドエンジニア育成講座</p>
-                <!-- /.img_item_txt -->
-              </a>
-            </li>
-            <!-- /.img_item -->
+          <li class="img_item blur">
+            <a target="_blank" href="/sueyoshi.github.io/contents/06_daily-trial/02_tyukyu/company/">
+              <span class="mask"><img class="img_item_img" src="img/016.webp" alt="" /><span
+                  class="cap">formとSCSSの練習</span></span>
+              <!-- /.mask -->
+              <div class="img_item_ttl">JSライブラリ</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">
+                ライブラリ
+                Swiper（スライダー）とwow!（アニメーション）を使用してのコーディング練習
+              </p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
 
-          </ul>
-        </section>
-        <!-- /#cooding_sec -->
-        <!---------------------------- //html/css 練習ここまで ---------------------------->
+          <li class="img_item lineText">
+            <a target="_blank" href="/sueyoshi.github.io/contents/02-syokyu/03_Japanese-snack-store/">
+              <span class="mask"><img class="img_item_img" src="img/011.webp" alt="" /><span
+                  class="cap">縦書きレイアウト</span></span><!-- /.mask -->
+              <div class="img_item_ttl">創作</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">ストアサイト（和菓子）</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+
+          <li class="img_item opacityText2">
+            <a target="_blank" href="/sueyoshi.github.io/contents/03-tyukyu/04_part/">
+              <span class="mask"><img class="img_item_img" src="img/015.webp" alt="" /><span
+                  class="cap">パーツのスニペット化</span></span>
+              <!-- /.mask -->
+              <div class="img_item_ttl">ボタン・見出しパターン集</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">パーツデザイン練習</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+
+          <li class="img_item opacityText">
+            <a target="_blank" href="/sueyoshi.github.io/contents/03-tyukyu/01_travel-blog/">
+              <span class="mask"><img class="img_item_img" src="img/012.webp" alt="" /><span
+                  class="cap">2カラム&3カラム</span></span>
+              <!-- /.mask -->
+              <div class="img_item_ttl">Travel Blog</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">ブログサイト。ローディング画面練習。</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+
+          <li class="img_item zoomInText">
+            <a target="_blank" href="/sueyoshi.github.io/contents/03-tyukyu/02_coffee-cafe-store/">
+              <span class="mask"><img class="img_item_img" src="img/013.webp" alt="" /><span
+                  class="cap">パララックス</span></span>
+              <!-- /.mask -->
+              <div class="img_item_ttl">COFFEE</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">ストアサイト（カフェ）</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
 
 
-        <!---------------------------- jQuery 練習ここから ---------------------------->
-        <section id="jquery_sec">
-          <h2>【jQuery】jQuery練習</h2>
 
-          <ul class="button_items">
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/01_toggle_menu/"
-                target="_blank"
-                class="btn bgleft"
-                ><span>Toggle Menu</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/02_alertbox/"
-                target="_blank"
-                class="btn bgright"
-                ><span>Alertbox</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/03_viewer/"
-                target="_blank"
-                class="btn bgtop"
-                ><span>Viewer</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/04_tab/"
-                target="_blank"
-                class="btn bgbottom"
-                ><span>Tab</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/05_dropdown_menu/"
-                target="_blank"
-                class="btn bgcenterx"
-                ><span>Dropdown Menu</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/06_floating_menu/"
-                target="_blank"
-                class="btn bgcentery"
-                ><span>Floating Menu</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/07_modal/"
-                target="_blank"
-                class="btn bgcenterout"
-                ><span>Modal</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/08_photo_caption/"
-                target="_blank"
-                class="btn bgskew"
-                ><span>Photo Caption</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/09_tooltip/"
-                target="_blank"
-                class="btn04 bordertop"
-                ><span>Tooltip</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/10_pull_down/pull-down"
-                target="_blank"
-                class="btn04 borderbottom"
-                ><span>pull-down</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/11_Height/"
-                target="_blank"
-                class="btn04 borderleft"
-                ><span>Height</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/12_text_resizer/"
-                target="_blank"
-                class="btn04 borderright"
-                ><span>Text Resizer</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/13_table_row_and_column_highlighting/"
-                target="_blank"
-                class="btn04 bordercenter"
-                ><span>Table Row and Column Highlighting</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/14_Parallax/"
-                target="_blank"
-                class="btn05 bordercircle1"
-                ><span>Parallax</span></a
-              >
-            </li>
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/15_Filtering/"
-                class="btn05 bordercircle2" target="_blank"
-                ><span>Filtering</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/16_accordion/"
-                class="btn05 bordercircle3" target="_blank"
-                ><span>Accordion</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a
-                href="/sueyoshi.github.io/contents/05_jquery/17_smooth_scroll/"
-                class="gradient1" target="_blank"
-                ><span>Smooth Scroll</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/21_random_banner/" class="gradient2" target="_blank"><span>Random Banner</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/22_form_validation/" class="gradient3" target="_blank"><span>Form Validation</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/23_slide_menu/" class="gradient4" target="_blank"><span>Slide Menu</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/19_resize_header/" class="btnlinestretches" target="_blank"><span>Resize Header</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/20_slide_menu/" class="btnlinestretches2" target="_blank"><span>Slide Menu</span></a
-              >
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/21_random_banner/" class="btnlinestretches3" target="_blank"><span>Random Banner</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/22_form_validation/" class="btnlinestretches4" target="_blank"><span>Form Validation</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/23_slide_menu/" class="btnchangeline" target="_blank"><span>Slide Menu</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/24_sticky_header/" class="btnchangeradius" target="_blank"><span>Sticky Header</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/25_highlight_menu/" class="btnshine" target="_blank"><span>Highlight Menu</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/26_slider/" class="btnshine" target="_blank"><span>Slider</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/27_slider2/" class="btnshine" target="_blank"><span>Slider2</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/28_zoom/" class="btnshine" target="_blank"><span>Zoom</span></a>
-            </li>
-            <!-- /.img_item -->
-            <li class="button_item">
-              <a href="/sueyoshi.github.io/contents/05_jquery/29_count_up/" class="btnshine" target="_blank"><span>Count Up</span></a>
-            </li>
-            <!-- /.img_item -->
-          </ul>
-        </section>
-        <!-- /#jquery_sec -->
-        <!---------------------------- //jQuery 練習ここまで ---------------------------->
-      </div>
-      <!-- /.inner -->
-    </main>
-    <footer id="footer">
-      <p class="copyright">2021 @ sueyoshi</p>
-      <p id="page-top">
-        <a href="#"><img src="img/totop.png" alt="to top" /></a>
-      </p>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
-    <!--IE11用-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+          <li class="img_item img_item01 zoom_in">
+            <a target="_blank" href="/sueyoshi.github.io/contents/01-nyumon/06_profile-site/">
+              <span class="mask">
+                <img class="img_item_img" src="img/01.webp" alt="" /> </span><!-- /.mask -->
+              <div class="img_item_ttl">KAKERU MIYAICHI</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">プロフィールサイト / 1カラム</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+          <li class="img_item zoom_out">
+            <a target="_blank" href="/sueyoshi.github.io/contents/01-nyumon/01_jewelry-brand/">
+              <span class="mask">
+                <img class="img_item_img" src="img/02.webp" alt="" /> </span><!-- /.mask -->
+
+              <div class="img_item_ttl">Wooden Jewelry</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">
+                ブランドサイト（ジュエリー）/ 1カラム
+              </p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+          <li class="img_item zoom_in_rotate_right">
+            <a target="_blank" href="/sueyoshi.github.io/contents/01-nyumon/04_photo/">
+              <span class="mask">
+                <img class="img_item_img" src="img/03.webp" alt="" /> </span><!-- /.mask -->
+              <div class="img_item_ttl">PHOTO BOOK</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">フォトサイト / 1カラム</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+          <li class="img_item zoom_in_rotate_left">
+            <a target="_blank" href="/sueyoshi.github.io/contents/01-nyumon/05_photo2/">
+              <span class="mask"><img class="img_item_img" src="img/04.webp" alt="" /> </span><!-- /.mask -->
+              <div class="img_item_ttl">PHOTO BOOK 2</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">フォトサイト / 1カラム</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+          <li class="img_item sepia">
+            <a target="_blank" href="/sueyoshi.github.io/contents/01-nyumon/03_recipe-top/">
+              <img class="img_item_img" src="img/05.webp" alt="" />
+              <div class="img_item_ttl">Recipe Diary</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">レシピサイト / トップページ</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+          <li class="img_item monochrome">
+            <a target="_blank" href="/sueyoshi.github.io/contents/01-nyumon/02_recipe-recipe/">
+              <img class="img_item_img" src="img/06.webp" alt="" />
+              <div class="img_item_ttl">Recipe Diary</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">レシピサイト / レシピページ</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+          <li class="img_item blur">
+            <a target="_blank" href="/sueyoshi.github.io/contents/02-syokyu/01_portfolio-site/">
+              <img class="img_item_img" src="img/07.webp" alt="" />
+              <div class="img_item_ttl">Xxxxx Ashley - Photographer</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">ポートフォリオサイト / 1カラム</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+          <li class="img_item opacity">
+            <a target="_blank" href="/sueyoshi.github.io/contents/02-syokyu/02_book-store/">
+              <img class="img_item_img" src="img/08.webp" alt="" />
+              <div class="img_item_ttl">Mag88 - Book & Magazine</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">ストアサイト（書店）/ トップページ</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+          <li class="img_item shine">
+            <a target="_blank" href="/sueyoshi.github.io/contents/02-syokyu/04_clothes-store/">
+              <span class="mask"><img class="img_item_img" src="img/09.webp" alt="" /></span><!-- /.mask -->
+              <div class="img_item_ttl">TOTALLY</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">ECサイト（アパレル）/ 商品ページ</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+          <li class="img_item hamon">
+            <a target="_blank" href="/sueyoshi.github.io/contents/02-syokyu/05_website-design-company/">
+              <span class="mask"><img class="img_item_img" src="img/010.webp" alt="" /></span><!-- /.mask -->
+              <div class="img_item_ttl">Web Entertainment Design</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">コーポレートサイト / 1カラム</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+
+          <li class="img_item flipZ2">
+            <a target="_blank" href="/sueyoshi.github.io/contents/04_isara/">
+              <span class="mask"><img class="img_item_img" src="img/014.webp" alt="" /><span
+                  class="cap">回転Z軸2＋テキストが出現</span></span>
+              <!-- /.mask -->
+              <div class="img_item_ttl">isara</div>
+              <!-- /.img_item_ttl -->
+              <p class="img_item_txt">バンコクのノマドエンジニア育成講座</p>
+              <!-- /.img_item_txt -->
+            </a>
+          </li>
+          <!-- /.img_item -->
+
+        </ul>
+      </section>
+      <!-- /#cooding_sec -->
+      <!---------------------------- //html/css 練習ここまで ---------------------------->
+
+
+      <!---------------------------- jQuery 練習ここから ---------------------------->
+      <section id="jquery_sec">
+        <h2>【jQuery】jQuery練習</h2>
+
+        <ul class="button_items">
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/01_toggle_menu/" target="_blank"
+              class="btn bgleft"><span>Toggle Menu</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/02_alertbox/" target="_blank"
+              class="btn bgright"><span>Alertbox</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/03_viewer/" target="_blank"
+              class="btn bgtop"><span>Viewer</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/04_tab/" target="_blank"
+              class="btn bgbottom"><span>Tab</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/05_dropdown_menu/" target="_blank"
+              class="btn bgcenterx"><span>Dropdown Menu</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/06_floating_menu/" target="_blank"
+              class="btn bgcentery"><span>Floating Menu</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/07_modal/" target="_blank"
+              class="btn bgcenterout"><span>Modal</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/08_photo_caption/" target="_blank"
+              class="btn bgskew"><span>Photo Caption</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/09_tooltip/" target="_blank"
+              class="btn04 bordertop"><span>Tooltip</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/10_pull_down/pull-down" target="_blank"
+              class="btn04 borderbottom"><span>pull-down</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/11_Height/" target="_blank"
+              class="btn04 borderleft"><span>Height</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/12_text_resizer/" target="_blank"
+              class="btn04 borderright"><span>Text Resizer</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/13_table_row_and_column_highlighting/" target="_blank"
+              class="btn04 bordercenter"><span>Table Row and Column Highlighting</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/14_Parallax/" target="_blank"
+              class="btn05 bordercircle1"><span>Parallax</span></a>
+          </li>
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/15_Filtering/" class="btn05 bordercircle2"
+              target="_blank"><span>Filtering</span></a>
+          </li>
+          <!-- /.img_item -->
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/16_accordion/" class="btn05 bordercircle3"
+              target="_blank"><span>Accordion</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/17_smooth_scroll/" class="gradient1"
+              target="_blank"><span>Smooth Scroll</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/21_random_banner/" class="gradient2"
+              target="_blank"><span>Random Banner</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/22_form_validation/" class="gradient3"
+              target="_blank"><span>Form Validation</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/23_slide_menu/" class="gradient4"
+              target="_blank"><span>Slide Menu</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/19_resize_header/" class="btnlinestretches"
+              target="_blank"><span>Resize Header</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/20_slide_menu/" class="btnlinestretches2"
+              target="_blank"><span>Slide Menu</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/21_random_banner/" class="btnlinestretches3"
+              target="_blank"><span>Random Banner</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/22_form_validation/" class="btnlinestretches4"
+              target="_blank"><span>Form Validation</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/23_slide_menu/" class="btnchangeline"
+              target="_blank"><span>Slide Menu</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/24_sticky_header/" class="btnchangeradius"
+              target="_blank"><span>Sticky Header</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/25_highlight_menu/" class="btnshine"
+              target="_blank"><span>Highlight Menu</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/26_slider/" class="btnshine"
+              target="_blank"><span>Slider</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/27_slider2/" class="btnshine"
+              target="_blank"><span>Slider2</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/28_zoom/" class="btnshine"
+              target="_blank"><span>Zoom</span></a>
+          </li>
+          <!-- /.img_item -->
+          <li class="button_item">
+            <a href="/sueyoshi.github.io/contents/05_jquery/29_count_up/" class="btnshine" target="_blank"><span>Count
+                Up</span></a>
+          </li>
+          <!-- /.img_item -->
+        </ul>
+      </section>
+      <!-- /#jquery_sec -->
+      <!---------------------------- //jQuery 練習ここまで ---------------------------->
+    </div>
+    <!-- /.inner -->
+  </main>
+  <footer id="footer">
+    <p class="copyright">2021 @ sueyoshi</p>
+    <p id="page-top">
+      <a href="#"><img src="img/totop.png" alt="to top" /></a>
+    </p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
+  <!--IE11用-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
 </html>
