@@ -1,0 +1,464 @@
+@charset "utf-8";
+:root {
+  /* 16pxを基準にしたrem換算値をあらかじめ定義しておく */
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.9375rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-30: 1.875rem;
+  --fs-32: 2rem;
+  --fs-34: 2.125rem;
+  --fs-36: 2.25rem;
+  --fs-38: 2.375rem;
+  --fs-40: 2.5rem;
+  --fs-42: 2.625rem;
+  --fs-44: 2.75rem;
+  --fs-46: 2.875rem;
+  --fs-48: 3rem;
+  --fs-50: 3.125rem;
+  --fs-52: 3.25rem;
+  --fs-54: 3.375rem;
+  --fs-56: 3.5rem;
+  --fs-58: 3.625rem;
+  --fs-60: 3.75rem;
+  --fs-62: 3.875rem;
+  /* 使うときは変数名を呼び出すだけなので、直感的にpx感覚で指定できる */
+  /* font-size: var(--fs-15); 基本サイズを15pxに設定 */
+}
+body {
+  font-family: "Montserrat","Noto Sans JP", sans-serif;
+  font-weight: normal;
+  font-size: var(--fs-16); /* 基本サイズを16xに設定 */
+}
+.br {
+  display: none;
+  @media (width <= 768px) {
+    display: block;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;z-index: 100;
+  box-sizing: border-box;
+  background: #fff;
+  width: 100%;
+  @media (width <= 768px) {
+    display: block;
+    text-align: center;
+    padding: 20px 30px;
+  }
+}
+/* @media (max-width: 768px){
+  header {
+    display: block;
+    text-align: center;
+    padding: 20px 30px;
+  }
+} */
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-13);
+  @media (width <= 768px) {
+    font-size: var(--fs-12);
+  }
+}
+.header_nav li {
+  margin-right: 50px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  @media (width <= 768px) {
+    margin-right: 0;
+  }
+}
+.mainvisual_area {
+  background-image: url(/img/mv_pc.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 60px);
+  min-height: 640px;
+  position: relative;
+  margin-top: 60px;
+  @media (width <= 768px) {
+    background-image: url(/img/mv_sp.jpg);
+    background-position: top;
+    height: calc(100vh - 120px);
+    margin-top: 120px;
+  }
+}
+.mainvisual_area h1 {
+  font-family: "Montserrat";
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media (width <= 768px) {
+    top: 40%;
+    width: 70%;
+  }
+}
+.mainvisual_area .sub_ttl {
+  display: block;
+  font-family: "Noto Sans JP";
+  font-size: var(--fs-20);
+  font-weight: normal;
+  color: #fff;
+  @media (width <= 768px) {
+    font-size: var(--fs-18);
+  }
+}
+section {
+  padding: 80px 0 100px 0;
+  @media (width <= 768px) {
+    padding: 60px 0 60px 0;
+  }
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs-40);
+  color: #8B7452;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 35px;
+  margin-bottom: 60px;
+  text-align: center;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background-color: #6A9631;
+    border-radius: 4px;
+  }
+}
+.sub_ttl {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: var(--fs-14);
+  color: #222;
+  font-weight: normal;
+  display: block;
+}
+.inner {
+  max-width: 1180px;
+  padding: 0 40px;
+  margin: 0 auto;
+  @media (width <= 768px) {
+    padding: 0 20px;
+  }
+}
+h3 {
+  font-size: var(--fs-28);
+  font-weight: 700;
+  margin-bottom: 20px;
+  @media (width <= 768px) {
+    font-size: var(--fs-24);
+  }
+}
+/* 当店について
+------------------------------------------------- */
+.about_contents {
+  display: flex;
+  @media (width <= 768px) {
+    display: block;
+  }
+}
+.about_left {
+  width: 50%;
+  @media (width <= 768px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+.about_left_img img {
+  border-radius: 40px;
+}
+.about_right {
+  text-align: left;
+  width: 50%;
+  padding-left: 60px;
+  @media (width <= 768px) {
+    width: 100%;
+    padding: 50px 20px 0 40px;
+    font-size: var(--fs-14);
+  }
+}
+.about_right_log {
+  margin-bottom: 20px;
+}
+.about_right_txt {
+  line-height: 1.8;
+  letter-spacing: .05em;
+}
+.about_right_txt p {
+  margin-bottom: 20px;
+}
+.bg_brown {
+  background: #F3F1EE;
+}
+/* メニュー
+------------------------------------------------- */
+.menu_contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.menu_contents_item {
+  width: calc(25% - 10px);
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 10px 10px 0;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+  @media (width <= 768px) {
+    width: calc(50% - 10px);
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+.menu_contents_item_img {
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.menu_contents_item_name {
+  margin-bottom: 10px;
+}
+.menu_contents_item_price {
+  text-align: right;
+  font-family: "Montserrat";
+  font-size: var(--fs-14);
+  font-weight: 700;
+}
+/* 店舗情報
+------------------------------------------------- */
+.access_area h3 {
+  font-size: var(--fs-20);
+}
+.access_area_left h3  .sub_ttl {
+  display: inline-block;
+  font-size: var(--fs-13);
+  font-weight: 700;
+  padding-left: 20px;
+}
+.access_area .inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  @media (width <= 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+.access_area_right_map iframe {
+  width: 100%;       /* 親要素の横幅いっぱいに合わせる（はみ出さなくなる） */
+  height: auto;      /* 縦横比を崩さないための設定（お好みで450px固定でもOK） */
+  min-height: 400px;
+  @media (width <= 768px) {
+    min-height: 400px;
+  }
+}
+.access_area_left dl {
+  font-family: "Noto Sans JP";
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+dt,dd {
+  padding: 10px;
+  border-top: solid 1px #ccc;
+}
+/* お問い合わせ
+------------------------------------------------- */
+.contact_area {
+  text-align: center;
+}
+.contact_area_txt {
+  margin-bottom: 60px;
+}
+.contact_area_contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (width <= 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+.contact_area_contents h3 {
+  font-size: var(--fs-16);
+  font-weight: 500;
+}
+@media (max-width: 768px){
+  .contact_area_left {
+    margin-bottom: 60px;
+  }
+}
+.contact_area_left_tel_num {
+  font-size: var(--fs-32);
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+.contact_area_left_tel_num img {
+  margin-right: 10px;
+}
+.contact_area_left_tel_reception_time {
+  font-weight: 400;
+  font-size: var(--fs-12);
+}
+
+.contact_area_right .contact_area_right_btn {
+display: inline-block;
+  background: #6A9631;
+  padding: 20px 60px;
+  border-radius: 8px;
+  border: none;
+  font-size: var(--fs-16);
+  color: #fff;
+  font-weight: 700;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+/* footer
+------------------------------------------------- */
+footer {
+  background: #8b7452;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0 20px 0;
+}
+.footer_nav {
+  font-size: var(--fs-13);
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.footer_copy {
+  font-family: "Montserrat";
+  font-size: var(--fs-12);
+}
+/* 下層ページcss
+------------------------------------------------- */
+.lower_main {
+  padding: 80px 0 100px;
+  background: #f3f1ee;
+  margin-top: 60px;
+  @media (width <= 768px) {
+    margin-top: 120px;
+  }
+}
+.lower_heading_group {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.lower_heading_group h1 {
+  font-size: var(--fs-40);
+  margin-bottom: 20px;
+  color: #333;
+  @media (width <= 768px) {
+    font-size: var(--fs-24);
+  }
+}
+/* フォームの土台（白枠のカード） */
+.contact_form {
+  background-color: #fff;
+  border-radius: 20px;          /* カンプの丸みに合わせて調整してください */
+  padding: 40px;                /* 内側の余白 */
+  max-width: 600px;             /* 横幅の最大値（カンプの数値に合わせます） */
+  margin: 0 auto;               /* 中央寄せ */
+  box-sizing: border-box;
+}
+
+/* 各入力項目の上下の間隔 */
+.contact_form_item {
+  margin-bottom: 24px;
+}
+
+/* ラベル（項目名）のスタイル */
+.contact_form_item label {
+  display: block;
+  font-family: "Noto Sans JP";
+  font-size: var(--fs-14);      /* 14px前後の小さな文字 */
+  font-weight: 700;             /* しっかり太字 */
+  color: #333;
+  margin-bottom: 8px;           /* 項目名と入力欄のスキマ */
+}
+
+/* 入力欄（input）とテキストエリア（textarea）共通の設定 */
+.contact_form_item input,
+.contact_form_item textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;       /* カンプの線の色に書き換えてください */
+  border-radius: 8px;           /* 入力枠の角丸 */
+  padding: 12px 16px;           /* 枠内の余白 */
+  font-family: "Noto Sans JP";
+  font-size: var(--fs-16);
+  color: #333;
+  background-color: #fff;
+}
+
+/* お問い合わせ内容（textarea）の高さ設定 */
+.contact_form_item textarea {
+  height: 180px;                /* カンプの高さに合わせて調整してください */
+  resize: vertical;             /* ユーザーが上下にだけサイズ調整できるようにする */
+}
+
+/* プレースホルダー（薄いグレーの文字）のスタイル */
+.contact_form_item input::placeholder,
+.contact_form_item textarea::placeholder {
+  color: #aaa;
+}
+
+/* ボタンの配置エリア */
+.contact_form_btn_area {
+  margin-top: 32px;
+}
+
+/* 送信ボタンのスタイル */
+.contact_form_btn {
+  display: block;
+  width: 100%;
+  background-color: #6b8e23;    /* カンプの緑色のカラーコードに書き換えてください */
+  color: #fff;
+  font-family: "Noto Sans JP";
+  font-size: var(--fs-16);
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;           /* ボタンの角丸 */
+  padding: 16px 0;              /* ボタンの縦幅（押しやすさ）の調整 */
+  cursor: pointer;
+  transition: opacity 0.3s;     /* ホバー時のアニメーション */
+}
+
+/* ボタンにマウスが乗ったとき（ホバー時）の演出 */
+.contact_form_btn:hover {
+  opacity: 0.8;
+}
